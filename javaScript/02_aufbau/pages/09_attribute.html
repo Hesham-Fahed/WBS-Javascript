@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute und Klassen</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <style>
+        .marked {
+            background-color: darkorange;
+        }
+
+        .offen {
+            color: red;
+            text-decoration: none;
+        }
+
+        .erledigt {
+            color: green;
+            text-decoration: line-through;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bold {
+            font-weight: 800;
+        }
+
+        .goldenrod {
+            color: goldenrod;
+        }
+    </style>
+    <!-- <script src="../scripts/09_attribute.js"></script> -->
+</head>
+
+<body>
+    <h1>Attribute und Klassen</h1>
+    <p>Das
+        <i>ist</i> ein Absatz mit
+        <b>Auszeichnungen.</b>
+    </p>
+    <div id="ausgabe">...</div>
+    <ul id="liste">
+        <li>Info1</li>
+        <li>Info2</li>
+        <li>Info3</li>
+        <li>Info4</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem recusandae hic veniam sit officia consequuntur,
+        esse maxime quos quaerat.</p>
+    <p>Corporis dolore alias nesciunt, obcaecati animi consequuntur rerum soluta, nulla praesentium iusto reiciendis illo quae
+        dolorum, quibusdam vitae voluptas eligendi?</p>
+    <p>Totam, voluptatem deleniti tempore autem reprehenderit asperiores minima delectus ab distinctio aliquid quo odio maiores
+        necessitatibus eum error suscipit maxime.</p>
+    <p>Recusandae, optio voluptates commodi est facere incidunt blanditiis. Aliquam libero aut fugiat est rem quo iure, ratione
+        alias temporibus modi!</p>
+    <p>Minus rerum vero iste, sint culpa soluta porro fugiat quidem, fugit error aspernatur deleniti! Minima veniam placeat
+        ex tenetur corporis!</p>
+    <p>Eum, amet! Error dolor optio cum delectus ipsa possimus. Assumenda ea maiores sit cumque amet eveniet doloribus natus
+        minus facilis.</p>
+    <p class="uppercase">Tempore error a eum voluptate porro eaque, illo, natus vero quo nesciunt reprehenderit molestias quia velit delectus
+        laborum perspiciatis dignissimos?</p>
+    <p>Nihil dolore ab pariatur minima id nulla architecto ullam fuga magni eum dicta officiis, illo impedit totam. Quos, iure
+        atque.</p>
+    <p>Vero delectus, non possimus veniam esse aperiam cumque amet itaque ullam cupiditate fugit eum obcaecati quidem quas similique
+        excepturi exercitationem!</p>
+    <p>Magnam placeat eum deserunt, animi repellendus dolorum accusamus totam, error atque veritatis laudantium blanditiis suscipit
+        explicabo officia! Beatae, optio qui!</p>
+    <ul>
+        <li>test</li>
+    </ul>
+
+    <script>
+
+        var ul = document.getElementsByTagName("ul");
+        var li = document.getElementsByTagName("li");
+        console.log("ul[0]: " + ul[1]);
+        //    ul[1].style.fontSize = "30px";
+
+
+        var classChange1 = {
+            add1: function (e, klasse) {
+                e.className += " " + klasse;
+            },
+            remove1: function (e, klasse) {
+                var arr = e.className.split(" ");
+                console.log(arr); 
+                if(el.classChange) {
+                    el.classChange1.remove(klasse);
+                } else {
+                    var remove = arr.indexOf(klasse);
+                    if(remove > -1) {
+                        arr.splice(remove, 1);
+                    }
+                    el.className = arr.join(" ").trim();
+                }
+            },
+            toggle1: function (e, klasse) {
+                if (e.className.search(klasse) === -1) {
+                    e.className += " " + klasse;
+                } else {
+                    var del = e.className.replace(klasse, "");
+                    e.className = del;
+                }
+                // e.classList.toggle(klasse);
+            },
+            contains1: function (e, klasse) {
+                // var pruef = e.classList.contains(klasse);
+                console.log("Contains: ", pruef);
+                var pruef = e.className.search(klasse);
+                console.log("search: ", pruef);
+            }
+        }
+
+        for (j = 0; j < li.length; j++) {
+            classChange1.remove1(li[j], "bold");
+        }
+
+
+    </script>
+
+
+    <noscript>
+        <p>When you have eliminated the
+            <b>JavaScript</b>, whatever remains must be an empty page.</p>
+    </noscript>
+</body>
+
+</html>
+
+<!--
+    Absatz (p) ist das Elternelement 
+<p>
+
+    Das                         //=> firstChild oder childNodes[0]
+    <i>ist</i>                  //=> childNodes[0].nextSibling oder childNodes[1]    
+    ein Absatz mit              //=> childNodes[1].nextSibling oder childNodes[2] 
+    <b>Auszeichnungen.</b>      //=> lastChild oder childNodes[3]
+
+</p>
+
+
+
+<p>
+    Das ist ein Absatz mit Auszeichnungen. //=> firstChild oder childNodes[0]
+</p>
+
+
+
+<p>
+    Das ist ein                 //=> firstChild oder childNodes[0]
+    <b>Absatz</b>               //=> childNodes[0].nextSibling oder childNodes[1]    
+    mit Auszeichnungen.         //=> lastChild childNodes[1].nextSibling oder childNodes[2] 
+</p>
+
+
+
+ -->

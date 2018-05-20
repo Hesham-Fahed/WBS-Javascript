@@ -1,0 +1,1 @@
+﻿{"farbe":"Rot","geschwindigkeit":50.2}

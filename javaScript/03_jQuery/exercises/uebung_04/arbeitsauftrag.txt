@@ -1,0 +1,13 @@
+Wir hätten gerne einen »Für Vegetarier«-Button. Wenn er angeklickt wird, sollen
+die fleischlichen Bestandteile in der Web-Speisekarte automatisch gegen vegetarische
+Entsprechungen ausgetauscht werden.
+
+Die Ersetzungen sollen so funktionieren:
+— Für Fischgerichte gibt es keinen vegetarischen Ersatz. Die müssen also entfernt werden.
+— Als vegetarische Alternative für Hamburger bieten wir Portobello-Zuchtchampignons an.
+— Für alle unsere Fleisch- und Eiergerichte außer Hackfleischgerichten bieten wir Tofu als vegetarische Alternative an.
+— Wir benötigen einen Button, der das Menü wieder in seinen Originalzustand versetzt.
+P.S. Es wäre schön, wenn außerdem ein Blatt-Symbol neben den vegetarischen
+Alternativgerichten angezeigt werden könnte.
+
+Schauen Sie sich die HTML und CSS Dateien an bevor Sie etwas programmieren!

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <title>4.2.1 erste Eventhandler</title>
+    <script src="kapitel-4-2-1-erste-Eventhandler.js"></script>
+</head>
+<body onload="geladen();">
+    <h1>4.2.1 erste Eventhandler</h1>
+    <p>
+        <input type="button" value="Schaltfläche 1" onclick="geklickt('Schaltfläche 1');">
+        <input type="button" value="Schaltfläche 2" onclick="geklickt(this.value);">
+        <input type="button" value="Neues Dokument" onclick="neu();">
+    </p>
+    <p>
+        <a href="javascript:geklickt('Hyperlink');">Hier steht ein Hyperlink</a>
+    </p>
+    <script>
+
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet.
+        </p>
+    </noscript>
+</body>
+
+</html>

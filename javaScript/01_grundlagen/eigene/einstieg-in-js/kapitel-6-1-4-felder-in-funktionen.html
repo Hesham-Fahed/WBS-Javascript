@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>6.1.2 Array in Funktionen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <script>
+        function maxi(feld) {
+            var maximum = feld[0];
+            for (var i = 1; i < feld.length; i++){
+                if (feld[i] > maximum) {
+                    maximum = feld[i];
+                }
+            }
+            return maximum;
+        }
+        function mini(feld) {
+            var minimum = feld[0];
+            for (var i = 1; i < feld.length; i++) {
+                if (feld[i] < minimum) {
+                    minimum = feld[i];
+                }
+            }
+            return minimum;
+        }
+
+        function aufwaerts(x, y) {
+            if (x > y) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+
+        function abwaerts(x, y) {
+            if (y > x) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>6.1.2 Array in Funktionen</h1>
+
+    <script>
+        var zahlArray = new Array(3, 28, 2, 14);
+        document.write("Feld: " + zahlArray + "<br>");
+        document.write("Maximum: " + maxi(zahlArray) + "<br>");
+        document.write("Minimum: " + mini(zahlArray) + "<br><br>");
+
+
+        var zahlArray2 = new Array(3, 28, 2, 1);
+        document.write("Unsortiert: " + zahlArray2 + "<br>");
+
+        // zahlArray2.sort();
+        // document.write("Zeichensortierung: " + zahlArray2);
+
+        zahlArray2.sort(aufwaerts);
+        document.write("<br>Zahlensortierung aufwärts: " + zahlArray2);
+
+        zahlArray2.sort(abwaerts);
+        document.write("<br>Zahlensortierung abwärts: " + zahlArray2);
+
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet.
+        </p>
+    </noscript>
+</body>
+
+</html>

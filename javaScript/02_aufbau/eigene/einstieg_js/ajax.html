@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ajax, erstes Beispiel</title>
+    <script>
+        function anfordern() {
+            var req = new XMLHttpRequest();
+            req.open("get", "ajax_hallo.php", true);
+            // req.open("get", "ajax_hallo.txt", true);
+            req.onreadystatechange = auswerten;
+            req.send();
+        }
+        function auswerten(e) {
+            if (e.target.readyState == 4 && e.target.status == 200)
+                document.getElementById("idAbsatz").firstChild.nodeValue =
+                    e.target.responseText;
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <a id="idLink" href="#">Bitte klicken</a>
+    </p>
+    <p id="idAbsatz">&nbsp;</p>
+    <script src="js/eh.js"></script>
+    <script>
+        meinHandler("idLink", "click", anfordern);
+    </script>
+
+
+    <!-- https://www.mediaevent.de/javascript/ajax-2-xmlhttprequest.html
+        https://de.wikipedia.org/wiki/Extensible_Markup_Language
+        https://www.json.org/json-de.html -->
+</body>
+
+</html>

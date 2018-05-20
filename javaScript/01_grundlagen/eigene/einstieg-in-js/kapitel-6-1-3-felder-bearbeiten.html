@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <title>6.1.2 Array-Felder bearbeiten</title>
+</head>
+<body>
+    <h1>6.1.2 Array-Felder bearbeiten</h1>
+    <script>
+        var stadtArray = new Array("Berlin", "Rom", "Bern");
+        document.write("Array: " + stadtArray + "<br>");
+    
+        var nochEinArray = new Array("Brüssel", "Madrid", "London");
+        document.write("Array 2: " + nochEinArray + "<br>");
+        stadtArray = stadtArray.concat(nochEinArray);
+        document.write("concat: " + stadtArray + "<br><br>");
+    
+        stadtArray.sort();
+        document.write("sort: " + stadtArray + "<br>");
+        stadtArray.reverse();
+        document.write("reverse: " + stadtArray + "<br><br>");
+    
+        var einText = stadtArray.join(" # "); // umwandlung in eine Zeichenkette <=> umwandlung zeichenkette in Feld: .split()
+        document.write("join: " + einText + "<br>");
+        document.write("Gesamter Array: " + stadtArray + "<br><br>");
+    
+        var neuerArray = stadtArray.slice(2);
+        document.write("slice, bis Ende: " + neuerArray + "<br><br>");
+        
+        neuerArray = stadtArray.slice(-2);
+        document.write("slice, ab Ende: " + neuerArray + "<br><br>");
+        
+        neuerArray = stadtArray.slice(2, 5);
+        document.write("slice, bis Element: " + neuerArray + "<br><br>");
+    
+        neuerArray = stadtArray.slice(2, -2);
+        document.write("slice, bis Element, ab Ende: " + neuerArray);
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet. 
+        </p>
+    </noscript>
+</body>
+</html>

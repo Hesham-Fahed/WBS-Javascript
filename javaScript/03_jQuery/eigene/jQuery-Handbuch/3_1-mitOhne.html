@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Listing 1</title>
+    <style type="text/css">
+        p {
+            cursor: pointer;
+        }
+
+        .green {
+            color: #009933;
+            background-color: #E2FFEC;
+            cursor: default;
+        }
+
+        .boxColor-0 {
+            background-color: #CCCCCC;
+        }
+
+        .boxColor-1 {
+            background-color: #EEEEEE;
+        }
+
+        .boxColor-2 {
+            background-color: #999999;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        window.jQuery || document.write('<script src="../../../_lib/js/jquery-3.3.1.js><\/script>')
+    </script>
+
+</head>
+
+<body>
+    <div id="box">
+        <p>Erster Absatz</p>
+        <p>Zweiter Absatz</p>
+        <p>Dritter Absatz</p>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $(document).click(function (e) {
+                console.log("x: " + e.clientX + ", y: " + e.clientY);
+            })
+
+            /*
+            $("#box p").click(function () {
+                $("#box p").removeClass("green");
+                $(this)
+                    .addClass("green")
+                    .parent()
+                    .removeClass()
+                // .addClass("boxColor-" + $("#box p").index(this));
+                console.log($("#box p"));
+            })
+            */
+
+            var obj = $("#box p");
+            obj.click(function () {
+                // welcher Index wurde angeklickt?
+                var pos = obj.index(this);
+                // Classen entfernen
+                obj.removeClass("green").parent().removeClass();
+                // klassen hinzufügen
+                $(this).addClass("green")
+                    .parent().addClass("boxColor-" + pos);
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

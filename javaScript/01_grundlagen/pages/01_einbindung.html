@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript in HTML einbinden</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <style>
+        h4 { margin: 0; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript in HTML einbinden</h1>
+    <h2>Leerraum</h2>
+    <h3>Test Test Test</h3>
+    <p><span>Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Nemo illum fugit beatae labore perferendis dicta vero corrupti ad modi ratione ut, temporibus repellendus praesentium nisi.</p>
+
+    <script>
+        document.write('<h4>nich schon wieder</h4>');
+        document.write('doch, schon wieder');
+    </script>
+
+    <p>
+        <script>
+            document.write('<h4>ich krisch die Krise</h4>');
+            document.write('nich schon wieder. ');
+        </script>
+    </p>
+
+    <script>
+        document     // Bezeichner (Name)
+        .            // Operator
+        write        // Bezeichner
+        ('Ich kann auch Multizeilig') // () sind Operatoren
+    </script>
+
+    <script src="../scripts/extern.js">
+     // hat das script tag eins src-Attribut wird der Code zwischen Start und Endtag nicht mehr ausgeführt.
+    </script>
+
+    <ul>
+        <li><a href="javascript:alert('hans muff');">JavaScript ausführen</a></li>
+        <li><a href="#" onclick="alert('Graf Zahl');">JavaScript ausführen</a></li>
+    </ul>
+
+    <div class="boxes">
+        <div class="box" onclick="this.innerHTML++">10</div>
+    </div>
+
+    <script>
+            // ein einzeiliger Kommentar bis zum nächsten Zeilenumrbuch (Enter). Man kann natürlich auch über mehrere Zeilen einfach weiterschreiben solange man nicht die Enter-Taste drückt
+       
+          
+    
+            /*
+            Ein
+            mehrzeiliger
+            Kommentar 
+            geschrieben wie in CSS
+            */
+        
+            // ###########################################################
+            // Thema: Kommentare
+            // Vorsicht sind im Quelltext zu sehen
+            // ###########################################################
+    
+    
+            //////////////////////////////////////////////////////////////
+            // Infobox                                                  //
+            //////////////////////////////////////////////////////////////
+    
+    
+            /*
+            * Kommentare dienen der Übersicht oder Erklärung
+            * von bestimmten Codestellen
+            *
+            */
+    
+    
+        </script>
+</body>
+</html>

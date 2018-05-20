@@ -1,0 +1,108 @@
+[
+  {
+    "Deckname": "Mardu Vehicles",
+    "Karten": [
+      "4 Aether Hub",
+      "3 Aethersphere Harvester",
+      "4 Concealed Courtyard",
+      "4 Fatal Push",
+      "4 Gideon, Ally of Zendikar",
+      "4 Heart of Kiran",
+      "4 Inspiring Vantage",
+      "1 Needle Spires",
+      "3 Plains",
+      "4 Scrapheap Scrounger",
+      "4 Spire of Industry",
+      "3 Swamp",
+      "2 Thalia, Heretic Cathar",
+      "4 Thraben Inspector",
+      "4 Toolcraft Exemplar",
+      "4 Unlicensed Disintegration",
+      "4 Walking Ballista",
+      "1 Anguished Unmaking",
+      "1 Archangel Avacyn",
+      "2 Fumigate"
+    ],
+    "Preis": "405,55$",
+    "Link": "https://www.mtggoldfish.com/archetype/standard-mardu-vehicles-32988#online",
+    "Bild": {
+      "src": "mardu_vehicles.JPG",
+      "alt": "Mardu Vehicles",
+      "title": "Mardu Vehicles Deckliste"
+    }
+  }, {
+    "Deckname": "Black-Green Energy",
+    "Karten": [
+      "4 Aether Hub",
+      "4 Attune with Aether",
+      "4 Blooming Marsh",
+      "3 Blossoming Defense",
+      "4 Fatal Push",
+      "6 Forest",
+      "4 Glint-Sleeve Siphoner",
+      "4 Greenbelt Rampager",
+      "3 Hissing Quagmire",
+      "3 Longtusk Cub",
+      "3 Nissa, Voice of Zendikar",
+      "3 Rishkar, Peema Renegade",
+      "3 Swamp",
+      "4 Verdurous Gearhulk",
+      "4 Walking Ballista",
+      "4 Winding Constrictor",
+      "1 Blossoming Defense",
+      "1 Fleetwheel Cruiser",
+      "2 Grasp of Darkness",
+      "3 Lifecrafter's Bestiary",
+      "1 Natural Obsolescence",
+      "2 Natural State",
+      "2 Tireless Tracker",
+      "3 Transgress the Mind"
+    ],
+    "Preis": "305,08$",
+    "Link": "https://www.mtggoldfish.com/archetype/standard-black-green-energy#online",
+    "Bild": {
+      "src": "black_green_energy.JPG",
+      "alt": "Black-Green Energy",
+      "title": "Black-Green Energy Deckliste"
+    }
+  }, {
+    "Deckname": "Four-Color Saheeli",
+    "Karten": [
+      "4 Aether Hub",
+      "4 Attune with Aether",
+      "4 Botanical Sanctum",
+      "3 Chandra, Torch of Defiance",
+      "4 Felidar Guardian",
+      "5 Forest",
+      "2 Game Trail",
+      "4 Harnessed Lightning",
+      "1 Inspiring Vantage",
+      "1 Island",
+      "1 Mountain",
+      "3 Oath of Chandra",
+      "4 Oath of Nissa",
+      "1 Plains",
+      "4 Rogue Refiner",
+      "4 Saheeli Rai",
+      "4 Servant of the Conduit",
+      "2 Spirebluff Canal",
+      "2 Tireless Tracker",
+      "3 Whirler Virtuoso",
+      "1 Authority of the Consuls",
+      "2 Dispel",
+      "2 Natural State",
+      "2 Negate",
+      "3 Release the Gremlins",
+      "2 Skysovereign, Consul Flagship",
+      "1 Tireless Tracker",
+      "2 Walking Ballista"
+    ],
+    "Preis": "305,08$",
+    "Link": "https://www.mtggoldfish.com/archetype/standard-four-color-saheeli#online",
+    "Bild": {
+      "src": "four_color_saheeli.JPG",
+      "alt": "Four-Color Saheeli",
+      "title": "Four-Color Saheeli Deckliste"
+    }
+  }
+]

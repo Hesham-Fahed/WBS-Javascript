@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<kontakt geschlecht="männlich">
+    <name>Frank Mustermann</name>
+    <ort>Musterhausen</ort>
+    <strasse>Musterstraße</strasse>
+    <postleitzahl>12345</postleitzahl>
+</kontakt>

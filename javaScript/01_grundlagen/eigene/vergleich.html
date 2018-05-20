@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spielwiese</title>
+</head>
+
+<body>
+    <script>
+        //1.1
+        var eingabe, eingabe2, summe, check1 = false,
+            check2 = false;
+
+        while (1) {
+            eingabe = prompt("Bitte Zahl1 eingeben");
+            if (eingabe === null) {
+                break;
+            } else if (eingabe.trim() === "") {
+                alert("Eingabe1 darf nicht leer sein");
+            } else if (isNaN(eingabe)) {
+                alert("Zahl1 muss eine Zahl sein");
+            } else {
+                check1 = true;
+                break;
+            }
+        }
+
+        while (1) {
+            eingabe2 = prompt("Bitte Zahl2 eingeben");
+            if (eingabe2 === null) {
+                break;
+            } else if (eingabe2.trim() === "") {
+                alert("Eingabe2 darf nicht leer sein");
+            } else if (isNaN(eingabe2)) {
+                alert("Zahl2 muss eine Zahl sein");
+            } else {
+                check2 = true;
+                break;
+            }
+        }
+
+
+        if (check1 === true && check2 === true) {
+            einsvierzwei(Number(eingabe), Number(eingabe2));
+        } else {
+            document.write("<p><b>Wir benötigen zwei Zahlen. Seite neuladen</b></p>")
+        }
+
+
+
+
+        function einsvierzwei(zahl, zahl2) {
+            if (zahl === zahl2) {
+                document.write(zahl + " ist geilch " + zahl2 + "<br>");
+            }
+            if (zahl < zahl2) {
+                document.write(zahl + " ist kleiner " + zahl2 + "<br>");
+            }
+            if (zahl > zahl2) {
+                document.write(zahl + " ist grösser " + zahl2 + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

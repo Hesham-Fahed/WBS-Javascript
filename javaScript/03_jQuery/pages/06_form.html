@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <link rel="stylesheet" href="../../_lib/css/form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../../_lib/jquery_validation/dist/jquery.validate.min.js"></script>
+    <script src="../../_lib/jquery_validation/dist/additional-methods.min.js"></script>
+    <script src="../scripts/06_form.js"></script>
+</head>
+
+<body>
+    <h1>Formulare</h1>
+    <form method="get" action="#" id="myFormId" name="myFormName">
+        <fieldset>
+            <legend>Persönliche Angaben</legend>
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" name="vorname">
+
+            <label for="nachname">Nachname</label>
+            <input type="text" id="nachname" name="nachname">
+        </fieldset>
+        <fieldset>
+            <legend>Geschlecht</legend>
+            Weiblich:
+            <input type="radio" id="radio_weiblich" name="geschlecht" value="w"> Männlich:
+            <input type="radio" id="radio_männlich" name="geschlecht" value="m">
+        </fieldset>
+        <fieldset>
+            <legend>Was ist Ihre Lieblingssprache?</legend>
+            <input type="checkbox" data-check="sprache" id="html" name="lieblingssprache" value="HTML"> HTML |
+            <input type="checkbox" data-check="sprache" id="css" name="lieblingssprache" value="CSS"> CSS |
+            <input type="checkbox" data-check="sprache" id="js" name="lieblingssprache" value="JavaScript"> JavaScript
+        </fieldset>
+        <fieldset>
+            <legend>Welche Sprache wollen Sie noch lernen?</legend>
+            <select name="sprache" id="sprache">
+                <option disabled selected>Bitte wählen</option>
+                <option value="php">PHP</option>
+                <option value="phyton">Phyton</option>
+                <option value="dart">Dart</option>
+                <option value="hack">Hack</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>AGBs</legend>
+            AGB akzeptieren
+            <input type="checkbox" id="agb" name="agb">
+        </fieldset>
+        <input type="submit" id="submit_btn" name="submit_btn" value="Absenden">
+        <input type="reset" id="clearForm" value="Alles löschen">
+    </form>
+    <ul id="fehlerliste"></ul>
+    <noscript>
+        <p>When you have eliminated the
+            <b>JavaScript</b>, whatever remains must be an empty page.</p>
+    </noscript>
+</body>
+
+</html>

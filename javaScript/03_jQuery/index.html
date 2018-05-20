@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>03 jQuery</title>
+    <link rel="stylesheet" href="../_lib/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        
+        var a = function(){};
+        console.log(a);
+        
+        console.log("$ //=> ", $);
+        console.log("jQuery //=> ",jQuery);
+        
+        var $ = "Überschreibt den Zeiger der Variable $";
+        console.log('var $ = "Überschreibt den Zeiger der Variable $"; ');
+        
+        console.log("$ //=> ", $);
+        console.log("jQuery //=> ",jQuery);
+
+
+
+        (function (window, document, $) {
+            "use strict";
+            $(function(){
+
+            });                    
+        }(window, document, jQuery));
+
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript jQuery</h1>
+    <h2>Themen</h2>
+    <ul id="themen">
+        <li>
+            <a href="pages/einbindung_factory.html" title="jQuery Einbindung und Factory FN">jQuery Einbindung und Factory FN</a>
+        </li>
+        <li>
+            <a href="pages/02_sammlungen_methoden.html" title="jQuery Sammlungen und Methoden">jQuery Sammlungen und Methoden</a>
+        </li>
+        <li>
+            <a href="pages/03_eventhandling.html" title="jQuery Eventhandling">Eventhandling</a>
+        </li>
+        <li>
+            <a href="pages/04_dom.html" title="jQuery DOM">DOM</a>
+        </li>
+        <li>
+            <a href="pages/05_regex.html" title="RegEx">RegEx</a>
+        </li>
+        <li>
+            <a href="pages/06_form.html" title="Form">Form</a>
+        </li>
+        <li>
+            <a href="pages/07_jAjax.html" title="jAjax">jAjax</a>
+        </li>
+    </ul>
+
+    <h2>Übung</h2>
+    <ul id="uebungen">
+        <li><a href="exercises/uebung_01.html">Übung 1 - xxx</a></li>
+        <li><a href="exercises/uebung_01.html">Übung 1 - xxx</a></li>
+        <li><a href="exercises/uebung_03.html">Übung 3 - xxx</a></li>
+        <li><a href="exercises/uebung_04/index.html">Übung 4 - Speisekarte</a></li>
+        <li><a href="exercises/uebung_04/_demo/index.html">Übung 4 - Demo</a></li>
+        <li><a href="exercises/uebung_05.html">Übung 5 - Listen</a></li>
+        <li><a href="exercises/uebung_06.html">Übung 6 - Validierung</a></li>
+        <li><a href="exercises/onlineformular_freiwillig/formulargruppierung.html">Übung 6 - Validierung T-Shirt-Shop</a></li>
+    </ul>
+</body>
+</html>

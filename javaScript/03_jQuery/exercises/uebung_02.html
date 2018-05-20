@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Consolas, "Liberation Mono", Courier, monospace;
+        }
+
+        #dom,
+        #bilder,
+        #links,
+        #einstieg {
+            border-bottom: 1px solid #10007B;
+            margin: 20px 0;
+        }
+
+        label,
+        input {
+            display: block;
+            margin: 10px 0;
+        }
+
+        #liste li {
+            list-style-type: none;
+        }
+
+        #bilder img {
+            /*width:100%;*/
+        }
+
+        .marked {
+            color: #bf0000;
+        }
+
+        .error {
+            color: red;
+        }
+        /* document.getElementById("einstieg").getElementsByTagName("a"); 
+            */
+        /* #einstieg ul li:nth-child(3) a {
+                color:red;
+            } */
+    </style>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../_lib/js/jquery-3.2.1.min.js"><\/script>');
+    </script>
+    <script src="../../_lib/js/lib.js"></script>
+    <script src="scripts/js/03_eventhandling.js"></script>
+</head>
+
+<body>
+    <noscript>When you have eliminated the JavaScript, whatever remains must be an empty page.</noscript>
+    <div id="einstieg">
+        <h2>1. Eigenschaften und Attribute auslesen</h2>
+        <ul>
+            <li><a id="link-01" href="https://www.google.de">Seite1</a></li>
+            <li><a id="link-02" href="https://www.zeit.de">Seite2</a></li>
+            <li><a id="link-03" href="https://www.freitag.de">Seite3</a></li>
+            <li><a id="link-04" href="https://monde-diplomatique.de/">Seite4</a></li>
+        </ul>
+        <div id="ausgabe">Beispielausgabe:<br> Die id des geklickten links <b>link-01</b>.<br> Die Zahl <b>01</b><br> Der Textknoten: <b>Seite1</b><br>Er wurde durch JavaScript mit der Klasse <b>marked</b> versehen.
+        </div>
+        <!--
+            Aufgabe 1:
+            Beim laden der Seite, soll zuerst der Inhalt des divs#ausgabe gelöscht werden.
+        
+            Wird einer der Hyperlinks geklickt muss dem geklickten Link die Klasse "marked" zugewiesen werden. Es kann/darf immer nur ein link die Klasse marked enthalten.
+        
+            Lesen Sie die Daten die Sie in der Beispielausgabe sehen können aus und schreiben Sie die Information
+            für den aktuell geklickten Link in den div-ausgabe. (Darstellung)
+        
+            Alle Fett markierten Bereiche in der Beispielausgabe sollen beim Klicken auf den Link ausgelesen werden.
+            Die id des geklickten links <b>link-01</b>.<br>
+            Die Zahl <b>01</b><br>
+            Der Textknoten: <b>Seite1</b><br>
+            Er wurde durch JavaScript mit der Klasse <b>marked</b> versehen.
+            -->
+    </div>
+
+    <div id="dom">
+        <h2>2. Geburtstagsliste</h2>
+        <h3>Person eintragen:</h3>
+        <div id="fehler"></div>
+        <form action="#" method="get">
+            <label for="vorname"><b>Vorname</b></label>
+            <input type="text" id="vorname" name="vorname" placeholder="Max">
+            <label for="nachname"><b>Nachname</b></label>
+            <input type="text" id="nachname" name="nachname" placeholder="Mustermann">
+            <label for="geburtstag"><b>Geburtstag</b></label>
+            <input type="text" id="geburtstag" name="geburtstag" placeholder="29.02.1980">
+            <input type="button" id="eintragen" value="Eintrag hinzufügen">
+        </form>
+        <h3>Ausgabe der Geburtstage:</h3>
+        <ul id="liste">
+            <li>Max Mustermann 29.02.1980</li>
+        </ul>
+        <!--
+            Aufgabe 2:
+            Geburtstagsliste
+            Immer wenn das input#eintragen gedrückt wird  sollen die Felder #vorname, #nachname und #geburtstag
+            validiert werden:
+        
+            Sollte ein Feld leer sein schreiben Sie folgende Fehlermeldung in den div#fehler:
+            Vorname ist leer Fehlermeldung: Vorname darf nicht leer sein.
+            Nachname ist leer Fehlermeldung:  Nachname darf nicht leer sein.
+            Geburtstag ist leer  Fehlermeldung:  Geburtstag darf nicht leer sein.
+        
+            Wurden alle Felder ausgefüllt schreiben Sie die eingegebenen Daten als neues Listenelemente in die Liste.
+            (Siehe Beispiel)
+            -->
+    </div>
+    <div id="bilder">
+        <h2>Bildwechsler</h2>
+        <img src="../../_lib/img/nicht_lustig/bild01.jpg" alt="lorempixel bild1" width="225" height="225">
+        <!--
+                      a) Wird die Seite neu geladen soll ein zufälliges Bild aus folgender Liste im Dokument
+                      angezeigt werden. 
+                      bild01.jpg, bild02.jpg ...
+                      b) Binden Sie ein mouseover an das img-Element. Immer wenn das Event
+                      ausgelöst wird
+                      soll das Bild zufällig ausgetauscht werden.
+                   -->
+    </div>
+    <div id="links">
+        <!--
+                        Aufgabe 4:
+                        Unterbinden Sie das Standardverhalten der Hyperlinks.
+                        Anstatt das Bild im Browser zu öffnen sorgen Sie dafür, das
+                        dass Bild im div#bilder ausgetauscht wird.
+                        -->
+        <h2>Hyperlinks Eventhandling</h2>
+        <ul>
+            <li><a id="bild-1" href="../../_lib/img/nicht_lustig/bild01.jpg">Bild1</a></li>
+            <li><a id="bild-2" href="../../_lib/img/nicht_lustig/bild02.jpg">Bild2</a></li>
+            <li><a id="bild-3" href="../../_lib/img/nicht_lustig/bild03.jpg">Bild3</a></li>
+            <li><a id="bild-4" href="../../_lib/img/nicht_lustig/bild04.jpg">Bild4</a></li>
+            <li><a id="bild-5" href="../../_lib/img/nicht_lustig/bild05.jpg">Bild5</a></li>
+            <li><a id="bild-6" href="../../_lib/img/nicht_lustig/bild06.jpg">Bild6</a></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

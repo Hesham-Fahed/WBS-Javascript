@@ -1,0 +1,32 @@
+/* 
+Satellitenzeit 
+Ein Satellit funkt Zeitspannen als „Anzahl Sekunden" zur Erde. Schreiben Sie ein Programm, welches zu einem vom Benutzer eingegebenen Sekundenbetrag die Zeitspanne in der Form d:h:m:s ausgibt. 
+
+Dabei gilt folgendes:
+- d (days): Anzahl der Tage
+- h (hours): Anzahl der Stunden im Bereich [0; 23]
+- m (minutes) Anzahl der Minuten im Bereich [0; 59]
+- s (seconds): Anzahl der Sekunden im Bereich [0; 59]
+
+Ausgabebeispiel:
+Sekunden: 924220, entspricht 10 Tage, 16 Stunden , 43 Minuten und 40 Sekunden
+------------------------------------------------------------------
+Math-Objekt Babyspielzeug 
+Eine Firma stellt Babyspielzeug her und braucht dafür Schaumstoffwürfel von 15 cm Kantenlänge. 
+Vom Großhändler bezieht sie Schaumstoffblöcke mit den Maßen 1m x 2m x 0,5m.
+
+Berechnen Sie mit einem Programm:
+- wie viele Würfel aus einem solchen Block geschnitten werden können
+- wieviel Schaumstoff an jeder Seite abgeschnitten werden muss
+- wie viele Blöcke man braucht, um 1000 Würfel zu erhalten
+
+Ausgabe mit document.write
+------------------------------------------------------------------
+Math-Objekt Runde Teppiche
+Eine Weberei stellt runde Teppiche in der vom Kunden gewünschten Größe her. Der Preis berechnet sich dann aus der Fläche des Teppichs, 1 m² kostet 50,- € bei einem Wollteppich und 60,- € bei einem Seidenteppich.  Um nicht mit ungeraden Beträgen rechnen zu müssen, werden alle Preise zu Gunsten des Kunden auf ganze Euro gerundet.
+Herr Meyer kauft einen Seidenteppich mit 2m Durchmesser, Frau Müller möchte einen Wollteppich mit 1,5m Durchmesser. 
+
+Wie viel kostet das? Schreiben Sie ein Programm, das die benötigten Werte berechnet.
+Ausgabe mit document.write.
+
+*/

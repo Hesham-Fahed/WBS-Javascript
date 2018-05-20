@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="utf-8">
+      <title>Ereignisse im Formular</title>
+      <script src="kapitel-4-2-1-erste-Eventhandler.js"></script>
+</head>
+
+<body>
+      <form name="f" method="post" action="event_form.php" onsubmit="return senden();" onreset="return ruecksetzen();">
+            <p>
+                  <input name="anrede" type="radio" value="Herr" onclick="wechsel(this);" checked="checked"> Herr
+                  <input name="anrede" type="radio" value="Frau" onclick="wechsel(this);"> Frau</p>
+            <p>
+                  <input name="nachname" size="20" onchange="wechsel(this);"> Nachname</p>
+            <p>
+                  <input name="vorname" size="20" onkeyup="aenderung(this);"> Vorname</p>
+            <p>
+                  <input name="reise" type="checkbox" value="Hinflug" onclick="markiert(this);"> nur Hinflug</p>
+            <p>
+                  <select name="land" onchange="wechsel(this);">
+                        <option value="I" selected="selected">Italien</option>
+                        <option value="S">Spanien</option>
+                        <option value="P">Portugal</option>
+                  </select> Land</p>
+            <p>
+                  <textarea name="bemerkung" rows="3" cols="20" onchange="wechsel(this);">Kommentar</textarea> Bemerkung</p>
+            <p>
+                  <input type="submit">
+                  <input type="reset">
+            </p>
+            <p>
+                  <input name="kontrolle" size="50" readonly="readonly"> Kontrolle
+            </p>
+      </form>
+</body>
+
+</html>

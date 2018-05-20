@@ -1,0 +1,88 @@
+
+.speisekarten_container{
+    width: 96%;
+    border: 1px solid gray;
+}
+ 
+.kopfteil{
+    padding: 2%;
+    width: 96%;
+    height: 100px;
+    overflow: hidden;
+    border-fussteil: 1px solid gray;
+}
+ 
+ 
+.linke_spalte{
+    float: left;
+    padding: 4%;
+    width: 41%;
+    height: 1000px;
+    border-right: 1px solid gray;
+   
+}
+ 
+.rechte_spalte{
+    float: right;
+    padding: 4%;
+    width: 41%;
+    height: 1000px;
+    border-left: 1px solid gray;
+}
+ 
+.fussteil{
+    clear:both;
+    padding: 2%;
+    width: 96%;
+    height: 60px;
+    border-top: 1px solid gray;
+}
+
+
+.nav{
+    text-align: right;
+    float: right;
+    list-style: none;
+    padding-left: 15px;
+}
+
+
+.vorspeisen li{
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+
+.zutaten{
+    padding-fussteil: 15px;
+}
+
+.zutaten li{
+    display: inline;
+    list-style-type: none;
+    padding-left: 15px;
+}
+	
+.fleisch{
+    background-color: "#000000";   
+}
+	
+.hamburger{
+    color: "#000000";  
+}
+	
+.fisch{
+    color: "#000000"; 
+}
+   
+.tofu{
+    color: "#00FF00";  
+}
+	
+.portobello{
+    color: "#00FF00"; 
+}
+
+.blatt_symbol{
+    list-style-image:url('../bilder/blatt.png');
+}	

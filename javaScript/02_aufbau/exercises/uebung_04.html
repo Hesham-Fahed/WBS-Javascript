@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 4 - Einkaufsliste - Eventhandler / Elemente einfügen </title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <style>
+        .offen {
+            color: red;
+            text-decoration: none;
+        }
+
+        .erledigt {
+            color: green;
+            text-decoration: line-through;
+        }
+
+        .hover:after {
+            content: " >";
+        }
+
+        .hover:before {
+            /* content: &#9760; */
+            content: "☠";
+            position: absolute;
+            left: -2em;
+            color: lime;
+            font-size: 2em;
+            margin: 0;
+            line-height: 0.8em;
+        }
+
+        .relativ {
+            position: relative;
+        }
+    </style>
+    <script src=""></script>
+</head>
+<body>
+    <h1>Übung 4 - Einkaufsliste - Eventhandler / Elemente einfügen </h1>
+    <h2>Einkaufsliste</h2>
+    <ul id="liste">
+        <li><a class="offen relativ" href="#">Käse</a></li>
+        <li><a class="offen relativ" href="#">Milch</a></li>
+        <li><a class="offen relativ" href="#">Butter</a></li>
+        <li><a class="offen relativ" href="#">Eier</a></li>
+    </ul>
+        <label for="neu">Der Einkaufsliste hinzufügen:</label>
+        <input type="text" id="neu"><br>
+        <input type="submit" id="btn_hinzufuegen" value="Hinzufügen">
+
+    <script src="uebung_04.js"></script>
+    <noscript>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
+    </noscript>
+</body>
+</html>
+
+<!-- 
+1. Wenn der Button im Dokument gedrückt wird soll das Eingabefeld ausgelesen werden. 
+Ist das Eingabefeld leer - Fehlermeldung (alert) bitte etwas eingeben.
+Leer bedeutet auch die Eingabe besteht nur aus Leerzeichen!
+Wurde eine Eingabe von mindestens 2 Zeichen gefunden soll diese als neues Listenelement in die ul#liste geschrieben werden. Jeder neu Listenpunkt hat die Klasse offen.
+
+2. Wird ein Listenpunkt angeklickt soll er als erledigt markiert werden, Klasse offen durch erledigt ersetzen.
+
+3. Lösen Sie diese Aufgabe mit createElement, setAttribute und classList
+
+ -->

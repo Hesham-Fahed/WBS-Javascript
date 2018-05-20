@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../_lib/js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <script src="../scripts/04_dom.js"></script>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <p>Das <i>ist</i> ein Absatz mit <b>Auszeichnung</b></p> 
+    <div id="ausgabe"></div>
+    <hr>
+    <form action="#" method="get">
+        <label for="newEntry">Neuer Eintrag</label><br>
+        <input type="text" id="newEntry" name="newEntry">
+        <input type="submit" id="sendBtn" name="sendBtn" value="Eintragen">
+    </form>
+    <ul id="liste">
+        <li><a href="#">Seite1</a></li>
+        <li><a href="#">Seite2</a></li>
+        <li><a href="#">Seite3</a></li>
+        <li><a href="#">Seite4</a></li>
+    </ul>  
+    <noscript>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
+    </noscript>
+</body>
+</html>

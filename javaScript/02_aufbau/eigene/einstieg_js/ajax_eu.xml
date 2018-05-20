@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<laender>
+   <land>
+      <name>Belgien</name>
+      <flaeche>30528</flaeche>
+      <stadt>Brüssel</stadt>
+   </land>
+   <land>
+      <name>Bulgarien</name>
+      <flaeche>110994</flaeche>
+      <stadt>Sofia</stadt>
+   </land>
+   <land>
+      <name>Dänemark</name>
+      <flaeche>43094</flaeche>
+      <stadt>Kopenhagen</stadt>
+   </land>
+</laender>

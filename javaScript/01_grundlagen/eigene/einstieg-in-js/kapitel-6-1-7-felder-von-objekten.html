@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>6.1.2 Elemente in Feldern finden</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <script>
+        function Fahrzeug(f, g) {
+            this.farbe = f;
+            this.geschwindigkeit = g;
+            this.toString = fahrzeugAusgeben;
+
+            function fahrzeugAusgeben() {
+                return this.farbe + " " + this.geschwindigkeit;
+            }
+        }
+
+        function abwaerts(x, y) {
+            if (y.geschwindigkeit > x.geschwindigkeit) { return 1; }
+            else { return -1; }
+        }
+    </script>
+    </script>
+</head>
+
+<body>
+    <h1>6.1.7 Felder von Objekten</h1>
+
+    <script>
+        var fahrzeugArray = [new Fahrzeug("Rot", 50),
+            new Fahrzeug("Blau", 85), new Fahrzeug("Gelb", 65)
+        ];
+        document.write("unsortiert: " + fahrzeugArray + "<br>");
+
+        fahrzeugArray.sort(abwaerts);
+        document.write("nach Geschwindigkeit sortiert: " + fahrzeugArray);
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet.
+        </p>
+    </noscript>
+</body>
+
+</html>

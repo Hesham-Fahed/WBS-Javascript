@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Louis de Funes Collection</title>
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <script src="../../../_lib/js/lib.js"></script>
+    <script src="09_pruefungsvorb_1.js"></script>
+</head>
+
+<body>
+    <noscript>When you have eliminated the JavaScript, whatever remains must be an empty page.</noscript>
+    <h1>Louis de Funes Collection</h1>
+    <div id="con1">
+        <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Die_Abenteuer_des_Rabbi_Jacob">Die Abenteuer des Rabbi Jacob</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Balduin,_das_Nachtgespenst">Balduin, das Nachtgespenst</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Balduin,_der_Ferienschreck">Balduin, der Ferienschreck</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Louis_de_Fun%C3%A8s">Alle ausgeben</a></li>
+        </ul>
+        <div id="ausgabe_con1"></div>
+    </div>
+    <hr>
+    <div id="con2">
+        <form action="#" method="get">
+            <label for="eingabe">Eingabe</label>
+            <input type="text" name="eingabe" id="eingabe">
+        </form>
+        <div id="ausgabe_con2"></div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+Liste click-Event:
+Information aus JSON-Datei für den gewünschten Film ausgeben.
+Bei Alle ausgeben werden alle Filme angezeigt.
+
+
+Eingabefeld keyup:
+Value des Eingabefeldes lesen und in der JSON-Datei nach übereinstimmung suchen.
+Suche nur in den Titeln
+
+Eingabe: Bal
+
+Vorschläge:
+Balduin, das Nachtgespenst
+Balduin, der Ferienschreck
+
+Eingabe: der
+Balduin, der Ferienschreck
+ -->

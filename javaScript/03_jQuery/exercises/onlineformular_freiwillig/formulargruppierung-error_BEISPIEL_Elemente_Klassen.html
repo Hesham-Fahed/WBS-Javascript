@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T-Shirt Shop - Registrierungsformular</title>
+    <link rel="stylesheet" href="css/formulargruppierung.css" type="text/css" media="all" />
+    <!--[if IE 6 ]>
+<link rel="stylesheet" href="css/formulargruppierung-ie.css" type="text/css" media="all" />
+<![endif]-->
+    <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="main">
+        <div class="wrapper clearfix">
+            <div id="intro">
+                <h1>T-Shirt-Shop</h1>
+            </div>
+
+            <div id="sidebar">
+                <h2>Ihr Warenkorb</h2>
+                <ul>
+                    <li><a href="#" title="T-Shirt mit Engel-Motiv, Gr&ouml;&szlig;e 110">T-Shirt Gr&ouml;&szlig;e 110</a>Engel-Motiv - 14.99&euro;</li>
+                    <li><a href="#" title="T-Shirt mit Feen-Motiv, Gr&ouml;&szlig;e 110">T-Shirt Gr&ouml;&szlig;e 110</a>Feen-Motiv - 12.99&euro;</li>
+                    <li id="amount">27.98&euro;</li>
+                </ul>
+                <h2>Ihre Bestellung</h2>
+                <ol>
+                    <li><a href="#" title="Warenkorb">Warenkorb</a></li>
+                    <li>Kundendaten</li>
+                    <li>Zahlung</li>
+                    <li>Bestellen</li>
+                </ol>
+                <h2>Fehleranzeige</h2>
+                <ul>
+                    <li><a href="formulargruppierung.html" title="Darstellung des Formulars ohne Fehlermeldung">Darstellung</a> des Formulars im Ausgangszustand</li>
+                </ul>
+            </div>
+            <div class="clearfix">
+                <form action="#" method="post">
+                    <fieldset class="personalData error">
+                        <legend><span>01</span>Anschrift</legend>
+                        <div class="formBox">
+                            <div class="errorMsg">
+                                <span>Bitte geben Sie einen Nachnamen ein.</span>
+                            </div>
+                            <div id="description">Mit <em title="Pflichtfeld">*</em> gekennzeichnete Formularfelder sind Pflichtfelder und m&uuml;ssen ausgef&uuml;llt werden.</div>
+                            <div>
+                                <label for="firstname">Vorname:</label>
+                                <input name="firstname" id="firstname" type="text" />
+                            </div>
+                            <div class="error">
+                                <label for="lastname">Nachname: <em title="Pflichtfeld">*</em></label>
+                                <input name="lastname" id="lastname" type="text" aria-required="true" class="error" />
+                            </div>
+                            <div>
+                                <label for="street">Stra&szlig;e / Nr.: <em title="Pflichtfeld">*</em></label>
+                                <input class="medium inputSpace" name="street" id="street" type="text" aria-required="true" />
+                                <input class="small" name="number" id="number" type="text" aria-required="true" />
+                            </div>
+                            <div>
+                                <label for="zipCode">PLZ / Stadt: <em title="Pflichtfeld">*</em></label>
+                                <input class="small inputSpace" name="zipCode" id="zipCode" type="text" aria-required="true" />
+                                <input class="medium" name="city" id="city" type="text" aria-required="true" />
+                            </div>
+                            <div>
+                                <label for="mobileCountryCode">Telefon:</label>
+                                <input class="small inputSpace" name="countryCode" id="mobileCountryCode" type="text" />
+                                <input class="small inputSpace" name="cityCode" id="cityCode" type="text" />
+                                <input class="number" name="telNumber" id="telNumber" type="text" />
+                            </div>
+                            <div>
+                                <label for="email">E-Mail: <em title="Pflichtfeld">*</em></label>
+                                <input name="email" id="email" type="text" aria-required="true" />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend><span>02</span>Bankdaten</legend>
+                        <div class="formBox">
+                            <div>
+                                <label for="creditCard">Kreditinstitut: <em title="Pflichtfeld">*</em></label>
+                                <select id="creditCard" name="creditCard" aria-required="true">
+                                    <option value="VISA">Visa</option>
+                                    <option value="MASTER">Eurocard/Master</option>
+                                    <option value="AMEX">American Express</option>
+                                    <option value="DINERS">Diners Club</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="creditCardNumber">Kartennummer: <em title="Pflichtfeld">*</em></label>
+                                <input id="creditCardNumber" name="creditCardNumber" type="text" aria-required="true" />
+                            </div>
+                            <div>
+                                <label for="creditCardHolder">Karteninhaber: <em title="Pflichtfeld">*</em></label>
+                                <input name="creditCardHolder" id="creditCardHolder" type="text" aria-required="true" />
+                            </div>
+                            <div>
+                                <label for="creditCardValidityDate">G&uuml;ltig bis: <em title="Pflichtfeld">*</em></label>
+                                <select id="creditCardValidityDate" name="creditCardValidityDate" aria-required="true">
+                                    <option value=""> ---- bitte w&auml;hlen ---- </option>
+                                    <option value="02/11">02/11</option>
+                                    <option value="03/11">03/11</option>
+                                    <option value="04/11">04/11</option>
+                                    <option value="05/11">05/11</option>
+                                    <option value="06/11">06/11</option>
+                                    <option value="07/11">07/11</option>
+                                    <option value="08/11">08/11</option>
+                                    <option value="09/11">09/11</option>
+                                    <option value="10/11">10/11</option>
+                                    <option value="11/11">11/11</option>
+                                    <option value="12/11">12/11</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend><span>03</span>AGB</legend>
+                        <div class="formBox">
+                            <div class="check">
+                                <label for="businessConditions">
+                                    <em title="Pflichtfeld">*</em> Mit der Buchung akzeptiere ich die Allgemeinen Gesch&auml;ftsbedingungen ......
+                                    <input type="checkbox" id="businessConditions" name="businessConditions" checked="checked" aria-required="true" /> </label>
+                            </div>
+                            <div class="buttons">
+                                <input class="btnCancel" type="reset" name="cancel" value="Abbrechen" />
+                                <input class="btnSend" type="submit" name="absenden" value="Bestellen" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="footer">
+                <ul>
+                    <li><a href="#">Hilfe</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

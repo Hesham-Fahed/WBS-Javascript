@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>6.1.2 Elemente in Feldern finden</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <script>
+        function elementGroesser20(element, nr, feld) {
+            document.write("Geprüft: Element " + nr +
+                ", Wert " + element + ", in Feld " + feld + "<br>");
+            if (element > 20) { return element };
+        }
+
+        function elementGroesserZahl(element, nr, feld) {
+            if (element > this) { return element };
+        }
+
+        function indexGroesserZahl(element, nr, feld) {
+            if (element > this) { return nr };
+        }
+    </script>
+</head>
+
+<body>
+    <h1>6.1.2 Elemente in Feldern finden</h1>
+
+    <script>
+        var zahlArray = new Array(3, 14, 2, 28, 6, 12);
+
+        document.write("Element > 20: " +
+            zahlArray.find(elementGroesser20) + "<br><br>");
+
+        document.write("Element > Zahl: " +
+            zahlArray.find(elementGroesserZahl, 10) + "<br>"); // .find und .findindex überliefern 3 Werte: 1. Das (der Inhalt des) Element selbst, 2. den Index des Elements, 3. Das ganze Feld
+
+        document.write("Index für Element > Zahl: " +
+            zahlArray.findIndex(indexGroesserZahl, 10) + "<br>");
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet.
+        </p>
+    </noscript>
+</body>
+
+</html>

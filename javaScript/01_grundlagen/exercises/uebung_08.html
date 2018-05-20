@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 8</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+</head>
+
+<body>
+
+    <h1>Übung 8</h1>
+    <ul id="liste">
+        <li>Käse</li>
+        <li>Milch</li>
+        <li>Butter</li>
+        <li>Eier</li>
+    </ul>
+    
+    <div id="fehler"></div>
+
+    <form method="get" action="#">
+        <label for="neu">Der Einkaufsliste hinzufügen:</label>
+        <input type="text" id="neu"> <!-- Inhalt wird zu Liste hinzugefügt -->
+        <br>
+        <input type="submit" id="hinzufuegen" value="Hinzufügen">
+    </form>
+
+    <script src="uebung_08_2.js"></script>
+    <noscript>
+        <p>When you have eliminated the
+            <b>JavaScript</b>, whatever remains must be an empty page.</p>
+    </noscript>
+</body>
+
+</html>
+
+<!-- 
+Einkaufsliste
+Schreiben Sie eine Einkaufslistenanwendung:
+HTML-Dokument soll eine ungeordnete Liste #liste beeinhalten, ein
+eingabefeld #neu und einen button #hinzufuegen.
+
+HTML-Code: 
+<div id="fehler"></div>
+<ul id="liste">
+    <li>Käse</li>
+    <li>Milch</li>
+    <li>Butter</li>
+    <li>Eier</li>
+</ul>
+<form method="get" action="#">
+<label for="neu">Der Einkaufsliste hinzufügen:</label>
+<input type="text" id="neu"><br>
+<button id="hinzufuegen" onclick="">Hinzufügen</button>
+</form>
+
+Wenn der Button im Dokument gedrückt wird soll das Eingabefeld ausgelesen werden. 
+Ist das Eingabefeld leer - Fehlermeldung im div#ausgabe "Bitte etwas eingeben."
+Leer bedeutet auch die Eingabe besteht nur aus Leerzeichen!
+
+Nutzen Sie Element.style um dem input#neu einen rote Border von 2px zu geben.
+Wurde etwas in das input#neu eingetragen soll diese Eingabe als neues Listenelement in die ul#liste geschrieben als neuer letzter Listenpunkt hinter Eier hinzugefügt werden. Alle weiteren Einträge werden immer hinter dem aktuell letzten Listenpunk eingefügt. 
+
+Denken Sie daran die rote Border von 2px am input#neu zu entfernen und den div#fehler zu löschen wenn die Eingabe korrekt ist.
+
+
+ -->

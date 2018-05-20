@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spielwiese</title>
+    <script></script>
+</head>
+
+<body>
+    <script>
+        var objekt = {
+            vorname : "Max",
+            nachname : "Mustermann"
+        };
+        console.log(objekt);
+        
+        var s = JSON.stringify(objekt);
+        console.log(s);
+        //String kann einfach über http-Protokoll übertragen werden
+        var o = JSON.parse(s);
+        console.log(o);
+
+        eval("alert('Böse')");
+        
+        for(var i = 0; i < 5; i++) {
+            eval("var variable"+i+"='foobar'");
+        }
+        console.log(variable1);
+        console.log(variable2);
+        console.log(variable3);
+        console.log(variable4);
+
+        console.log(eval("(" + s + ")"));
+ 
+    </script>
+</body>
+
+</html>

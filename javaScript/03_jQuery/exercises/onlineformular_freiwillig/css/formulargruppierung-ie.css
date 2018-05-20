@@ -1,0 +1,73 @@
+form {
+	float:right;
+	padding:0;
+	width:650px;
+	margin:0 25px 0 0;
+}
+#sidebar {
+	float:left;
+	padding:0;
+	width:175px;
+	margin:0 0 0 25px;
+}
+#main fieldset.personalData,
+#main fieldset.error { 
+	border:0;
+} 
+fieldset legend {
+	margin:-5px -14px 25px -7px;
+}
+fieldset legend span {
+	margin:12px 10px 0px 10px;
+	height:20px;
+	width:20px;
+}
+#main .formBox input,
+#main .formBox select {
+	border:1px solid #1795be;
+}
+#main .formBox input,
+#main .formBox input.error {
+	width:251px;	
+}
+#main .formBox select {
+	width:254px;	
+}
+#main .formBox input.small {
+	width:70px;
+}
+#main .formBox input.number {
+	width:89px;
+}
+#main .formBox input.medium {
+	width:170px;
+}
+#main .formBox .inputSpace {
+	margin:0 3px 0 0;
+}
+#main .formBox input.btnCancel, 
+#main .formBox input.btnSend {
+	width:100px;
+}
+#main .formBox input.btnSend  {
+	border:1px solid #FFF;  	  	
+}
+#main .formBox .check {
+	margin:0 0 .5% 1%;
+	padding:1.5%;
+	width:90%;
+	background-image: none;
+}
+#main .formBox .check label{
+	width:90%;
+	padding:0 0 0 48px;
+	line-height:125%;
+}
+#main .check label input {
+	left:25px;
+	top:4px;	
+	border:none;	
+	position:absolute;
+	width:13px;
+	height:13px;	
+}

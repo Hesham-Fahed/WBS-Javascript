@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <title>Ratespiel</title>
+</head>
+<body>
+    <h1>Ratespiel</h1>
+    <script>
+        var personArray = ["Peter", "Monika", "Hans"];
+        
+        document.write("array-direkt: " + personArray + "<br>");
+        document.write("for-Schleife: ");
+        
+        for(var i=0; i<personArray.length; i++){
+            document.write(i + ":" + personArray[i] + " ");
+        }
+
+        document.write("<br>");
+        document.write("for-of-Schleife: ");
+        
+        for(var x of personArray){
+            document.write(x + " ");
+        }
+        document.write("<br>");
+
+        var auchPersonArray = personArray;
+        document.write("Zweiter Verweis, toString(): "
+        + auchPersonArray + "<br><br>");
+
+        var zahlArray = new Array(7);
+        document.write("Zu Beginn: " + zahlArray + "<br>");
+        
+        zahlArray.fill(42, 3, 5);
+        document.write("Einige Elemente: " + zahlArray + "<br>");
+        document.write("Element 0: " + zahlArray[0] + "<br>");
+        document.write("Element 7: " + zahlArray[7] + "<br>");
+        
+        zahlArray.fill(42, 3);
+        document.write("Bis zum Ende: " + zahlArray + "<br>");
+        
+        zahlArray.fill(42);
+        document.write("Alle Elemente: " + zahlArray + "<br><br>");
+
+        var tabArray = [[22.3, 18.5],[21.6, 19.7], [24.6, 20.1]];
+        document.write("Mehrdimensionaler Array:<br>");
+        document.write("Ausgabe mit Schleife:<br>");
+        
+        for(var i = 0; i < tabArray.length; i++) {
+            for(var k = 0; k < tabArray[i].length; k++) {
+            document.write(i + "/" + k + ":" + tabArray[i][k] + " ");
+            document.write("<br>");}
+        }
+        document.write("Ausgabe gesamt:<br>" + tabArray);
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet. 
+        </p>
+    </noscript>
+</body>
+</html>

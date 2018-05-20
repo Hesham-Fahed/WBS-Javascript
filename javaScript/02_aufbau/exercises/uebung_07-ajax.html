@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 07 - Ajax Anfragen JSON</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <script src="../../_lib/js/lib.js"></script>
+    <script src="uebung_07-ajax.js"></script>
+    <!-- <script src="uebung_07-ajax.js"></script> -->
+</head>
+
+<body>
+    <h1>Übung 07 - Ajax Anfragen JSON</h1>
+    <div id="u1">
+        <h2>Fahrzeug</h2>
+        <ul>
+            <li>
+                <a href="aufgabe1.json">Daten anfordern</a>
+            </li>
+        </ul>
+        <div id="a1"></div>
+    </div>
+    <!-- Wird der Hyperlink in #u1 geklickt soll die Datei aufgabe1.json angefordert werden.
+    Geben Sie die Daten als Liste im div#a1 aus.
+    <ul>
+        <li> Name : Dacia Sandero</li>
+        ...
+    </ul>
+    -->
+    <div id="u2">
+        <h2>Hyperlinks</h2>
+        <ul>
+            <li>
+                <a href="aufgabe2.json">Daten anfordern</a>
+            </li>
+        </ul>
+        <div id="a2"></div>
+    </div>
+    <!-- Wird der Hyperlink in #u2 geklickt soll die Datei aufgabe2.json angefordert werden.
+    Geben Sie die Daten als Liste im div#a2 aus.
+    <ul>
+        <li><a href="http://www.mozilla.com/">Mozilla</a></li>
+        ...
+    </ul>
+    -->
+
+    <div id="u3">
+        <h2>Personendaten</h2>
+        <ul>
+            <li>
+                <a id="p1" href="#">jpenddreth0@census.gov</a>
+            </li>
+            <li>
+                <a id="p2" href="#">gfrediani1@senate.gov</a>
+            </li>
+            <li>
+                <a id="p3" href="#">nbea2@imageshack.us</a>
+            </li>
+            <li>
+                <a id="p4" href="#">wvalek3@vk.com</a>
+            </li>
+            <li>
+                <a id="all" href="#">Alle</a>
+            </li>
+        </ul>
+        <div id="a3" style="border:1px solid red;"></div>
+    </div>
+    <!-- 
+        Immer wenn ein Hyperlink angeklickt wird starten Sie eine Ajax-Anfrage auf die 
+        Datei aufgabe3.json. Geben Sie nur die Information zum zugehörigen Link aus.
+
+
+        Beispiel Geklickt wird: <a id="p1" href="#">jpenddreth0@census.gov</a>
+
+        <div id="a3">
+            <ul>
+                <li>ID: 1<li>
+                <li>Vorname: Jeanette</li>
+                <li>Nachname: Penddreth</li>
+                <li>E-Mail: jpenddreth0@census.gov</li>
+                <li>Geschlecht: Female</li>
+                <li>IP-Adresse: 26.58.193.2</li>
+            </ul>
+        </div>
+
+        //Zwei getrennte Funktion.
+        1. Lösen Sie die Aufgabe mit dem Attribut id des geklickten Links.
+        2. Lösen Sie die Aufgabe mit dem innerHTML des geklickten Links.
+
+        -->
+
+
+    <noscript>
+        <p>When you have eliminated the
+            <b>JavaScript</b>, whatever remains must be an empty page.</p>
+    </noscript>
+</body>
+
+</html>

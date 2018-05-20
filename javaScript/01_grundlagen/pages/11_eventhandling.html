@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventhandling</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+</head>
+<body>
+    <h1>Eventhandling</h1>
+    <!-- div#container>button*3[type=button]{Klick mich $}  -->
+
+    <h3>S.103 Klassische Ereignisbehandlung</h3>
+    <div id="container1">
+        <!-- Hier ist der Kontext von this das Element das, das Event ausgelöst hat -->
+        <button type="button" onclick="showEventInfo(this);">Klick Event</button>
+        <button type="button" onmouseover="showEventInfo(this);">Mouseover Event</button>
+        <button type="button" onmousemove="showEventInfo(this);">Mousemove Event</button>
+    </div>
+
+    <h3>S.103 Ereignisse als Eigenschaften</h3>
+    <div id="container2">
+        <!-- Hier ist der Kontext von this das Element das, das Event ausgelöst hat -->
+        <button type="button">Klick Event</button>
+        <button type="button">Mouseover Event</button>
+        <button type="button">Mousemove Event</button>
+    </div>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, accusantium!</p>
+    <script src="../scripts/11_eventhandling.js"></script>
+    <noscript>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
+    </noscript>
+</body>
+</html>

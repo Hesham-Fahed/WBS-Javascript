@@ -1,0 +1,10 @@
+/* 
+Kommentieren Sie den Demo-Code aus.
+
+Versehen Sie die button in der #switcher mit einem onclick Handler.
+Wenn einer der Knöpfe gedrückt wird sollen die zugehörigen Informationen aus 
+dem Objekt data in div#info ausgegeben werden. 
+Der aktuell geklickte Button soll mit der Klasse (className) activBtn versehen werden.
+
+Versehen Sie die Bilder in div#vorschau mit einem onmouseover Handler. Das Bild über dem sich die Maus gerade befindet oder als letztes befand soll im div#mainimg img angezeigt werden. Austausch src-Attribut-Wert.
+*/

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ereignis als Eigenschaft</title>
+   <script>
+      function geladen()
+      {
+         alert("Dokument wurde geladen");
+      }
+
+      function senden()
+      {
+         return confirm("Wollen Sie das Formular wirklich absenden?");
+      }
+
+      function geklickt(id)
+      {
+         alert("Element geklickt mit ID: " + id);
+         document.getElementById(id).onclick = null;
+      }
+
+      function wechsel(id)
+      {
+         alert("Element geändert mit ID: " + id
+            + "\nName: " + document.getElementById(id).name
+            + "\nWert: " + document.getElementById(id).value);
+      }
+
+      function taste(id)
+      {
+         alert("Taste heruntergedrückt in Element mit ID: " + id);
+      }
+
+      function maus(id)
+      {
+         alert("Maus hineinbewegt in Element mit ID: " + id
+            + "\nBilddatei: " + document.getElementById(id).src);
+      }
+   </script>
+</head>
+<body>
+   <form id="idForm" method="post" action="event_eigenschaft.php">
+      <p><input id="idButton" type="button" value="Schaltfläche"></p>
+      <p><input id="idNachname" name="nachname" size="20"> Nachname</p>
+      <p><input id="idStadt" name="stadt" size="20"> Stadt</p>
+      <p><input type="submit"><input type="reset"></p>
+   </form>
+   <p><a id="idLink" href="#">Hier steht ein Hyperlink</a></p>
+   <p><img id="idBild" src="im_paradies.jpg" alt="Paradies"></p>
+
+   <script>
+      document.body.onload = geladen;
+      document.getElementById("idForm").onsubmit =
+         function() { return senden(); };
+      document.getElementById("idButton").onclick =
+         function() { geklickt("idButton"); };
+      document.getElementById("idNachname").onchange =
+         function() { wechsel("idNachname"); };
+      document.getElementById("idStadt").onkeydown =
+         function() { taste("idStadt"); };
+      document.getElementById("idLink").onclick =
+         function() { geklickt("idLink"); };
+      document.getElementById("idBild").onmouseover =
+         function() { maus("idBild"); };
+   </script>
+</body>
+</html>

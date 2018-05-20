@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <title>6.1.2 Array-Elemente verändern</title>
+</head>
+<body>
+    <h1>6.1.2</h1>
+    <script>
+        var stadtArray = new Array("Berlin", "Rom");
+        document.write("Array: " + stadtArray + "<br><br>");
+        stadtArray.push("Bern", "Brüssel"); // hinzufügen am Ende des Feldes
+        document.write("push: " + stadtArray + "<br>");
+        
+        var stadt = stadtArray.pop(); // entfernen am Ende
+        document.write("pop: " + stadtArray + "<br>");
+        document.write("Entfernt: " + stadt + "<br><br>");
+        
+        stadtArray.unshift("Madrid", "London"); // hinzufügen am Anfang
+        document.write("unshift: " + stadtArray + "<br>");
+        
+        stadt = stadtArray.shift();
+        document.write("shift: " + stadtArray + "<br>"); // löschen am Anfang
+        document.write("Entfernt: " + stadt + "<br><br>");
+        
+        stadtArray.splice(2, 0, "Prag", "Sofia"); 
+        document.write("splice zum Hinzufügen: " + stadtArray + "<br>");
+        
+        stadtArray.splice(1, 2);
+        document.write("splice zum Löschen: " + stadtArray + "<br><br>");
+        
+        delete stadtArray[1];
+        document.write("delete: " + stadtArray);
+    </script>
+    <noscript>
+        <p>
+            Pech gehabt. Hast JS ausgeschaltet. 
+        </p>
+    </noscript>
+</body>
+</html>

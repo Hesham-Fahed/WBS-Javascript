@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ajax, Parameter senden</title>
+   <script>
+      function anfordern(personalnummer, umfang)
+      {
+         var req = new XMLHttpRequest();
+         req.open("get", "ajax_parameter.php?pnr=" + personalnummer
+            + "&umfang=" + umfang, true);
+         req.setRequestHeader("Content-Type",
+            "application/x-www-form-urlencoded");
+         req.onreadystatechange = auswerten;
+         req.send();
+      }
+
+      function auswerten(e)
+      {
+         if(e.target.readyState == 4 && e.target.status == 200)
+            document.getElementById("idAbsatz").firstChild.nodeValue =
+               e.target.responseText;
+      }
+   </script>
+</head>
+
+<body>
+   <p>Personalnummer:</p>
+   <p><a id="idLink0" href="#">6714</a><br>
+   <a id="idLink1" href="#">81343</a><br>
+   <p id="idAbsatz">&nbsp;</p>
+   <script src="js/eh.js"></script>
+   <script>
+      meinHandler("idLink0", "click",
+         function() { anfordern(6714, "alle"); });
+      meinHandler("idLink1", "click",
+         function() { anfordern(81343, "teil"); });
+   </script>
+   <!-- https://www.mediaevent.de/javascript/ajax-2-xmlhttprequest.html
+   https://de.wikipedia.org/wiki/Extensible_Markup_Language
+   https://www.json.org/json-de.html -->
+</body>
+</html>

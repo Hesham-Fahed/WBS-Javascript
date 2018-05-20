@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="f" action="#">
+        <p>Land:
+            <select id="idLand" name="land">
+                <option id="idItalien" value="Italy">Italien</option>
+                <option id="idSpanien" value="Spain" selected="selected">Spanien</option>
+                <option id="idRumaenien" value="Romania">Rumänien</option>
+            </select>
+        </p>
+    </form>
+    <p>
+        <script>
+            var tx = document.forms[0].elements[0].value + " "
+                + document.forms["f"].elements["land"].value + " "
+                + document.f.land.value + " "
+                + document.getElementsByTagName("form")[0].elements[0].value
+                + " " + document.getElementsByTagName("select")[0].value
+                + " " + document.getElementById("idLand").value + "<br>";
+            tx += document.forms[0].elements[0].options[1].value + " "
+                + document.getElementsByTagName("option")[1].value + " "
+                + document.getElementById("idSpanien").value;
+            document.write(tx);
+
+            ///////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////
+
+            function pruefen(idFeld) {
+                var idMeldung = idFeld + "Meldung";
+                var fehler = false;
+                if (document.getElementById(idFeld).value == "") {
+                    document.getElementById(idMeldung).firstChild.nodeValue =
+                        "(Bitte etwas eintragen)";
+                    fehler = true;
+                }
+                else {
+                   document.getElementById(idMeldung).firstChild.nodeValue = "";
+                }
+                return fehler;
+            }
+
+                function senden(e) {
+                    var pn = pruefen("idNachname");
+                    var pv = pruefen("idVorname");
+                    if (pn || pv) {
+                        if (e.preventDefault) { e.preventDefault(); } 
+                        else { window.event.returnValue = false; }
+                        return false;
+                    }
+                    else
+                        return true;
+                }
+                function aendern() {
+                    document.getElementById("idNachname").value = "Wagner";
+                    document.getElementById("idVorname").value = "Peter";
+                    document.getElementById("idBem").value = "Zeile 1\nZeile 2";
+                }
+
+        </script>
+    </p>
+
+    <form id="idForm" method="post" action="form_text.php">
+        <p>
+            <input id="idNachname" size="30" name="nn" value="Wagner"> Nachname (*)
+            <span id="idNachnameMeldung">&nbsp;</span>
+        </p>
+        <p>
+            <input id="idVorname" size="30" name="vn"> Vorname (*)
+            <span id="idVornameMeldung">&nbsp;</span>
+        </p>
+        <p>
+            <textarea rows="3" cols="25" id="idBem" name="bem">Hier steht etwas</textarea> Bemerkung</p>
+        <p>
+            <input id="idPasswort" size="30" name="pw" type="password"> Passwort</p>
+        <p>
+            <input id="idAendern" type="button" value="Formular ändern">
+        </p>
+        <p>
+            <input type="submit">
+            <input type="reset">
+        </p>
+        <p>(*) = Pflichtfeld</p>
+    </form>
+    <script src="js/eh.js"></script>
+    <script>
+            meinHandler("idForm", "submit", function (e) { return senden(e); });
+            meinHandler("idAendern", "click", aendern);
+    </script>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

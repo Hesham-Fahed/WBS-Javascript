@@ -1,0 +1,58 @@
+@charset "UTF-8";
+body {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+html {
+    background: url(../img/magic/landing_page/bild1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+    width:800px;
+    margin:0 auto;
+    padding: 80px;
+    overflow:hidden;
+}
+
+#karten li {
+    list-style-type: none;
+}
+
+#left {
+    float:left;
+}
+
+#right {
+    float:right;
+    margin-right:100px;
+}
+
+#auswahl li {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+#auswahl li a {
+    text-decoration: underline;
+    color: #000;
+    font-size:20px;
+
+}
+#auswahl li a:hover {
+    background-color: #009926;
+    color: #fff;
+}
+
+#auswahl li img {
+    display: block;
+}
+
+.active {
+    background-color: #009926;
+    color: #fff;
+}

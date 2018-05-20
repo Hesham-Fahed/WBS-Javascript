@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 6 - Formular</title>
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <link rel="stylesheet" href="../../../_lib/css/form.css">
+    <script src="../../../_lib/js/lib.js"></script>
+    <script src="06_formular.js"></script>
+</head>
+<body>
+    <h1>Übung 6 - Formular</h1>
+    <h2>WM-Ticketservice</h2>
+    <form action="../../_lib/php/get_post.php" method="get">
+        <div class="errorMsg">
+            <span>Bitte geben Sie einen Geschlecht ein.</span>
+        </div>
+        <fieldset>
+            <legend>Persönliche Informationen</legend>
+            <div id="anrede"><em title="Pflichtfeld">*</em>
+                <label for="geschlechtW">
+                    <input type="radio" id="geschlechtW" name="geschlecht"> Weiblich </label>
+                <label for="geschlechtM">
+                    <input type="radio" id="geschlechtM" name="geschlecht"> Männlich </label>
+            </div>
+            <label for="vorname">Vorname <em title="Pflichtfeld">*</em></label>
+            <input type="text" id="vorname" name="vorname">
+            <label for="nachname">Nachname <em title="Pflichtfeld">*</em></label>
+            <input type="text" id="nachname" name="nachname">
+            <label for="e-mail">e-mail <em title="Pflichtfeld">*</em></label>
+            <input type="text" id="e-mail" name="e-mail">
+        </fieldset>
+        <fieldset>
+            <legend>Bestellung</legend>
+            <label for="sektion">Gewünschte Sektion im Stadion <em title="Pflichtfeld">*</em></label>
+            <div class="hideoverflow">
+                <select name="sektion" id="sektion" size="5">
+                    <option value="select" disabled>---Bitte wählen---</option>
+                    <option value="nord">Nordkurve</option>
+                    <option value="sued">Südkurve</option>
+                    <option value="haupt">Haupttribüne</option>
+                    <option value="gegen">Gegentribüne</option>
+                </select>
+            </div>
+            <label for="promocode">Promocode</label>
+            <input type="text" id="promocode" name="promocode">
+        </fieldset>
+        <fieldset>
+            <legend>AGB</legend>
+            <label for="agb"><em title="Pflichtfeld">*</em>AGB akzeptieren
+                <input type="checkbox" name="agb" id="agb">
+            </label>
+        </fieldset>
+        <input type="submit" id="sendBtn" value="Bestellen">
+    </form>
+    <div id="fehler"></div>
+    <noscript>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
+    </noscript>
+</body>
+</html>

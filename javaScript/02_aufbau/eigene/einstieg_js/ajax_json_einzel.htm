@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ajax, einzelnes JSON-Objekt</title>
+   <script>
+      function anfordern()
+      {
+         req = new XMLHttpRequest();
+         req.open("get", "ajax_json_einzel.txt", true);
+         req.onreadystatechange = auswerten;
+         req.send();
+      }
+
+      function auswerten(e)
+      {
+         if(e.target.readyState == 4 && e.target.status == 200)
+         {
+            var antwort;
+            if(window.JSON)
+               antwort = JSON.parse(e.target.responseText);
+            else
+               antwort = eval("(" + e.target.responseText + ")");
+            document.getElementById("idAusgabe").firstChild.nodeValue =
+               "Farbe: " + antwort.farbe + ", Geschwindigkeit: "
+                  + antwort.geschwindigkeit;
+         }
+      }
+   </script>
+</head>
+<body>
+   <p>Fahrzeugdaten:</p>
+   <p><a id="idLink" href="#">Dacia</a></p>
+   <p id="idAusgabe">&nbsp;</p>
+   <script src="eh.js"></script>
+   <script>
+      meinHandler("idLink", "click", anfordern);
+   </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+(function(window,document){
+    "use strict";
+    window.addEventListener("load",function(){
+        var data = [{
+            "Name": "TRADIOMANO GOVERNO ALL 'USO TOSCANO",
+            "Jahrgang": "2015",
+            "Weinstil": "samtig & üppig",
+            "Anbauregion": "Toskana",
+            "Alkoholgehalt": "13.5 % Vol.",
+            "Bild": "tradiomano-governo-all-uso-toscano.png"
+        },
+        {
+            "Name": "ZOLLA PRIMITIVO - MERLOT",
+            "Jahrgang": "2016",
+            "Weinstil": "fruchtig & weich",
+            "Anbauregion": "Apulien",
+            "Alkoholgehalt": "13.5 % Vol.",
+            "Bild": "zolla-primitivo-merlot.png"
+        }];
+
+        var s = "";
+        var wein;
+        for(var i = 0; i < data.length; i++) {
+            wein = data[i];
+            s += "<h2>" + wein.Name + "</h2>";
+            s += "<ul>";
+            s += "<li>" + wein.Jahrgang + "</li>";
+            s += "<li>" + wein.Weinstil + "</li>";
+            s += "<li>" + wein.Anbauregion + "</li>";
+            s += "<li>" + wein.Alkoholgehalt + "</li>";
+            s += "<li><img src='../../_lib/img/weine/" + wein.Bild + "'></li>";
+            s += "</ul>";
+        }
+        document.getElementById("ausgabe").innerHTML = s;
+
+    });
+}(window,document));
+
+
+
+

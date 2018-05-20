@@ -1,0 +1,484 @@
+body {
+	font: 14px/1.25 Arial, sans-serif;
+	color: #555;
+	padding:0;
+	margin:0;	
+	background: #fff url(../images/bg_form.jpg) fixed no-repeat;
+}
+
+/*= Header */
+#intro {
+	color:#555;
+	text-align:right;
+}
+#intro h1 {
+	font: bolder 75px/1.5 "Cabin Sketch", Arial, sans-serif;
+	margin:0 50px 0 0;
+	color:#1795be;
+}
+.wrapper {
+	margin:0 auto 15px auto;
+
+	padding:0 0 25px 0;
+	width:950px;	
+	background-color: rgba(255,255,255,.75);
+	-webkit-border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomright:5px; 	
+	-moz-border-radius-bottomleft:5px;	
+	border-bottom-right-radius:5px; 	
+	border-bottom-left-radius:5px; 	
+}
+
+/*= Formular */
+form {
+	float:right;
+	padding:0;
+	width:650px;
+	margin:0 50px 0 0;
+}
+
+fieldset { 
+	padding:0 0 35px 0;
+	margin:0 0 20px 0;
+	background-color: #e4f0ff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:0;
+} 
+
+fieldset.personalData { 
+	background: #e4f0ff url(../images/bg_fieldsetCorrect.png) 96% 85% no-repeat;
+} 
+fieldset.error { 
+	background: #e4f0ff url(../images/bg_fieldsetError.png) 96% 90% no-repeat;
+}
+fieldset legend {
+	float:left;
+	font-weight:bold;
+	font-size:18px;
+	height:50px;
+	background-color: #1795be;
+	color:#FFF;
+	padding:0;
+	width:100%;
+	margin:0 0 25px 0;
+	*margin:-5px 0 25px -7px;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-top-left-radius:5px;
+	-moz-border-radius-topright:5px; 	
+	-moz-border-radius-topleft:5px;	
+	border-top-right-radius:5px; 	
+	border-top-left-radius:5px; 		
+}
+fieldset legend span {
+	display:inline-block;
+	background-color:#e4f0ff;
+	color:#1795be;
+	margin:10px;
+	height:20px;
+	width:20px;
+	padding:5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.formBox div {
+	float:left;
+	margin:0 0 10px 0;
+	padding:0 10px 0 50px;
+	width:90%;
+}
+.formBox .errorMsg {
+	float:left;
+	margin:0 0 20px 0;
+	padding:15px 0;
+	width:100%;
+	border-width:1px 0;
+	border-style: solid;
+	border-color: #E00 #FFDCE5;
+	color:#E00;
+	background-color:#FFDCE5;
+}
+.formBox .errorMsg span {
+	display:block;
+	padding:0 10px 0 50px;
+}
+label { 
+	float:left;
+	line-height:125%;
+	width:150px;
+	cursor: pointer;
+}
+input,
+select {
+	height:20px;
+	padding:0;
+	width:248px;	
+	background:#FFF;
+	font-size:14px;
+	color: #555;
+	outline:none;
+	border:1px solid rgb(23,149,190);
+  	border:1px solid rgba(23,149,190,.66);
+  	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	-o-transition-property: border-color;
+  	-webkit-transition: all 0.25s ease-in-out;
+   -moz-transition: all 0.25s ease-in-out;
+   -o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+}
+select {
+	width:250px;			
+}
+input {
+  	text-indent:3px;
+}
+input.small {
+	width:66px;	
+}
+input.number {
+	width:94px;
+}
+input.medium {
+	width:171px;
+}
+.inputSpace {
+	margin:0 5px 0 0;
+}
+em {
+	display:inline-block;
+	font-size:125%;
+	font-weight: bold;
+	color:#E00;
+}
+/* div.error  {
+	color:#E00;
+}
+div.error input, div.error select {
+	border:1px solid #E00;
+	color:#E00;
+	background-color:#FFDCE5;
+} */
+
+label.error  {
+	color:#E00;
+}
+input.error , select.error  {
+	border:1px solid #E00;
+	color:#E00;
+	background-color:#FFDCE5;
+}
+
+input.btnCancel, 
+input.btnSend {
+	float:left;
+	font: bold 14px/1.25 Arial, sans-serif;
+	margin:25px 0 0 0;
+	width:90px;
+	height:30px;
+	font-weight: normal;
+	color: #1795be;
+	text-align: center;
+	padding:0 0 1px 0;
+	text-indent:0px;	
+	border:1px solid #1795be;  
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	cursor:pointer;
+	background-color: #FFF;
+}
+input.btnSend  {
+	float:right;
+	color:#FFF;
+	width:150px;	
+	background: #dd902a;  	
+	border:1px solid #fff;  	
+ 	-webkit-box-shadow: 1px 0 0 #dd902a, -1px 0 0 #dd902a, 0 1px 0 #dd902a, 0 -1px 0 #dd902a, 0 5px 10px -5px #dd902a;
+  	-moz-box-shadow: 1px 0 0 #dd902a, -1px 0 0 #dd902a, 0 1px 0 #dd902a, 0 -1px 0 #dd902a, 0 5px 10px -5px #dd902a;
+  	box-shadow: 1px 0 0 #dd902a, -1px 0 0 #dd902a, 0 1px 0 #dd902a, 0 -1px 0 #dd902a, 0 5px 10px -5px #dd902a;
+}
+
+input:active, 
+input:hover, 
+input:focus {
+	border:1px solid rgb(23,149,190);
+  	border:1px solid rgba(23,149,190,1);
+	-moz-box-shadow: 0 0 5px rgba(23,149,190,.75);
+ 	-webkit-box-shadow: 0 0 5px rgba(23,149,190,.75); 
+  	box-shadow: 0 0 5px rgba(23,149,190,.75);
+}
+
+input.btnCancel:hover,
+input.btnCancel:active,
+input.btnCancel:focus, 
+input.btnSend:hover,
+input.btnSend:active,
+input.btnSend:focus {
+	-webkit-outline:none; 
+  	-moz-outline:none; 
+  	outline:none; 		
+}
+input.btnSend:hover,
+input.btnSend:active,
+input.btnSend:focus {
+  	border:1px solid rgba(255,255,255,1);  
+  	-moz-box-shadow: 1px 1px 2px #dd902a, -1px 1px 2px #dd902a, 1px 1px 2px #dd902a, 1px -1px 2px #dd902a, -1px -1px 1px 1px #dd902a;
+  	-webkit-box-shadow: 1px 1px 2px #dd902a, -1px 1px 2px #dd902a, 1px 1px 2px #dd902a, 1px -1px 2px #dd902a, -1px -1px 1px 1px #dd902a;
+  	box-shadow: 1px 1px 2px #dd902a, -1px 1px 2px #dd902a, 1px 1px 2px #dd902a, 1px -1px 2px #dd902a, -1px -1px 1px 1px #dd902a;
+}
+.formBox div.check {
+	float:left;
+	margin:0 0 1.5% -1%;
+	padding:1.5%;
+	width:90%;
+	background: transparent url(../images/bg_check.png) 0 0 no-repeat;
+}
+.formBox div.check label{
+	display:inline-block;
+	position:relative;
+	width:85%;
+	padding:0 0 0 68px;
+	line-height:150%;
+}
+.formBox div.check label input {
+	border:none;
+	left:10px;
+	top:0px;	
+	position:absolute;
+	width:13px;
+	height:13px;
+}
+.formBox div.buttons {
+	margin:0 0 10px 0;
+	padding:0 0 0 50px;
+	width:85%;
+	position:relative;
+}
+
+
+
+
+
+
+/*= Navigation */
+#sidebar {
+	float:left;
+	padding:0;
+	width:175px;
+	margin:0 0 0 50px;
+}
+#sidebar h2 {
+	font-weight:bold;
+	font-size:18px;
+	line-height:50px;
+	text-indent:25px;
+	background-color: #1795be;
+	color:#FFF;
+	padding:0;
+	width:100%;
+	margin:0 0 0 0;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-top-left-radius:5px;
+	-moz-border-radius-topright:5px; 	
+	-moz-border-radius-topleft:5px;	
+	border-top-right-radius:5px; 	
+	border-top-left-radius:5px; 	
+}
+#sidebar ul,
+#sidebar ol {
+	padding:25px;
+	margin:0 0 20px 0;
+	background-color: #e4f0ff;
+	-webkit-border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomright:5px; 	
+	-moz-border-radius-bottomleft:5px;	
+	border-bottom-right-radius:5px; 	
+	border-bottom-left-radius:5px; 	
+	border:0;
+	list-style:none;
+}
+#sidebar ul {
+	padding-right:10px;
+}
+#sidebar ul li {
+	padding:0;
+	margin:0 0 20px 0;	
+	color:#555;
+	font-size:13px;	
+}
+#sidebar ul a {
+	display: block;
+	font-weight:bold;
+	font-size:15px;
+	line-height:15px;
+	color:#1795be;
+	margin:0 0 3px 0;
+}
+#sidebar li#amount  {
+	margin:0 15px 5px 0;
+	font-weight:bold;
+	font-size:18px;
+	line-height:50px;
+	text-align:center;
+	background-color: #1795be;
+	color:#FFF;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px; 	
+	border-radius:5px; 
+}
+#main #sidebar ol {
+	padding:15px 25px 25px 25px;
+}
+
+#sidebar ol a,
+#sidebar ol li {
+	font-weight:normal;
+	font-size:14px;
+	line-height:25px;	
+	background-color: transparent;
+	color:#555;
+	text-decoration:none;
+}
+#sidebar ol a {
+	color: #1795be;
+}
+
+/*= Navigation */
+#footer {
+	float:right;
+	padding:0;
+	margin:0 50px 15px 0;
+}
+#footer ul,
+#footer li {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+#footer li {
+	float:left;
+	margin:0 0 0 15px;	
+}
+#footer a {
+	display: inline-block;
+	color:#555;
+	text-decoration: none;
+}
+#footer a:hover {
+	text-decoration: underline;	
+}
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+/* IE-Patch für IE 7*/
+*:first-child+html .clearfix { min-height: 0; } 
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+@media screen and (max-width: 975px) {
+	.wrapper {
+		width:750px;
+	}
+	#sidebar {
+	   width:650px;
+		float:none;
+   }
+   #sidebar li {
+   	display:inline-block;
+   	width:33%;
+   }
+   #sidebar ol li {
+   	display:inline-block;
+   	width:20%;
+   }
+}
+@media screen and (max-width: 775px) {
+	.wrapper {
+		width:490px;
+	}
+	#sidebar {
+		float:none;
+   }
+   #sidebar li {
+   	display:inline-block;
+   	width:45%;
+   }
+   #sidebar ol li {
+   	display:inline-block;
+   	width:45%;
+   }
+   form,
+   fieldset,
+   #sidebar{
+		width:400px;
+	}
+	form,
+	.formBox div {
+		float:none;
+	}
+	form {
+		margin:0 0 20px 50px;
+	}
+	fieldset label {
+		width:325px;	
+	}
+	fieldset.personalData {
+		background-image: none;
+	}
+	.formBox #description,
+	.formBox div.buttons {
+		width:75%;
+	}
+	#intro h1 {
+		font-size: 50px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.wrapper {
+		width:300px;
+	}
+	#sidebar li,
+	#sidebar ol li {
+   	display:block;
+   	width:85%;
+   }
+   form,
+   fieldset,
+   #sidebar{
+		width:280px;
+		margin-right:0;
+		margin-left:5px;
+	}
+	#sidebar {
+		margin-left:10px;
+	}
+	fieldset label {
+		width: 200px;
+	}
+	.formBox div.check label {
+		width:80%;
+	}
+	.formBox div {
+		width:auto;
+		padding-left:20px;
+	}
+	.formBox div.buttons {
+		padding-left:15px;
+		width:90%;		
+	}
+  	#intro h1 {
+		font-size: 20px;
+		margin-right:10px;
+	}
+}	

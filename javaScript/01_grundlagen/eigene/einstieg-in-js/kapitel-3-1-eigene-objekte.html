@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>3.1 eigene Objekte</title>
+    <link rel="stylesheet" href="../../../_lib/css/main.css">
+    <script>
+        function Fahrzeug(f, g) { // Prototyp // Konstruktorfunktion
+            this.farbe = f;
+            this.geschwindigkeit = g;
+            this.beschleunigen = fahrzeugBeschleunigen;
+            this.lackieren = function(g) { this.farbe = g; }
+            this.toString = fahrzeugAusgeben;
+        }
+
+        function fahrzeugBeschleunigen(wert) {
+            this.geschwindigkeit += wert;
+        }
+
+        function fahrzeugAusgeben() {
+            return "Farbe: " + this.farbe
+                +", Geschwindigkeit: " + this.geschwindigkeit;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>3.1 eigene Objekte</h1>
+
+    <p>
+        <script>
+            var dacia = new Fahrzeug("Rot", 50); // Objekt zum Prototyp
+            dacia.beschleunigen(30);
+            dacia.lackieren("Blaugrünrot");
+
+            document.write("<b>" + dacia + "</b><br>")
+            document.write("Farbe: " + dacia.farbe +
+                ", Geschwindigkeit: " + dacia.geschwindigkeit + "<br>");
+            
+            dacia.geschwindigkeit = 75;
+            
+            document.write("Farbe: " + dacia.farbe +
+                ", Geschwindigkeit: " + dacia.geschwindigkeit + "<br>");
+
+
+
+            var renault = new Fahrzeug("Gelb", 65); // Objekt zum Prototyp
+            document.write("Farbe: " + renault.farbe +
+                ", Geschwindigkeit: " + renault.geschwindigkeit);
+        </script>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<meta name="charset" content="utf-8" />
+	<head>
+<meta charset="utf-8" />
+		<title>Unsere Speisekarte</title> 
+		<link type="text/css" href="lib/css/basis.css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!--Pfad muss immer an Ordnerstruktur angepasst werden.  -->
+		<script>window.jQuery || document.write('<script src="../_lib/js/jquery-1.11.3.min.js"><\/script>');</script>
+		<script src="lib/js/speisekarte.js"></script>
+	</head>
+	<body>
+		<div class="speisekarten_container">
+			<header class="kopfteil">
+				<h2>Unsere Speisekarte</h2>
+				<nav>
+					<button id="vegetarisch_an">Für Vegetarier</button>
+					<button id="zuruecksetzen">Zurücksetzen</button>
+				</nav>
+			</header>
+			<div class="linke_spalte">
+				<h4>Vorspeisen</h4>
+				<ul class="vorspeisen">		
+					<li>Pochierter Lachs
+						<ul class="zutaten">
+							<li class="fisch">Lachs</li>
+							<li>Weisswein</li>
+							<li>Salz</li>
+							<li>Schwarzer Pfeffer </li>
+						</ul>
+					</li>
+					<li>Forelle vom Grill
+						<ul class="zutaten">
+							<li class="fisch">Forelle vom Grill</li>
+							<li>Minze</li>
+							<li>Kapern</li>
+							<li>Oliven</li>
+							<li>Tomaten</li>
+							<li>Zitrone</li>
+							<li>Olivenöl</li>
+							<li>Kartoffeln </li>
+						</ul>
+					</li>
+					<li>Heilbutt (Thai-Style)
+						<ul class="zutaten">
+							<li>Kokosmilch</li>
+							<li class="fisch">Gebratener Heilbutt</li>
+							<li>Brühe mit Zitronengras</li>
+							<li>Herbstgemüse</li>
+							<li>Thai-Gewürze </li>
+						</ul>
+					</li>
+					<li>Geschmorte Köstlichkeiten
+						<ul class="zutaten">
+							<li class="fleisch">Lammschulter</li>
+							<li class="blatt_symbol">Zwiebeln</li>
+							<li>Karotten</li>
+							<li>Junge Rüben</li>
+							<li>Geröstete rote Trauben</li>
+							<li>Bratensaft</li>
+						</ul>
+					</li>
+					<li>Panini vom Grill
+						<ul class="zutaten">
+							<li class="fleisch">Prosciutto</li>
+							<li>Provolone (Hartkäse)</li>
+							<li>Avocado</li>
+							<li>Kirschtomaten</li>
+							<li>Sauerteig-Brötchen</li>
+							<li>Shoestring Fries </li>
+						</ul>
+					</li>
+					<li>Unsere Miniburger
+						<ul class="zutaten">
+							<li>marinierte Aubergine</li>
+							<li>Zucchini</li>
+							<li class="hamburger">Hamburger</li>
+							<li>Balsamessig</li>
+							<li>Zwiebeln</li>
+							<li>Karotten</li>
+							<li>Mehrkornbrötchen</li>
+							<li>Ziegenkäse</li>
+						</ul>
+					</li>
+					<li>Southwest Slider
+						<ul class="zutaten">
+							<li>Ganze Chillis</li>
+							<li class="hamburger">Hamburger</li>
+							<li>Pepperjack-Käse</li>
+							<li>Zwiebeln</li>
+							<li>Karotten</li>
+							<li>Avocadostreifen</li>
+							<li>Mehrkornbrötchen</li>
+						</ul>
+					</li>
+					<li>Frittata (ital. Omelett)
+						<ul class="zutaten">
+							<li class="fleisch">Eier</li>
+							<li>Asiagokäse, Provolone (Hartkäse) und Pecorino</li>
+							<li>Kartoffeln </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+	 
+			<div class="rechte_spalte">
+				<h4>Suppen und Beilagen</h4>
+				<ul class="vorspeisen">
+					<li>Kokossuppe
+						<ul class="zutaten">
+							<li>Kokosmilch</li>
+							<li class="fleisch">Hühnchen</li>
+							<li>Gemüsebrühe</li>
+						</ul>
+					</li>
+					<li>Soup Du Jour
+						<ul class="zutaten">
+							<li class="fleisch">Steak vom Grill</li>
+							<li>Champignons</li>
+							<li>Gemüse der Saison</li>
+							<li>Gemüsebrühe </li>
+						</ul>
+					</li>
+					<li>Suppe scharf und sauer
+						<ul class="zutaten">
+							<li class="fleisch">Geröstetes Schwein</li>
+							<li>Karotten</li>
+							<li>Chinesische Pilze</li>
+							<li>Chilli</li>
+							<li>Gemüsebrühe </li>
+						</ul>
+					</li>
+					<li>Baked Kartoffeln mit Füllung
+						<ul class="zutaten">
+							<li>Kartoffeln</li>
+							<li class="fleisch">Hühnchen vom Holzkohlegrill</li>
+							<li>Gemüse der Saison</li>
+							<li>Cheddar & Jack Käse</li>
+							<li>Alfredo-Sauce</li>
+						</ul>
+					</li>
+					<li>Avocadobrötchen
+						<ul class="zutaten">
+							<li>Avocado</li>
+							<li>Ganze Chillis</li>
+							<li>Süße rote Paprika</li>
+							<li>Ingwer-Dip</li>
+						</ul>
+					</li>
+					<li>Geröstete Artischockenherzen
+						<ul class="zutaten">
+							<li>Artischockenherzen</li>
+							<li>Balsamessig</li>
+							<li>Gedämpfter Knoblauch</li>
+						</ul>
+					</li>
+					<li>Brokkoli mit Knoblauch
+						<ul class="zutaten">
+							<li>Brokkoli aus dem Wok</li>
+							<li>Karotten</li>
+							<li>Zwiebeln</li>
+							<li>Knoblauchsauce </li>
+						</ul>
+					</li>
+					<li>Knoblauchgemüse aus dem Wok
+						<ul class="zutaten">
+							<li>Gemischtes Gemüse aus dem Wok</li>
+							<li>Champignons</li>
+							<li>Karotten</li>
+							<li>Zwiebeln</li>
+							<li>Knoblauch </li>
+						</ul>
+					</li>
+					<li>Grüne Bohnen mit Champignons
+						<ul class="zutaten">
+							<li>Grüne Bohnen aus dem Wok</li>
+							<li>Karotten</li>
+							<li>Zwiebeln</li>
+							<li>Champignons </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<footer class="fussteil">
+				<h5>Adresse</h5>
+			</footer>
+		</div> 
+	</body>
+</html>

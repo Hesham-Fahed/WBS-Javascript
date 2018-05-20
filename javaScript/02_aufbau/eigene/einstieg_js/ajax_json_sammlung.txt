@@ -1,0 +1,3 @@
+﻿[ {"farbe":"Rot","geschwindigkeit":50.2},
+  {"farbe":"Blau","geschwindigkeit":85.0},
+  {"farbe":"Gelb","geschwindigkeit":65.5} ]

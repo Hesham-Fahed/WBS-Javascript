@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ajax, Suchvorschläge</title>
+   <script>
+      function anfordern()
+      {
+         req = new XMLHttpRequest();
+         req.open("get", "ajax_eu.xml", true);
+         req.onreadystatechange = auswerten;
+         req.send();
+      }
+
+      function auswerten(e)
+      {
+         if(e.target.readyState == 4 && e.target.status == 200)
+         {
+            var absatz = document.getElementById("idAbsatz");
+            while(absatz.childNodes.length > 2)
+               absatz.removeChild(absatz.lastChild);
+
+            if(document.getElementById("idEin").value == "")
+               return;
+
+            var antwort = e.target.responseXML;
+            var nameAlle = antwort.getElementsByTagName("name");
+            console.log("Namealle: ", nameAlle);
+            var suche = document.getElementById("idEin").value;
+
+            for(var i=0; i<nameAlle.length; i++)
+            {
+               var name = nameAlle[i].firstChild.nodeValue;
+
+               if(suche == name.substr(0,suche.length))
+               {
+                 var flaeche = antwort.getElementsByTagName("flaeche")[i]
+                               .firstChild.nodeValue;
+                 var stadt = antwort.getElementsByTagName("stadt")[i]
+                             .firstChild.nodeValue;
+
+                 var text = document.createTextNode(name + ", "
+                               + flaeche + " qkm, " + stadt);
+                 var div = document.createElement("div");
+                 div.appendChild(text);
+                 absatz.appendChild(div);
+               }
+            }
+         }
+      }
+   </script>
+</head>
+<body>
+   <p id="idAbsatz">
+     <input id="idEin"> Suche nach Ländern der EU</p>
+   <script src="js/eh.js"></script>
+   <script>
+      meinHandler("idEin", "keypress", anfordern);
+   </script>
+
+<!-- https://german.stackexchange.com/questions/491/where-can-i-find-a-parsable-list-of-german-words -->
+</body>
+</html>

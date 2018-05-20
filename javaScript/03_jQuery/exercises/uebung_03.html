@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 3 - DOM Methoden Einstieg</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <style>
+        .entry {
+            background-color:#8bc9e3;
+            width:400px;
+            height:auto;
+            padding:10px;
+            margin: 10px;
+            border-radius : 25px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../_lib/js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <script src="js/uebung_03.js"></script>
+</head>
+<body>
+    <h1>Übung 3 - DOM Methoden Einstieg</h1>
+    <div id="main">
+        <div class="entry" id="box1">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
+            Corporis cumque delectus eaque eum exercitationem minus nemo nihil praesentium quod saepe.
+            <br>
+            <a href="#">UP</a>
+            <a href="#">DOWN</a>
+        </div>
+        <div class="entry" id="box2">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
+            Corporis cumque delectus eaque eum exercitationem minus nemo nihil praesentium quod saepe.
+            <br>
+            <a href="#">UP</a>
+            <a href="#">DOWN</a>
+        </div>
+        <div class="entry" id="box3">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
+            Corporis cumque delectus eaque eum exercitationem minus nemo nihil praesentium quod saepe.
+            <br>
+            <a href="#">UP</a>
+            <a href="#">DOWN</a>
+        </div>
+        <div class="entry" id="box4">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.
+            Corporis cumque delectus eaque eum exercitationem minus nemo nihil praesentium quod saepe.
+            <br>
+            <a href="#">UP</a>
+            <a href="#">DOWN</a>
+        </div>
+    </div>
+    <div id="bearbeiten">
+        <form action="#">
+            <for for="neu">Neuer Post</for>
+            <textarea name="neu" id="neu" cols="30" rows="10"></textarea>
+            <button type="button" id="endNeu">Neuer Post</button>
+            <button type="button" id="endEdit">Beenden</button>
+        </form>
+    </div>
+    <noscript>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
+    </noscript>
+</body>
+</html>

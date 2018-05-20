@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ajax, Sammlung aus XML</title>
+   <script>
+      function anfordern(x)
+      {
+         req = new XMLHttpRequest();
+         req.open("get", "ajax_xml_sammlung.xml", true);
+         req.onreadystatechange = function(e) { auswerten(e, x); };
+         req.send();
+      }
+
+      function auswerten(e, x)
+      {
+         if(e.target.readyState == 4 && e.target.status == 200)
+         {
+            var antwort = e.target.responseXML;
+            var kfarbe = antwort.getElementsByTagName("farbe")[x];
+            var kleistung = antwort.getElementsByTagName("leistung")[x];
+            document.getElementById("idDaten").firstChild.nodeValue =
+               "Farbe: " + kfarbe.firstChild.nodeValue
+                  + ", Leistung: " + kleistung.firstChild.nodeValue
+                  + ", Hubraum: " + kleistung.getAttribute("hubraum")
+                  + ", Zylinder: " + kleistung.getAttribute("zylinder");
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <p>Fahrzeugdaten:</p>
+   <p><a id="idLink0" href="#">Dacia</a></p>
+   <p><a id="idLink1" href="#">Renault</a></p>
+   <p><a id="idLink2" href="#">Kettcar</a></p>
+   <p id="idDaten">&nbsp;</p>
+   <script src="js/eh.js"></script>
+   <script>
+      meinHandler("idLink0", "click", function() { anfordern(0); } );
+      meinHandler("idLink1", "click", function() { anfordern(1); } );
+      meinHandler("idLink2", "click", function() { anfordern(2); } );
+   </script>
+</body>
+</html>

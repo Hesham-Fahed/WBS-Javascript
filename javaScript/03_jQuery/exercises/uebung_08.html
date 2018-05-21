@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Postleitzahlen</title>
+    <link rel="stylesheet" href="../../_lib/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write("<script src='../../_lib/js/jquery-3.3.1.js'<\/script>");
+    </script>
+    <script src="js/uebung_08.js"></script>
+</head>
+<body>
+    <noscript>When you have eliminated the JavaScript, whatever remains must be an empty page.</noscript> 
+    <h1>Postleitzahlen</h1>
+    <h2>On-Submit</h2>
+    <form action="../../_lib/data/get_post.php" method="get">
+        <label for="plz">Postleitzahl</label><br>
+        <input type="text" id="plz" name="plz">
+        <input type="submit" value="absenden" id="btnSend" name="btnSend">
+    </form>  
+    <div id="status"></div>
+    <div id="ausgabe"></div>
+    <!-- 
+        1. Unterbinden Sie das Standardverhalten des Forumulars. 
+        Wenn der Button[value=absenden] gedrückt wird,erzeugen Sie eine Ajax-Anfrage (get) auf die Datei <orte_de.json>. Nutzen Sie das gelieferte Objekt um alle 
+        Postleitzahlen die mit den eingegeben Ziffern übereinstimmen auszugeben.
+
+        Fehler:
+        1. Eingabe ist länger als 5 Ziffern. Fehlermeldung
+        2. Eingabe ist leer.
+
+        Alle Eingabe zwischen 1 und 5 Ziffern oder genau 5 Ziffern erzeugen eine Ausgabe. Alle gefundenen übereinstimmen werden im div#ausgabe angezeigt.
+
+
+        2. Erweiterung:
+        Wenn Sie Aufgabe 1 gelöst haben erweitern Sie die Datei dahingehende das Sie 
+        am input[id=plz] einen keyup Eventhandler binden. Eingaben in das Feld lösen sofort eine Ajax-Anfrage auf die Datei <orte_de.json> aus und alle gefundenen übereinstimmen werden im div#ausgabe angezeigt.
+     -->
+
+</body>
+</html>

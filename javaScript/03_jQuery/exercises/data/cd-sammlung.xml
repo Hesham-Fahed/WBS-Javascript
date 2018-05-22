@@ -1,0 +1,46 @@
+<collection>
+    <cd>
+        <jahr>1965</jahr>
+        <artist>The Beatles</artist>
+        <title>Help!</title>
+        <ul class="songlist">
+            <li>Help!</li>
+            <li>The Night Before</li>
+            <li>You've Got To Hide Your Love Away</li>
+            <li>I Need You</li>
+            <li>Another Girl</li>
+            <li>You're Gonna Lose That Girl</li>
+            <li>Ticket to Ride</li>
+            <li>Act Naturally</li>
+            <li>It's Only Love</li>
+            <li>You Like Me Too Much</li>
+            <li>Tell Me What You See</li>
+            <li>I've Just Seen a Face</li>
+            <li>Yesterday</li>
+            <li>Dizzy Miss Lizzy</li>
+        </ul>
+    </cd>
+
+    <cd>
+        <jahr>1994</jahr>
+        <artist>The Rolling Stones</artist>
+        <title>Voodoo Lounge</title>
+        <ul class="songlist">
+            <li>Love is Strong</li>
+            <li>You Got Me Rocking</li>
+            <li>Sparks Will Fly</li>
+            <li>The Worst</li>
+            <li>New Faces</li>
+            <li>Moon Is Up</li>
+            <li>Out Of Tears</li>
+            <li>I Go Wild</li>
+            <li>Brand New Car</li>
+            <li>Sweethearts Together</li>
+            <li>Suck On The Jugular</li>
+            <li>Blinded By Rainbows</li>
+            <li>Baby Break It Down</li>
+            <li>Thru And Thru</li>
+            <li>Mean Disposition</li>
+        </ul>
+    </cd>
+</collection>

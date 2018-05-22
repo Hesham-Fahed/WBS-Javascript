@@ -35,7 +35,7 @@
 
                         if (terms !== "term") {
                             // Array für quote erstellen //////////////
-                            if (Array.isArray(daten[key][terms]) === true) {
+                            if (Array.isArray(daten[key][terms])/*  === true */) {
                                 // zwischenspeicher für array
                                 var arrayQuote = [];
                                 // Array quote pushen

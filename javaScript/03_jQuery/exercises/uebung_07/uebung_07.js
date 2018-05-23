@@ -2,9 +2,22 @@
     "use strict";
     $(function () {
 
+        var $auswurf = $("#dictionary");
+        $auswurf.empty("");
+
         $("#letter-a").on("click", output);
         $("#letter-b").on("click", output);
         $("#letter-c").on("click", output);
+        $("#letter-e").on("click", output);
+
+        $("#letter-f")
+        .find("form")
+        .on("submit", function (e) {
+            e.preventDefault();
+            $.get("f.php", $(this).serialize(), function(res){
+                $auswurf.empty().append(res);
+            });
+        });
 
     });
 
@@ -75,8 +88,49 @@
             $.getScript("c.js");
         }
 
+        // letter-e
+        // if ($target.parents("div").attr("id") === "letter-e") {
+
+        //     var $targetText = $(el.target).text();
+        //     $target.text()
+
+        //     $.post("e.php", { term: $targetText }, function (res) {
+        //         el.preventDefault();
+        //         $auswurf.append(res);
+        //     }, "html");
+        // }
+
+        // alternative die kürzer ist. Im href steht der komplette link inkl. des Query-Texts 
+        $("#letter-e")
+            .find("a")
+            .on("click", function (e) {
+                e.preventDefault();
+                $.get(this.href, function (res) {
+                    $out.empty().append(res);
+                });
+            });
+
+
+
+
+        // letter-f
+        // if ($target.parents("div").attr("id") === "letter-f") {
+
+        //     var $inputText = $("#term").val();
+
+
+        //     $.post("e.php", { term: $inputText }, function (res) {
+        //         el.preventDefault();
+        //         $auswurf.append(res);
+        //     }, "html");
+        // }
+
+
+
 
     } // ende output
+
+
 }(window, document, jQuery));
 /* 
 <h3>E</h3>

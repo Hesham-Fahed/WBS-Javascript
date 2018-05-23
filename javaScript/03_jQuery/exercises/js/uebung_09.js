@@ -59,8 +59,8 @@ HTML-Vorlage
             for (var i = 0; i < $cds.length; i++) {
                 html = "";
                 html += "<div class='cd'>";
-                html += "<h2 class='artist'>" + $($cds[i]).find("artist").text() + "</h2>";
-                html += "<h3 class='title'>" + $($cds[i]).find("title").text() + "</h3>";
+                html += "<h2 class='artist'>" + $cds.eq(i).find("artist").text() + "</h2>";
+                html += "<h3 class='title'>" + $cds.eq(i).find("title").text() + "</h3>";
                 html += "<ul class='songlist'>";
 
                 var $songs = $($cds[i]).find(".songlist li");

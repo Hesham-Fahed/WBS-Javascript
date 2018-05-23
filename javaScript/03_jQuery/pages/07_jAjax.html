@@ -19,31 +19,28 @@
     <h1>AJAX</h1>
     <div id="ajax">
         <ul id="liste">
-            <li>
-                <a href="#">Anfrage - load - fragment.html</a>
-            </li>
-            <li>
-                <a href="../../_lib/data/pathfinder.html">Anfrage - load - pathfinder.html</a>
-            </li>
-            <li>
-                <a href="#">Anfrage - get - pathfinder.html</a>
-            </li>
-            <li>
-                <a href="#">Anfrage - getJSON - person.json</a>
-            </li>
-            <li>
-                <a href="#">Anfrage - get - kontakt.xml</a>
-            </li>
-            <li>
-                <a href="#">Anfrage - get - get_post.php</a>
-            </li>
+            <li><a href="#">Anfrage fragment.html</a></li>
+            <li><a href="../../_lib/data/pathfinder.html">Anfrage - load - pathfinder.html</a></li>
+            <li><a href="#">Anfrage - get - pathfinder.html</a></li>
+            <li><a href="#">Anfrage - getJSON - person.json</a></li>
+            <li><a href="#">Anfrage - get - kontakt.xml</a></li>
+            <li><a href="#">Anfrage - get - get_post.php</a></li>
         </ul>
     </div>
+    <form action="../../_lib/php/get_post.php" method="post">
+        <label for="Eingabe">Eingabe</label>
+        <input type="text" id="eingabe" name="eingabe">
+        <input type="submit" value="Absenden">
+    </form>
     <div id="ausgabe"></div>
     <noscript>
-        <p>When you have eliminated the
-            <b>JavaScript</b>, whatever remains must be an empty page.</p>
+      <p>When you have eliminated the <b>JavaScript</b>, whatever remains must be an empty page.</p>  
     </noscript>
 </body>
 
 </html>
+
+
+
+
+

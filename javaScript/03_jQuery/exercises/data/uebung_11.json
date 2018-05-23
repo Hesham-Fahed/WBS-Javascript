@@ -1,0 +1,46 @@
+{
+    "Oscar Wilde": {
+        "Geboren": "16. Oktober 1854, Westland Row, Dublin, Irland",
+        "Gestorben": "30. November 1900, Dritte Französische Republik",
+        "Vita": "Oscar Fingal O’Flahertie Wills Wilde war ein irischer Schriftsteller, der sich nach Schulzeit und Studium in Dublin und Oxford in London niederließ",
+        "Zitate": [
+            "Die Anzahl unserer Neider bestätigt unsere Fähigkeiten.",
+            "Versuchungen sollte man nachgeben. Wer weiß, ob sie wiederkommen!",
+            "Auf seine eigene Art zu denken ist nicht selbstsüchtig. Wer nicht auf seine eigene Art denkt, denkt überhaupt nicht.",
+            "Jeder von uns ist sein eigener Teufel, und wir machen uns diese Welt zur Hölle."
+        ]
+    },
+    "Albert Einstein": {
+        "Geboren": "14. März 1879 in Ulm, Württemberg, Deutsches Reich",
+        "Gestorben": "18. April 1955 in Princeton, New Jersey, Vereinigte Staaten",
+        "Vita": "Seine Forschungen zur Struktur von Materie, Raum und Zeit sowie dem Wesen der Gravitation veränderten maßgeblich das physikalische Weltbild. Er gilt daher als einer der bedeutendsten Physiker der Menschheit.",
+        "Zitate": [
+            "Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit, aber bei dem Universum bin ich mir noch nicht ganz sicher.",
+            "Wenn ein unordentlicher Schreibtisch einen unordentlichen Geist repräsentiert, was sagt dann ein leerer Schreibtisch über den Menschen, der ihn benutzt aus?",
+            "Ich bin nicht sicher, mit welchen Waffen der dritte Weltkrieg ausgetragen wird,aber im vierten Weltkrieg werden sie mit Stöcken und Steinen kämpfen.",
+            "Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt."
+        ]
+    },
+    "Johann Wolfgang von Goethe": {
+        "Geboren": "28. August 1749, Goethe-Haus, Frankfurt am Main",
+        "Gestorben": "22. März 1832, Weimar",
+        "Vita": "Johann Wolfgang von Goethe, 1782 geadelt, war ein deutscher Dichter und Naturforscher. Er gilt als einer der bedeutendsten Schöpfer deutschsprachiger Dichtung",
+        "Zitate": [
+            "Wer sich den Gesetzen nicht fügen will, muss die Gegend verlassen, wo sie gelten.",
+            "Es hört doch jeder nur, was er versteht.",
+            "Es ist nicht genug zu wissen - man muss auch anwenden. Es ist nicht genug zu wollen - man muss auch tun.",
+            "Nichts ist schrecklicher als ein Lehrer, der nicht mehr weiß als das, was die Schüler wissen sollen."
+        ]
+    },
+    "René Descartes": {
+        "Geboren": "31. März 1596, Descartes, Frankreich",
+        "Gestorben": "11. Februar 1650, Stockholm, Schweden",
+        "Vita": "René Descartes war ein französischer Philosoph, Mathematiker und Naturwissenschaftler",
+        "Zitate": [
+            "Dubium sapientiae initium. — Zweifel ist der Weisheit Anfang.",
+            "Ich könnte nicht an Projekten arbeiten, die nur deshalb für einige nützlich sind, weil sie anderen schaden.",
+            "Die nur ganz langsam gehen, aber immer den rechten Weg verfolgen, können viel weiter kommen als die, welche laufen und auf Abwege geraten.",
+            "Der Zweifel ist der Weisheit Anfang."
+        ]
+    }
+}

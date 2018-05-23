@@ -1,38 +1,26 @@
+
 //////////////////////////////////////////////
 // Funktionen
 //////////////////////////////////////////////
 
+function zufall(jsonLength) {
+    var random = Math.floor(Math.random() * jsonLength);
+    return random;
+}
 
 
 //////////////////////////////////////////////
 // Window-Objekt
 //////////////////////////////////////////////
 
-
 (function (window, document, $) {
     "use strict";
     $(function () {
 
-        function zufall(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        var $uebersicht = $("#uebersicht");
-        function uebersicht (daten) {
-            var html2 = "";
-            for(var key in daten) {
-                html2 += "<ul>";
-                html2 += "<li>" + key + " <a href='#'>mehr lesen</a></li>";
-                html2 += "</ul>";
-            }
-            return html2;
-        }
-
-
         /* 
             2. Erzeugen Sie eine HTML-Datei uebung_11.html. Legen Sie in 
             der HTML-Datei einen container div#zitat an. Wenn die Seite im Browser geladen wird fordern Sie die in Aufgabe 1 erzeugte Datei über einen Ajax-Request an und geben ein zufälliges Zitate mit Author und allen zugehörigen Daten im div#zitat aus:
-        
+
             <h2>Versuchungen sollte man nachgeben. Wer weiß, ob sie wiederkommen!</h2>
             <p><strong>Oscar Wilde</strong>Oscar Fingal O’Flahertie Wills Wilde war ein irischer Schriftsteller, der sich nach Schulzeit und Studium in Dublin und Oxford in London niederließ</p>
             <ul>
@@ -40,48 +28,30 @@
             <li>Gestorben: 30. November 1900, Dritte Französische Republik</li>
             </ul> 
         */
-        var $zitat = $("#zitat");
+
+        var $zitatAusgabe = $("#zitat");
+        var html = "";
+
         $.ajax({
             url: "data/uebung_11.json",
-            dataType: "json",
             success: function (data) {
-                var html = "";
                 var daten = data;
-                var personen = Object.keys(daten);
-                var person = personen[zufall(personen.length)];
-                var zitate = daten[person].Zitate;
+                var jsonLength = Object.keys(data).length;
 
-                html += "<h2>" + zitate[zufall(zitate.length)] + "</h2>";
-                html += "<p><strong>" + person + " </strong>" + daten[person].Vita + "</p>";
+                // zufällige Person aus JSON
+                var zufallszahl = zufall(jsonLength);
+                var person = Object.keys(data)[zufallszahl];
+
+                var zitatAnzahl = daten[person].Zitate.length;
+                html += "<h2>»" + daten[person].Zitate[zufall(zitatAnzahl)] + "«</h2>";
+
+                html += "<p><strong>" + person + "</strong> " + daten[person].Vita + "</p>";
                 html += "<ul>";
                 html += "<li>Geboren: " + daten[person].Geboren + "</li>";
                 html += "<li>Gestorben: " + daten[person].Gestorben + "</li>";
-
                 html += "</ul>";
-                $zitat.append(html);
-                $uebersicht
-                .empty()
-                .append(uebersicht(daten))
-                .find("a")
-                .on("click", function(e) {
-                    e.preventDefault();
-                    var html3 = "";
-                    var autor = $(e.target).parent().contents().first().text().trim();
-                    var $info = $("#info");
-                    var zitate = daten[autor].Zitate;
 
-                    html3 += "<ul>";
-                    html3 += "<h2>" + zitate[zufall(zitate.length)] + "</h2>";
-                    html3 += "<p><strong>" + autor + " </strong>" + daten[autor].Vita + "</p>";
-                    html3 += "<li>Geboren: " + daten[autor].Geboren + "</li>";
-                    html3 += "<li>Gestorben: " + daten[autor].Gestorben + "</li>";
-                    html3 += "</ul>";
-
-                    $info.append(html3);
-
-                })
-                ;
-
+                $zitatAusgabe.append(html);
 
                 //////////////////////////////
                 // Aufgabe 3
@@ -95,25 +65,48 @@
                 <li>René Descartes<a href="#">mehr lesen</a></li>
                 </ul> 
                 */
-                uebersicht(daten);
-            } // ende success 
-        }) // Ende $.ajax
+
+                var htmlUebersicht = "";
+                var $uebersicht = $("#uebersicht");
+                htmlUebersicht += "<ul id='autoren'>"
+                for (var key in daten) {
+                    // console.log(key);
+                    htmlUebersicht += "<li>" + key + ": <a href='#'>mehr lesen</a></li>";
+
+                }
+                htmlUebersicht += "</ul>";
+                $uebersicht.append(htmlUebersicht);
+
+                //////////////////////////////
+                // Aufgabe 3
+                //////////////////////////////
+                /* 
+                4. Binden Sie an die Hyperlinks in der in Aufgabe 3 erzeugten Liste einen Klick-Eventhandler. Wird der Link mehr lesen gedrückt geben Sie alle Informationen zum Author und alle Zitate in einem neu erzeugten div#info aus.
+                */
+
+                var $info = $("#info");
+                var $autorenLinks = $("#autoren li");
+                $autorenLinks.on("click", function (e) {
+                    e.preventDefault();
+                    var $target = $(e.target);
+                    var person = $target.parents("li").text().split(":")[0];
+
+                    // console.log(daten[person].Zitate.join(", "))
+                    $info.append("<div>" + daten[person].Zitate.join("</div><div>") + "</div><div>");
+
+
+                })
+
+
+            } // ende success
+        }); // ende ajax Aufgabe 2
+
+
     });
+
+
+
 }(window, document, jQuery));
-
-
-
-
-
-
-//////////////////////////////
-// Aufgabe 3
-//////////////////////////////
-/* 
-4. Binden Sie an die Hyperlinks in der in Aufgabe 3 erzeugten Liste einen Klick-Eventhandler. Wird der Link mehr lesen gedrückt geben Sie alle Informationen zum Author und alle Zitate in einem neu erzeugten div#info aus.
-*/
-
-
 
 /* 
 

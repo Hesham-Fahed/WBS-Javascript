@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aufgabe 2</title>
+    <!--
+            Quelltext zum Buch "Workshop HTML5 & CSS3"
+            Verlag:     dpunkt.verlag GmbH
+            Copyright:  2012 Stephan Heller <heller@daik.de>
+            Lizenz:     GNU General Public License
+            Verwendung der Quelltexte ausdrücklich gestattet und gewünscht!
+            Weitere Quelltexte finden Sie unter http://www.h5c3.de
+        -->
+    <link rel="stylesheet" href="lib/css/style.css">
+    <style>
+        .hier {
+            border: 5px solid red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="lib/js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <script src="lib/js/aufgabe2.js"></script>
+
+</head>
+
+<body>
+    <div id="kopf">
+        <div id="kopf-oben">
+            <img id="logo" src="lib/img/ziemlich_beste_freunde/logo-kinowebseite.png" alt="Logo Kino-Webseite">
+            <nav class="meta-navigation">
+                <ul>
+                    <li>
+                        <a href="#">Start</a>
+                    </li>
+                    <li>
+                        <a href="#">Suche</a>
+                    </li>
+                    <li>
+                        <a href="#">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="auswahl">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Partner</a>
+                    </li>
+                    <li>
+                        <a href="#">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="float-ende"></div>
+        </div>
+
+    </div>
+    <div id="inhalt" class="inhaltsseite">
+        <nav id="navigation-inhalt">
+            <ul>
+                <li>
+                    <a href="#">Aktuelles im Kino</a>
+                </li>
+                <li>
+                    <a href="#">Filme von A - Z</a>
+                </li>
+                <li>
+                    <a class="auswahl" href="#">Filmtipps</a>
+                </li>
+                <li>
+                    <a href="#">Fotos und Trailer</a>
+                </li>
+                <li>
+                    <a href="#">Film der Woche</a>
+                </li>
+                <li>
+                    <a href="#">Demnächst im Kino</a>
+                </li>
+                <li>
+                    <a href="#">Suche</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="haupt-inhalt" class="hier">
+            <article class="beitrag">
+                <header>
+                    <h1>Aktuelle Nachrichten zum gewählten Thema</h1>
+                    <p>
+                        <b>Dieser Text bleibt stehen...</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
+                        nisi tempora fuga quos voluptas sapiente reprehenderit obcaecati earum rem unde! Harum nulla consequuntur
+                        magni eaque dolorum molestiae esse omnis. Aspernatur, ipsa eaque eum beatae odio sed ea commodi nihil
+                        dignissimos!</p>
+
+                    <p>Klicken Sie auf einen Link um mehr zu lesen</p>
+                    <ul>
+                        <li>
+                            <a href="#">Nachrichtenartikel 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Nachrichtenartikel 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Nachrichtenartikel 3</a>
+                        </li>
+                    </ul>
+
+                    <div id="artikel">
+
+                    </div>
+            </article>
+        </div>
+        <div class="float-ende"></div>
+    </div>
+    <div id="fuss">
+        <div id="fuss-oben">
+            <nav id="druck">
+                <ul>
+                    <li>
+                        <a href="#">Druckversion</a>
+                    </li>
+                    <li>
+                        <a href="#">Seitenanfang</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="meta-navigation">
+                <ul>
+                    <li>
+                        <a href="#">Start</a>
+                    </li>
+                    <li>
+                        <a href="#">Suche</a>
+                    </li>
+                    <li>
+                        <a href="#">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="auswahl">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Partner</a>
+                    </li>
+                    <li>
+                        <a href="#">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="float-ende"></div>
+        </div>
+        <div id="copyright">
+            <p>&copy; 2012 KinoWebseite</p>
+        </div>
+    </div>
+
+    <noscript>
+        Sorry, kein JavaScript, keine Funktionalität. Bitte anschalten.
+    </noscript>
+
+
+</body>
+
+</html>

@@ -1,0 +1,620 @@
+﻿/*_____________________________________________________________
+|
+|   Quelltext zum Buch "Workshop HTML5 & CSS3"
+|   Verlag:     dpunkt.verlag GmbH
+|   Copyright:  2012 Stephan Heller <heller@h5c3.de>
+|   Lizenz:     GNU General Public License
+|   Verwendung der Quelltexte ausdrücklich gestattet und gewünscht!
+|   Weitere Quelltexte finden Sie unter http://www.h5c3.de
+|_______________________________________________________________ */
+
+/***************************
+* Anweisungen für den Entwicklungsprozess
+***************************/
+
+/***************************
+* Übergreifende Formate
+***************************/
+* {
+    font-family: verdana, sans-serif;
+    color: #222;
+}
+body {
+    width: 78.3333em;
+    margin: auto;
+    font-size: 75%;
+}
+.float-ende {
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin-top: 0px;
+    margin-bottom: 1.6666em;
+}
+h1 {
+    font-size: 1.6666em;
+    font-weight: 400;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+h3 {
+    font-size: 1.3333em;
+    font-weight: 400;
+}
+h4 {
+    font-size: 1.1666em;
+}
+h5 {
+    font-size: 1.0833em;
+}
+h6 {
+    font-size: 1em;
+}
+blockquote {
+    font-style: italic;
+    font-size: 1.1666em;
+}
+ol {
+    padding-left: 2.0833em;
+}
+ul {
+    padding-left: 1.6666em;
+}
+figure {
+    margin-left: 0px;
+}
+figcaption {
+    font-size: 0.9166em;
+}
+abbr {
+    border-bottom: 1px dashed #999;
+    cursor: help;
+}
+.unsichtbar {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* 
+    nicht im Buch - Sprungmarken einblenden. 
+    siehe www.h5c3.de/link-17-1 
+*/
+#skip {
+    position: absolute;   
+}
+#skip .unsichtbar:focus {
+    left: 0.8333em;
+    top: 0.8333em;
+    background-color: white;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    padding: 0.3333em  0.8333em;
+    border: 2px solid #cc1511;
+}
+
+/***************************
+* Kopf
+***************************/
+#kopf {
+    padding-top: 5.4166em;
+    background-image: url('../img/ziemlich_beste_freunde/hg-kopf-punkte.png');
+    background-repeat:  repeat-x;
+}
+#logo {
+    float: left;
+    width: 30.5833em;
+    height: 1.5833em;
+}
+#kopf nav.meta-navigation {
+    float: right;
+}
+#kopf-unten {
+    margin-top: 1.25em;
+}
+#key-visual {
+    float: right;
+    width: 58em;
+    height: 15.0833em;
+}
+
+/***************************
+* Navigation
+***************************/
+
+/* Haupt- und Inhaltsnavigation */
+#navigation-inhalt,
+#navigation {
+    float: left;
+    padding: 1.25em;
+    background-image: url('../img/ziemlich_beste_freunde/hg-punkt.png');
+    font-size: 1em; /* Schriftgröße wird für den IE benötigt - der IE erbt diese nicht korrekt */
+} 
+#navigation-inhalt ul,
+#navigation ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0.8333em;
+    min-height: 11em;
+    width: 13.75em;
+    background-color: white;
+    line-height: 1em; /* Nicht im Buch, wird jedoch benötigt */
+}
+#navigation-inhalt ul li a,
+#navigation ul li a {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+    text-decoration: none;
+    padding: 0.1666em;
+    -moz-transition: background-color 0.25s;
+    -webkit-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    -ms-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+#navigation-inhalt ul li a:hover,
+#navigation-inhalt a:focus,
+#navigation-inhalt ul li a.auswahl,
+#navigation ul li a:hover,
+#navigation ul li a:focus,
+#navigation ul li a.auswahl {
+    color: white;
+    background-color: #cc1511;
+}
+
+/* Responsive Design für Tablet-PCs im Hochformat */
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
+    #navigation-inhalt {
+        float: none;
+        background: #fff;
+        padding: 0px;
+    }
+    #navigation-inhalt ul {
+        width: auto;
+        padding: 0px;
+        min-height: 25px;
+        background-color: #cc1511;
+    }
+    #navigation-inhalt ul li {
+        float: left;
+        font-size: 11px;
+        font-weight: 700;
+    }
+    #navigation-inhalt ul li a {
+        padding: 6px 8px;
+        border-left: 2px solid white;
+        color: white;
+    }
+    #navigation-inhalt ul li a.auswahl {
+        color: #cc1511;
+        background-color: white;
+    }
+    #haupt-inhalt {
+        float: none;
+        width: auto;
+        margin-top: 25px;
+    }
+    #inhalt {
+        font-size: 140%;
+    } 
+}
+
+/* Meta- und Drucknavigation */
+#druck,
+.meta-navigation {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8333em;
+    background-color: #cc1511;
+}
+#druck ul,
+.meta-navigation ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+#druck ul {
+    margin-left: 0.8333em;
+}
+#druck ul li,
+.meta-navigation ul li {
+    float: left;
+}
+#druck ul li a, 
+.meta-navigation ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;   
+    border-left: 2px solid white;
+    padding: 0.3333em 0.4166em 0.4em;
+    -moz-transition: background-color 0.25s;
+    -webkit-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    -ms-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+/* spezielle Angabe für Firefox - dieser stellt die Höhe der Listenpunkte leicht abweichend dar. */
+#druck ul li a, 
+.meta-navigation ul li a, x:-moz-broken {
+    padding: 0.25em 0.4166em 0.25em;
+}
+#druck ul li a:hover,
+#druck ul li a:focus,
+#druck ul li a.auswahl,
+.meta-navigation ul li a:hover,
+.meta-navigation ul li a:focus,
+.meta-navigation ul li a.auswahl {
+    color: #cc1511;
+    background-color: white;
+}
+#druck ul li:first-child a,
+.meta-navigation ul li:first-child a {
+    border-left: 0px;
+}
+
+/***************************
+* Inhalt
+***************************/
+#inhalt {
+    margin-top: 2.0833em;
+    min-height: 12.5em;
+    font-size: 1em; /* Schriftgröße wird für den IE benötigt - der IE erbt diese nicht korrekt */
+}
+#inhalt.startseite {
+    margin-top: 0px;
+}
+
+/* Start bzw. Teaserseite */
+.teaser {
+    padding: 1.25em;
+    width: 35.6666em;
+    float: left;
+    margin-top: 2.0833em;
+    background-image: url('../img/ziemlich_beste_freunde/hg-punkt.png');
+}
+.teaser-rechts {
+    float: right;
+}
+/* Alternative Schreibweise: Neuer Selektor in CSS3 - wird nicht vom IE8 untersützt */
+.teaser:nth-child(even) {
+    float: right;
+}
+/* Nicht im Buch - damit die linken Teaser auf der gleichen Höhe wie die rechten stehen
+   wird das float: right aufgelöst */
+.teaser:nth-child(odd) {
+    clear: left;
+}
+.teaser section  {
+    min-height: 15em;
+    background-color: white;
+    padding: 0.8333em 0.8333em 0.1em 0.833em ;
+}
+.teaser h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.8333em;
+}
+.teaser h2 {
+    font-size: 1em;
+    color: white;
+    background-color: #cc1511;
+    padding: 0.25em;
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 0.8333em;
+    text-transform: uppercase;
+}
+.teaser p {
+    line-height: 1.4em;
+    margin-bottom: 0.8333em;
+}
+.teaser p a {
+    text-decoration: none;
+    color:  #cc1511;
+    font-weight: bold;
+    margin-top: 0.8333em;
+    display: inline-block;
+    background-image: url('../img/ziemlich_beste_freunde/hg-mehr-link.png');
+    padding-right: 1.6666em;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+/* Nicht im Buch: Hier wird die Angabe von position generell auf den Teaser gelegt
+   damit entfallen die Anweisungen in den Regeln für .teaser-mit-bild-links und .teaser-mit-bild-rechts */
+.teaser section {
+    position: relative;
+}
+.teaser-mit-bild-links section {
+    padding-left: 14.1666em;
+} 
+.teaser-mit-bild-links img {
+    position: absolute;
+    left: 0.8333em;
+    top: 0.8333em;
+}
+.teaser-mit-bild-rechts img {
+    position: absolute;
+    right: 0.8333em;
+    top: 0.8333em;
+}
+.teaser-mit-bild-rechts section {
+    padding-right: 14.1666em;
+}  
+
+/* Beitragsseiten */
+#haupt-inhalt {
+    width: 55.4166em;
+    padding: 1.25em;
+    background-image: url('../img/ziemlich_beste_freunde/hg-punkt.png');
+    float: right;
+}
+.volle-breite #haupt-inhalt {
+    float: none;
+    width: 75.8333em;
+}
+#haupt-inhalt section,
+#haupt-inhalt article {
+    padding: 0.8333em;
+    background-color: white;
+    min-height: 200px;
+}
+#haupt-inhalt p, 
+#haupt-inhalt blockquote, 
+#haupt-inhalt ol, 
+#haupt-inhalt ul {
+    line-height: 1.6em;   
+    max-width: 500px;
+}
+#haupt-inhalt article.beitrag {
+    padding-left: 15.8333em;
+}
+#haupt-inhalt article.beitrag img {
+    width: 12.5em;
+    height: 8.75em;
+}
+#haupt-inhalt article p  {
+    padding-right: 1.6666em;
+}
+#haupt-inhalt article p img {
+    float: left;
+    margin-left: -14.1666em;
+    margin-top: 0.4166em;
+}
+
+/* einfache Tabelle innerhalb eines Artikels */
+#haupt-inhalt article table {
+    font-size: 0.9166em;
+}
+#haupt-inhalt article caption {
+    font-size: 1.5em;
+    text-align: left;
+    text-transform: uppercase;
+}
+#haupt-inhalt article table th {
+    text-align: left;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: normal;
+    min-width: 10em;
+}
+#haupt-inhalt article table th,
+#haupt-inhalt article table td {
+    padding: 0.8333em 0.8333em 0px 0px;
+    vertical-align: top;
+}
+
+/* Komplexe Tabellen */
+table.programm  {
+    border-collapse: collapse;
+}
+table.programm caption {
+    padding: 0.4166em;
+}
+table.programm caption,
+table.programm th {
+    text-align: left;
+}
+table.programm th {
+    background-color: #CB160F;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+table.programm th[scope="row"] {
+    text-align: right;
+}
+table.programm th, 
+table.programm td {
+    border: 1px solid #dddddd;
+    padding: 0.4166em;
+    vertical-align: top;
+}
+#inhalt table.programm td[title*="Spezial"] {
+    outline: 2px solid hsl(2,93%,50%);
+    cursor: help;
+}
+#inhalt table.programm td:empty {
+    background-color: #eeeeee;
+}
+
+audio,
+video {
+    box-shadow: gray 5px 5px 5px;
+    border-radius: 5px;
+    width: 53.3333em;
+    margin-bottom: 25px;
+}
+
+/***************************
+* Formulare
+***************************/
+label {
+    text-transform: uppercase;
+}
+p.standard-zeile label {
+    width: 11.6666em;
+    float: left;
+    margin-top: 0.1666em;
+}
+p.standard-zeile input {
+    width: 20em;
+}
+p.standard-zeile textarea {
+    width: 23.3333em;
+    height: 8.3333em;
+}
+p.standard-zeile select {
+    width: 20.5em;
+}
+p.plz-ort-zeile label {
+    float: left;
+}
+p label.plz-label {
+    width: 2.9166em;
+}
+p label.ort-label {
+    width: 8.75em;
+}
+#zip {
+    width: 5.6666em;
+}
+#city {
+    width: 13.5833em;
+}
+p.box-zeile {
+    padding-left: 11.6666em;
+}
+p.submit-zeile {
+    padding-left: 11.6666em;
+}
+p.submit-zeile input {
+    color: white;
+    background-color: #cc1511;
+    border: 1px solid #cc1511;
+    width: 20.5em;
+    font-weight: 700;
+    box-shadow: #222 2px 2px 3px;
+}
+
+/* Formular Startseite */
+.teaser fieldset {
+    border: 0px solid;
+    padding: 1.25em 0em 0em;
+    margin: 0px;
+}
+.teaser legend {
+    color: white;
+    background-color: #cc1511;
+    text-transform: uppercase;
+    padding: 0.1666em 0.4166em;
+}
+.teaser .standard-zeile input {
+    width: 13.3333em;
+}
+.teaser .box-zeile label {
+    text-transform: none;
+}
+.teaser .submit-zeile input {
+    color: #222222;
+    background-color: #f5f5f5;
+    border: 1px solid #999;
+    border-radius:3px;
+    width: auto;
+    padding: 0.0833em 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/***************************
+* Fuß
+***************************/
+#fuss-oben {
+    background-color: #cc1511;
+}
+#fuss-oben,
+#copyright {
+    margin-top: 1.6666em;
+}
+#druck {
+    float: left;
+}
+#fuss nav.meta-navigation {
+    float: right;
+}
+#copyright {
+    background-image: url('../img/ziemlich_beste_freunde/hg-punkt.png');
+    padding: 1.25em;
+}
+#copyright p {
+    background-color: #fff;
+    margin: 0px;
+    width: 14.1666em;
+    padding-left: 0.8333em;
+    font-size: 0.8333em;
+    text-transform: uppercase;     
+}
+
+/***************************
+* Druckausgabe
+***************************/
+@media print {
+    body {
+        font-size: 10pt;
+    }
+    h1, 
+    .teaser  h1 {
+        font-size: 18pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
+    #kopf {
+        padding-top: 0px;
+        background-image: none;
+    }
+    .meta-navigation,
+    #navigation, 
+    #navigation-inhalt,
+    #inhalt .teaser a,
+    #druck {
+        display: none;
+    }
+    #inhalt * {
+        background-image: none;
+    }
+    #inhalt .teaser {
+        float: none;
+        min-height: inherit;
+        margin: 0.2cm 0px 0.5cm ;
+        padding: 0px;      
+        border-bottom: 1px solid gray;
+        width: 17.6cm;
+    }
+    #inhalt section {
+        min-height: inherit;
+    }
+    #haupt-inhalt section {
+        padding: 0px;
+        min-height: inherit;
+    }
+    #key-visual,
+    #haupt-inhalt {
+        float: left;
+        max-width: 100%;
+        padding: 0px;
+    }
+    #copyright {
+        background-image: none;
+        padding: 10px 0px 0px;
+        border-top: 1px solid #999;
+    }
+    #copyright p {
+        padding: 0px;
+    }
+}

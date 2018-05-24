@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aufgabe 1</title>
+    <!--
+            Quelltext zum Buch "Workshop HTML5 & CSS3"
+            Verlag:     dpunkt.verlag GmbH
+            Copyright:  2012 Stephan Heller <heller@daik.de>
+            Lizenz:     GNU General Public License
+            Verwendung der Quelltexte ausdrücklich gestattet und gewünscht!
+            Weitere Quelltexte finden Sie unter http://www.h5c3.de
+        -->
+    <link rel="stylesheet" href="lib/css/style.css">
+    <style>
+        .hier {
+            border: 5px solid red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="lib/js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <script src="lib/js/aufgabe1.js"></script>
+</head>
+
+<body>
+    <div id="kopf">
+        <div id="kopf-oben">
+            <img id="logo" src="lib/img/ziemlich_beste_freunde/logo-kinowebseite.png" alt="Logo Kino-Webseite">
+            <nav class="meta-navigation">
+                <ul>
+                    <li>
+                        <a href="#">Start</a>
+                    </li>
+                    <li>
+                        <a href="#">Suche</a>
+                    </li>
+                    <li>
+                        <a href="#">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="auswahl">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Partner</a>
+                    </li>
+                    <li>
+                        <a href="#">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="float-ende"></div>
+        </div>
+        <div id="kopf-unten">
+            <nav id="navigation">
+                <ul>
+                    <li>
+                        <a href="#">Programm</a>
+                    </li>
+                    <li>
+                        <a href="#">Filme von A-Z</a>
+                    </li>
+                    <li>
+                        <a href="#" class="auswahl">Themen</a>
+                    </li>
+                    <li>
+                        <a href="#">Aktuelles</a>
+                    </li>
+                </ul>
+            </nav>
+            <img id="key-visual" class="hier" src="lib/img/ziemlich_beste_freunde/haus-im-himmel.jpg" alt="Holzhütte vor wolkigem Himmel">
+            <div class="float-ende"></div>
+        </div>
+    </div>
+    <div id="inhalt" class="startseite">
+        <div class="teaser">
+            <section>
+                <hgroup>
+                    <h2>News & Themen</h2>
+                    <h1>3. Oscar für Meryl Streep</h1>
+                </hgroup>
+                <p>Die dreifache Oscar-Preisträgerin gilt als eine der gefragtesten sowie künstlerisch erfolgreichsten Filmdarstellerinnen
+                    der Welt.</p>
+                <p>
+                    Lesen Sie eine beeindruckende Biografie der 1949 geborenen Mary Louise "Meryl" Streep.
+                    <br>
+                    <a href="#" title="Mehr über 3. Oscar für Meryl Streep">mehr</a>
+                </p>
+            </section>
+        </div>
+        <div class="teaser teaser-rechts teaser-mit-bild-links">
+            <section>
+                <hgroup>
+                    <h2>Aktionen</h2>
+                    <h1>Kino macht Schule</h1>
+                </hgroup>
+                <img src="lib/img/ziemlich_beste_freunde/kino-macht-schule.jpg" alt="">
+                <p>
+                    <strong>Kino macht Schule</strong> ist eine geförderte Aktion der Landesregierung und bringt dem Nachwuchszuschauer
+                    den Kulturwert Kino näher.
+                    <br>
+                    <a href="#" title="Mehr über Kino macht Schule">mehr</a>
+                </p>
+            </section>
+        </div>
+        <div class="teaser">
+            <section>
+                <form method="get" action="#">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <p class="standard-zeile">
+                            <label for="username">Benutzername</label>
+                            <input name="username" type="text" id="username" placeholder="Ihr Benutzername" autofocus>
+                        </p>
+                        <p class="standard-zeile">
+                            <label for="password">Passwort</label>
+                            <input name="password" type="password" id="password">
+                        </p>
+                        <p class="box-zeile">
+                            <input name="merken" type="checkbox" id="merken">
+                            <label for="merken">angemeldet bleiben</label>
+                        </p>
+                    </fieldset>
+                    <p class="submit-zeile">
+                        <input type="submit" value="Einloggen">
+                    </p>
+                </form>
+            </section>
+        </div>
+        <div class="teaser teaser-rechts teaser-mit-bild-rechts">
+            <section>
+                <hgroup>
+                    <h2>Intern</h2>
+                    <h1>Ökologisch Kino genießen</h1>
+                </hgroup>
+                <img src="lib/img/ziemlich_beste_freunde/steckdosen.jpg" alt="">
+                <p>
+                    Durch die Wahl unseres Stromanbieters laufen unsere Filme mit Strom aus zu 100% erneuerbaren Energien.
+                    <br>
+                    <a href="#" title="Mehr über Ökologisch Kino genießen">mehr</a>
+                </p>
+            </section>
+        </div>
+        <div class="float-ende"></div>
+    </div>
+    <div id="fuss">
+        <div id="fuss-oben">
+            <nav id="druck">
+                <ul>
+                    <li>
+                        <a href="#">Druckversion</a>
+                    </li>
+                    <li>
+                        <a href="#">Seitenanfang</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="meta-navigation">
+                <ul>
+                    <li>
+                        <a href="#">Start</a>
+                    </li>
+                    <li>
+                        <a href="#">Suche</a>
+                    </li>
+                    <li>
+                        <a href="#">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="auswahl">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Partner</a>
+                    </li>
+                    <li>
+                        <a href="#">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="float-ende"></div>
+        </div>
+        <div id="copyright">
+            <p>&copy; 2012 KinoWebseite</p>
+        </div>
+    </div>
+
+    <noscript>
+        Sorry, kein JavaScript, keine Funktionalität. Bitte anschalten.
+    </noscript>
+
+</body>
+
+</html>

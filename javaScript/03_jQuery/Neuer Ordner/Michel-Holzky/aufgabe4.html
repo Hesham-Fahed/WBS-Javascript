@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aufgabe 4</title>
+    <!--
+            Quelltext zum Buch "Workshop HTML5 & CSS3"
+            Verlag:     dpunkt.verlag GmbH
+            Copyright:  2012 Stephan Heller <heller@daik.de>
+            Lizenz:     GNU General Public License
+            Verwendung der Quelltexte ausdrücklich gestattet und gewünscht!
+            Weitere Quelltexte finden Sie unter http://www.h5c3.de
+        -->
+    <link rel="stylesheet" href="lib/css/style.css">
+    <!--[if lt IE 9]>
+            <script type="text/javascript" src="_js/html5shiv.js"></script>
+        <![endif]-->
+    <style>
+        .hier {
+            border: 5px solid red;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .ok {
+            color: green;
+        }
+
+        .errorInput {
+            background-color: #ff9999;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="lib/js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <script src="lib/js/jquery_validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/js/jquery_validation/dist/additional-methods.min.js"></script>
+    <script src="lib/js/lib.js"></script>
+    <script src="lib/js/aufgabe4.js"></script>
+
+</head>
+
+<body>
+    <nav id="skip">
+        <p>
+            <a class="unsichtbar" href="#inhalt">zum Inhalt</a>
+        </p>
+    </nav>
+    <div id="kopf">
+        <div id="kopf-oben">
+            <img id="logo" src="lib/img/ziemlich_beste_freunde/logo-kinowebseite.png" alt="Logo Kino-Webseite">
+            <nav class="meta-navigation">
+                <ul>
+                    <li>
+                        <a href="#">Start</a>
+                    </li>
+                    <li>
+                        <a href="#">Suche</a>
+                    </li>
+                    <li>
+                        <a href="#">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <span class="unsichtbar">Ausgewählte Seite: </span>
+                        <a href="#" class="auswahl">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Partner</a>
+                    </li>
+                    <li>
+                        <a href="#">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="float-ende"></div>
+        </div>
+        <div id="kopf-unten">
+            <nav id="navigation">
+                <ul>
+                    <li>
+                        <a href="#">Programm</a>
+                    </li>
+                    <li>
+                        <a href="#">Filme von A-Z</a>
+                    </li>
+                    <li>
+                        <span class="unsichtbar">Ausgewählte Seite: </span>
+                        <a href="#" class="auswahl">Themen</a>
+                    </li>
+                    <li>
+                        <a href="#">Aktuelles</a>
+                    </li>
+                </ul>
+            </nav>
+            <img id="key-visual" src="lib/img/ziemlich_beste_freunde/briefkaesten.jpg" alt="Amerikanische Briefkästen auf dem Land">
+            <div class="float-ende"></div>
+        </div>
+    </div>
+    <div id="inhalt" class="inhaltsseite">
+        <nav id="navigation-inhalt">
+            <ul>
+                <li>
+                    <a href="#">Aktuelles im Kino</a>
+                </li>
+                <li>
+                    <a href="#">Filme von A - Z</a>
+                </li>
+                <li>
+                    <span class="unsichtbar">Ausgewählte Seite: </span>
+                    <a class="auswahl" href="#">Filmtipps</a>
+                </li>
+                <li>
+                    <a href="#">Fotos und Trailer</a>
+                </li>
+                <li>
+                    <a href="#">Film der Woche</a>
+                </li>
+                <li>
+                    <a href="#">Demnächst im Kino</a>
+                </li>
+                <li>
+                    <a href="#">Suche</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="haupt-inhalt" class="hier">
+            <section>
+                <h2>Ticketreservierung</h2>
+                <p>Mit * gekennzeichnete Felder sind Pflichtfelder</p>
+                <form method="get">
+                    <p class="standard-zeile">
+                        <label for="first">* Vorname:</label>
+                        <input name="vorname" id="first">
+                    </p>
+                    <p class="standard-zeile">
+                        <label for="last">* Nachname:</label>
+                        <input name="nachname" id="last">
+                    </p>
+                    <p class="standard-zeile">
+                        <label for="mail">* E-Mail:</label>
+                        <input name="mail" id="mail">
+                    </p>
+                    <p class="standard-zeile">
+                        <label for="anzahl">* Anzahl Karten:</label>
+                        <input name="anzahl" id="anzahl">
+                    </p>
+                    <p class="box-zeile">
+                        *
+                        <input name="agb" type="checkbox" value="ja" id="agb">
+                        <label for="agb">AGB gelesen?</label>
+                    </p>
+                    <p class="standard-zeile">
+                        <label for="memo">Anmerkung:</label>
+                        <textarea name="kommentar" id="memo"></textarea>
+                    </p>
+                    <p class="submit-zeile">
+                        <input type="submit" value="Jetzt absenden!">
+                    </p>
+                </form>
+            </section>
+        </div>
+        <div class="float-ende"></div>
+    </div>
+    <div id="fuss">
+        <div id="fuss-oben">
+            <nav id="druck">
+                <ul>
+                    <li>
+                        <a href="#">Druckversion</a>
+                    </li>
+                    <li>
+                        <a href="#">Seitenanfang</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="meta-navigation">
+                <ul>
+                    <li>
+                        <a href="#">Start</a>
+                    </li>
+                    <li>
+                        <a href="#">Suche</a>
+                    </li>
+                    <li>
+                        <a href="#">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <span class="unsichtbar">Ausgewählte Seite: </span>
+                        <a href="#" class="auswahl">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Partner</a>
+                    </li>
+                    <li>
+                        <a href="#">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="float-ende"></div>
+        </div>
+        <div id="copyright">
+            <p>&copy; 2012 KinoWebseite</p>
+        </div>
+    </div>
+
+    <noscript>
+        Sorry, kein JavaScript, keine Funktionalität. Bitte anschalten.
+    </noscript>
+
+
+</body>
+
+</html>

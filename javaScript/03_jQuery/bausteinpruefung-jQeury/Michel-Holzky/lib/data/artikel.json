@@ -1,0 +1,20 @@
+{
+    "a0": {
+        "headline": "Wichtiger Nachrichtenartikel 1",
+        "fliesstext": "Nachrichtenartikel 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, magni quidem ab doloremque dolores perferendis vitae amet temporibus ut labore sint ex facilis harum quaerat fugit possimus voluptates est debitis doloribus eius voluptatibus quo nostrum deserunt voluptatem tempora eligendi itaque nihil sunt in exercitationem tempore quisquam eum consequatur non repellat....",
+        "src": "img/nicht_lustig/bild1.jpg",
+        "alt": "Alternativtext Bild1"
+    },
+    "a1": {
+        "headline": "Wichtiger Nachrichtenartikel 2",
+        "fliesstext": "Nachrichtenartikel 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, magni quidem ab doloremque dolores perferendis vitae amet temporibus ut labore sint ex facilis harum quaerat fugit possimus voluptates est debitis doloribus eius voluptatibus quo nostrum deserunt voluptatem tempora eligendi itaque nihil sunt in exercitationem tempore quisquam eum consequatur non repellat....",
+        "src": "img/nicht_lustig/bild2.jpg",
+        "alt": "Alternativtext Bild2"
+    },
+    "a2": {
+        "headline": "Wichtiger Nachrichtenartikel 3",
+        "fliesstext": "Nachrichtenartikel 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, magni quidem ab doloremque dolores perferendis vitae amet temporibus ut labore sint ex facilis harum quaerat fugit possimus voluptates est debitis doloribus eius voluptatibus quo nostrum deserunt voluptatem tempora eligendi itaque nihil sunt in exercitationem tempore quisquam eum consequatur non repellat....",
+        "src": "img/nicht_lustig/bild3.jpg",
+        "alt": "Alternativtext Bild3"
+    }
+}

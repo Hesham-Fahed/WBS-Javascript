@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+
+    <style>
+        body { margin: 0; padding: 0; }
+
+        html, body {
+            font-family: sans-serif;
+        }
+
+        nav {
+            background: #EEE;
+        }
+
+        nav > ul {
+            list-style: none;
+            margin: 0; padding: 0;
+
+            /* Put everything on the same axis */
+            display: flex;
+            
+            /* swap the two axis */
+            /* flex-direction: column; */
+            
+            /* change direction of axis = reverse ordering */
+            /* flex-direction: column-reverse; */
+
+            flex-direction: row-reverse;
+
+            /* This is left now! */
+            /* justify-content: flex-end; */
+
+            /* Put equal space around all items */
+            /* justify-content: space-around; */
+
+            /* Put equal space only between items */
+            justify-content: space-between;
+        }
+
+
+        li {
+            padding: 15px 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+    <h1>Flexbox Navigation Menu</h1>
+
+</body>
+</html>

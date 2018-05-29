@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <input v-model="message">
+
+        <div>{{ counter }}</div>
+        <button @click="counter++">Add</button>
+        <button @click="counter--">Substract</button>
+        <button @click="$emit('fire', 12)">Fire</button>
+
+        <div @fire="message++">{{ message }}</div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                counter: 0
+            }
+        })
+    </script>
+    <script>
+        (11 * (7 - 3)) == 44;
+        ((11 % 3) ** 3) === 8;
+        ((3 + ".14") * 4) === 12.56;
+        ((3 * (4 + 8)) / 2) === 18;
+        true and false xor !true and false;
+        
+        
+        true xor ((true xor true) and false);
+        !(null) ? false : false;
+    </script>
+
+    <!-- 
+    <button id="get-request">Get Request</button>
+    <button id="post-request">Post Request</button>
+    <button id="delete-request">Delete Request</button>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		let getButton = document.getElementById('get-request');
+		let postButton = document.getElementById('post-request');
+        let deleteButton = document.getElementById('delete-request');
+	
+		getButton.addEventListener('click', function() {
+            $.get('sandbox.php', { pizza: 'Spanferkel' })
+                .done(function(response) {
+                    console.log(response);
+                }
+            )
+		})
+
+        postButton.addEventListener('click', function() {
+			$.post('sandbox.php', { pizza: 'Spanferkel' })
+                .done(function(response) {
+                    console.log(response);
+                }
+            )
+		})
+
+        deleteButton.addEventListener('click', function() {
+            $.ajax({
+                url: 'sandbox.php?pizza=fungi',
+                type: 'DELETE',
+                success: function(result) {
+                    console.log(result)
+                }
+            })
+        })
+
+    </script> -->
+
+</body>
+</html>

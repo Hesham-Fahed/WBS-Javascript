@@ -1,0 +1,9 @@
+{
+    "name": "Just some dependencies",
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
+    "require": {
+        "twig/twig": "2.4.3 as 1.3"
+    }
+}

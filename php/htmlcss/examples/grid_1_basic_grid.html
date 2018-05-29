@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+
+    <style>
+        #container {
+            width: 80%;
+            margin: 30px auto 0;
+            background: #EEE;
+            display: grid;
+
+            /* 3 columns of equal width: */
+            /* grid-template-columns: auto auto auto; */
+
+            /* different width columns: */
+            grid-template-columns: 100px auto 100px;
+
+            /* grids will adjust to the container height */
+            height: 400px;
+
+            /* the same goes for rows */
+            grid-template-rows: 100px auto 100px;
+
+            /* put some space between the grid cells */
+            grid-gap: 5px;
+
+            /* make all columns auto width with repeat function */
+            /* grid-template-columns: repeat(4, auto); */
+        }
+
+        .item {
+            border: 5px solid lightgreen;
+        }
+
+        .item:first-child {
+            /* exchange cell 1 and cell 9 */
+            background: lightcoral;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .item:last-child {
+            /* exchange cell 1 and cell 9 */
+            background: lightcoral;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .item:nth-child(2) {
+            /* exchange cell 1 and cell 9 */
+            background: lightcoral;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+    
+    </style>
+</head>
+<body>
+    
+    <h1>Basic Grid</h1>
+
+    <div id="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+
+</body>
+</html>

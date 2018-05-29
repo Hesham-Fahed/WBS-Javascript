@@ -1,0 +1,104 @@
+PAUSEN
+0930 - 0950
+1100 - 1115
+1215 - 1300
+1430 - 1445
+
+
+Brainstorming
+-------------
+Netzwerk
+Rechnernetz
+Internet (aka Neuland)
+
+Client
+  Nutzt / Konsumiert Dienste
+  zB Browser, Handy-App, Toaster mit Internet, Alexa, ...
+Server
+  Stellt Dienste bereit
+  Kann den Rechner oder einen Service bezeichnen
+
+
+  Datenbank (DB)
+  MySQL / MariaDB
+  SQL
+
+Protokoll - Legt die Art/Syntax/Vokabular der Kommunikation fest
+  TCP - Alle Daten kommen richtig an, Port
+  IP - Daten kommen am richtigen Rechner an, IP
+  Port - Daten kommen am richtigen Service an
+  HTTP / HTTPS  - Protokoll von Web-Client/-Server
+    GET, POST - HTTP Verben
+  weitere: (S)FTP, SSH, Telnet
+
+HTTP Request(-Response) Cycle
+  Request - Anfrage
+  Response - Antwort
+
+HTML
+CSS
+Scriptsprache
+JavaScript
+PHP
+
+Frontend
+Backend
+
+Datenübermittlung
+Mobile
+
+Framework
+CMS
+Typo3
+
+AJAX
+XML
+JSON
+
+Character Encoding
+UTF-8
+
+Dynamic / Static
+Responsive
+
+
+
+
+
+
+IP HEADER
+  Source Address: 192.168.0.12
+  Destination Address: 192.168.0.1
+TCP HEADER
+  Source Port: 32384   Destination Port: 80
+  Sequence Number: 1, ...,
+HTTP HEADER
+  GET /order/bla/index.php?delete=12 HTTP/1.1
+  Cookie: bnla=12
+  User-Agent: Webkit 62 .....
+HTTP PAYLOAD
+  user=peter&pass=123123&email=papst@vatican.vt
+
+8.8.8.8
+
+Route
+192.168.0.-> direkt
+250.1.1.  -> Super Router im Keller
+DEFAULT   -> Vodafone Router
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

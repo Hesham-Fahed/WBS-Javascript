@@ -1,0 +1,134 @@
+Oliver Schumacher:
+http://radwild.de/~ollo/webdev.zip
+
+http://radwild.de/~ollo/learning_php_7.pdf
+
+http://php.net/manual/en/
+
+https://developer.mozilla.org/en-US/
+
+http://www.selfphp.de/
+
+https://eloquentjavascript.net/
+
+https://github.com/getify/You-Dont-Know-JS
+
+
+
+Operatoren Übung
+!3/4
+    ((!3)/4)
+    ((!true)/4)
+    (false/4)
+    (0/4)
+    0
+    
+    
+Kurs-Doku liegt in:
+webdev/docs/_site/index.html
+
+PHP BUCH
+http://radwild.de/~ollo/learning_php_7.pdf
+
+Case Types
+    $meine_variable_ist_toll;    // snake case - Prozedurale Programmierung
+    $CamelCaseIsUsedInWikis;     // Klassennamen
+    $studlyCaseSchreibtDasErsteZeichenKlein; // OOP
+    <div class="bu-kebab-cok-iyi">Kebab Case</div>
+
+
+PHP Brainstorming
+
+Netzwerk
+Rechnernetz
+Internet (aka Neuland)
+
+Client
+  Nutzt / Konsumiert Dienste
+  zB Browser, Handy-App, Toaster mit Internet, Alexa, ...
+Server
+  Stellt Dienste bereit
+  Kann den Rechner oder einen Service bezeichnen
+
+Protokoll - Legt die Art/Syntax/Vokabular der Kommunikation fest
+  TCP - Alle Daten kommen richtig an, Port
+  IP - Daten kommen am richtigen Rechner an, IP
+  DNS - Domain Name Service - Konvertiert Domain Namen in IPs
+  Port - Daten kommen am richtigen Service an
+  HTTP / HTTPS  - Protokoll von Web-Client/-Server
+    GET, POST - HTTP Verben
+  weitere: (S)FTP, SSH, Telnet
+
+HTTP Request(-Response) Cycle
+  Request - Anfrage auf eine Ressource, zB http://bla.de/meine/pizza/12
+  Response - Antwort mit Code und ggf Daten, zB 200 { status: success }, oder 404
+
+HTML - Auszeichnungssprache, Struktur des Dokuments, DOM ~ Baum
+CSS - Beschreibungssprache um Elemente des DOMs zu Stylen
+JavaScript - Skriptsprache zur Manipulation von Daten und des DOMs
+PHP - Skriptsprache zur Manipulation von Daten, der DB und zum Bauen von Antworten
+Scriptsprache - werden für uns unsichtbar kompiliert, wird oft interpretiert
+
+Frontend - Clientseitig, sieht der Nutzer
+Backend - Serverseitig, sieht der Nutzer nicht
+
+Character Encoding
+  ASCII
+  ISO8859-1 - ISO8859-15
+  UTF-8 / UTF-7 / UTF-16 / ....
+
+Framework
+  Laravel
+  Symphony
+  CodeIgniter
+  CakePHP
+
+CMS
+  Typo3
+  Wordpress
+  Joomla
+  Drupal
+  OctoberCMS
+
+AJAX (Asynchronous JavaScript via XML)
+XML (Extensible Markup Language)
+JSON (JavaScript Object Notation)
+
+Datenbank (DB) - Die Dateien/Kisten, die die Daten enthalten
+Datenbankmanagementsystem (DBMS) - Der eigentliche Server
+Relationale DBMS - Daten werden in Tabellen gespeichert
+  MySQL / MariaDB
+  SQL - (Sequel) Die Sprache, mit der mit der DB kommuniziert wird
+Dokumentbasiert DBMS
+  MongoDB
+GraphDatenbanken
+  Neo4J
+
+
+Beispiel (mit "Pseudocode") für ein HTTP Paket
+----------------------------------------------
+Physical Layer
+   110010101010101010100101010101010101111010101010
+Ethernet HEADER
+  Source MAC: aa:c9:44:44:55:66
+  Destination MAC: ....
+IP HEADER
+  Source Address: 192.168.0.12
+  Destination Address: 192.168.0.1
+TCP HEADER
+  Source Port: 32384   Destination Port: 80
+  Sequence Number: 1, ...,
+HTTP HEADER
+  Request: GET /order/bla/index.php?delete=12 HTTP/1.1
+  Cookie: bnla=12
+  User-Agent: Webkit 62 .....
+  ODER 
+  Response: HTTP/1.x 200 OK
+  BLABLA DATEN
+HTTP PAYLOAD
+  user=peter&pass=123123&email=papst@vatican.vt
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+
+        header, footer {
+            background: #EEE;
+        }
+
+        .container > * {
+            padding: 0 20px;
+        }
+
+        .container {
+            /* Removing max-width makes the layout fluid */
+            max-width: 500px;
+            min-height: 100%;
+
+            margin: 0 auto;
+
+            /* flex makes everything jump onto the main axis - bad */
+            display: flex;
+
+            /* Make everything stack horizontally - change main axis */
+            flex-direction: column;
+
+            /* Center everything on the page - meh - not what we want */
+            /* justify-content: center; */
+
+            /* Distibute rows evenly */
+            justify-content: space-between;
+        }
+
+        /* Make the main content flexible */
+        main {
+            display: flex;
+
+            /* Set as much bottom margin as possible */
+            /* margin-bottom: auto; */
+        }
+
+        main aside {
+            margin-right: 20px;
+
+            /* The Item does not grow or shrink 
+               and has a fixed size */
+            flex: 0 0 100px;
+
+            /* Push the Links to the left */
+            order: -1;
+        }
+
+        footer {
+            /* We can also set the margin on the footer */
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        
+        <main>
+
+            <!-- div.primary>{p>lorem}*3 -->
+            <div class="primary">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit atque ipsum, vel sapiente inventore eos ea voluptatum. Amet vel quia culpa soluta explicabo aut id, voluptates aperiam quam doloribus cupiditate.</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit atque ipsum, vel sapiente inventore eos ea voluptatum. Amet vel quia culpa soluta explicabo aut id, voluptates aperiam quam doloribus cupiditate.</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit atque ipsum, vel sapiente inventore eos ea voluptatum. Amet vel quia culpa soluta explicabo aut id, voluptates aperiam quam doloribus cupiditate.</p>
+            </div>
+
+            <!-- aside>ul>li*8>a[href=#]{Link to Oblivion} -->
+            <aside>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </aside>
+
+        </main>
+
+        <footer>
+            <h5>Footer</h5>
+            <p>Impressum</p>
+        </footer>
+    </div>
+
+</body>
+</html>

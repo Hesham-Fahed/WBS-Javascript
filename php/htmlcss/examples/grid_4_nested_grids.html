@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+
+    <style>
+        body { margin: 0; padding: 0; }
+    
+        #container {
+            width: 80%;
+            margin: 30px auto 0;
+            background: #EEE;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 10px;
+        }
+
+        .box {
+            background: lightblue;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        /* make a cell stretch two columns */
+        .a {
+            /* grid-column: 2 / 4; */
+
+            /* another way to write it: */
+            grid-column: 2 / span 2;
+        }
+
+        /* make a cell stretch two rows */
+        .b {
+            grid-column: 4 / 5;
+            grid-row: 1 / 4;
+
+            /* nested grid */
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+        }
+
+        .box .box {
+            background: darkkhaki;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <h1>Nested Grids</h1>
+
+    <div id="container">
+        <div class="box a">A</div>
+        <div class="box b">
+            <div class="box b1">B1</div>
+            <div class="box b2">B2</div>
+            <div class="box b3">B3</div>
+            <div class="box b4">B4</div>
+        </div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+    </div>
+
+</body>
+</html>

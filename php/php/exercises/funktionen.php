@@ -1,20 +1,184 @@
 <?php
 declare(strict_types=1);
 
+    $minMax = [1, 2, 3, 4];
+    echo max( $minMax );
+
+    echo "<hr>Stringlength<br>";
+    $stringlength = "Der Sack hat nicht tschüss gesagt";
+    echo strlen($stringlength);
+    echo "<br>";
+    echo mb_strlen($stringlength);
+
+    //test();
+    // function test()
+    // {
+    //     static $count = 0;
+
+    //     $count++;
+    //     echo $count;
+    //     if ($count < 10) {
+    //         test();
+    //     }
+    //     $count--;
+    //     echo $count;
+    // }
+
+
 /*************************
  * EXERCISES - FUNCTIONS *
  *************************/
+
+    // Aufgabe 1 /////////////////////////
+
+    echo "<hr>";
+    $firstname = "Peter";
+    $lastname = "Pan";
+
+    echo "$firstname";
+
+    function get_full_name($first, $last) : string {
+        // return "<p><b>Aufgabe 1: </b>" . $first . " " . $last . "</p>";
+        return "<p><b>Aufgabe 1: </b>$first $last</p>";
+    }
+
+    echo get_full_name($firstname, $lastname);
+
+
+    // Aufgabe 2 /////////////////////////
+    echo "<hr>Aufgabe 2<br>";
+    echo times_called();
+    echo times_called();
+    echo times_called();
+    
+    function times_called() {
+        static $counter = 0;
+        $counter++;
+        return $counter;
+    }
+    
+    
+    // Aufgabe 3 /////////////////////////
+    function has_umlauts($string)  
+    {
+        $umlauts = ['ä', 'ö', 'ü'];
+        $umlauts_length = count($umlauts);
+
+        for ($i = 0; $i < $umlauts_length; $i++) {
+            if (mb_stripos($string, $umlauts[$i]) !== false) {
+                return true;
+        }
+
+        return true;
+    }
+
+//=> Umlaute gefunden
+
+    // Aufgabe 3b //////////////////////
+    echo "<hr>Aufgabe3b<br>";
+
+    $urString = "Haus Katze Baum Boot Katze Baum Baum Haus 37 Brote Haus";
+    $urStringEinzel = mb_split(' ', $urString);
+    $urStringEinzelLength = count($urStringEinzel);
+    $singleWords = [];
+
+    ///////////////////////////////////////
+    // kurs und knackig
+    ///////////////////////////////////////
+    // $word_frequencies = [];
+    // foreach ($urStringEinzel as $word) {
+    //     if (isset($word_frequencies[$word])) {
+    //         $word_frequencies[$word]++;
+    //     }
+    //     else {
+    //         $word_frequencies[$word] = 1;
+    //     }
+    // }
+    ///////////////////////////////////////
+    
+    // herrausfiltern der doppelten Worte, 
+    // damit jedes Wort durchgezählt werden kann, ohne doppelt gezählt zu werden.
+    for ($i=0; $i < $urStringEinzelLength ; $i++) { 
+        if(!(in_array($urStringEinzel[$i], $singleWords))) {
+            array_push($singleWords, $urStringEinzel[$i]);
+        }
+    }
+
+    $countword = [];
+    foreach($singleWords as $index => $word) {
+        $counter = 0;
+        for($i = 0; $i < $urStringEinzelLength; $i++) {
+            if($urStringEinzel[$i] === $word) {
+                $counter++; 
+            }
+            $countword[$word] = $counter;
+        }
+    }
+    var_dump($countword);
+
+    // $wordFrequencies = count_words($urString);
+    // var_dump($wordFrequencies);
+    
+    // Aufgabe 4 easy ////////////////////////////////
+    echo "<hr>Aufgabe 4 easy<br>";
+
+    /* 
+    <div class="solwrapper">
+    <p>Definiere eine Funktion mit folgender Signatur:</p>
+    <pre>function truncate_string(string $text, int $max_length) : string</pre>
+    <ul>
+        <li>Die Funktion soll $text kürzen, wenn es länger als $max_length ist</li>
+        <li>Der gekürzte String soll mit drei Punkten "..." am Ende zurückgegeben werden.</li>
+        <li>Beachte, dass die drei Punkte auch zur Länge des Strings zählen. </li>
+        <li>Ist $max_length kleiner gleich 3, dann zählen die drei Punkte "..." nicht zur Länge des Strings. </li>
+    </ul>
+
+    <pre>
+        echo truncate_string("This string may get truncated!", 16);
+        Ausgabe: This string m...
+
+        echo truncate_string("Hallo", 2);
+        Ausgabe: Ha...
+
+        echo truncate_string("Hold the Line", 15);
+        Ausgabe: Hold the Line
+    </pre>
+    */
+
+
+    $testText = "Der Kitsch ist wie der gute Hirte, selbst wenn er sich avantgardistisch gibt, sieht er zu, dass jeder mitkommt.";
+    $wishedLength = 2;
+
+
+    // $trunc_str = mb_substr($text, 0, ($max_length <= 3) ? $max_length : ($max_length - 3));
+
+    echo truncate_string($testText, $wishedLength);
+
+    function truncate_string(string $text, int $max_length) : string {
+        $strLength = mb_strlen($text);
+        
+        if ($max_length > 3) {
+            if ($strLength > $max_length) {
+                $shortText = mb_substr($text, 0, $max_length-3) . "...";
+            } else {
+                $shortText = $text;
+            }
+        } else {
+            $shortText = mb_substr($text, 0, 2) . "...";
+        }
+        
+        return $shortText;
+    }
+
+
+    echo "<hr>";
+    echo "<hr>";
+    echo "<hr>";
 ?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <?php include 'helpers/head.php'; ?>
-    <style>
-    .code {
-        color: <?= $_GET['color']; ?>;
-        font-family: Courier;
-    }
-    </style>
 </head>
 
 <body>

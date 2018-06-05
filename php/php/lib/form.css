@@ -1,0 +1,51 @@
+
+.errorMsg {
+    float: left;
+    margin: 0 0 20px 0;
+    padding: 15px 0;
+    width: 100%;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #E00 #FFDCE5;
+    color: #E00;
+    background-color: #FFDCE5;
+    visibility:hidden; 
+}
+
+.errorMsg span {
+    display: block;
+    padding: 0 10px 0 50px;
+}
+
+input.error {
+    border: 1px solid #E00;
+    color: #E00;
+    background-color: #FFDCE5;
+}
+
+select.error {
+    /* border: 1px solid #E00; */
+    /* color: #E00; */
+    background-color: #FFDCE5;
+    border: none;
+}
+
+
+label.error { color: #E00;border-color: transparent; background-color:transparent ;}
+
+fieldset.error { color: #000; border-color: #E00;background-color:transparent ;}
+fieldset.error legend { color: #E00; }
+
+em {
+    display: inline-block;
+    font-size: 125%;
+    font-weight: bold;
+    color: #E00;
+}
+
+.valid {
+    color:green;
+    border: 2px solid green;
+}
+
+label, input[type="button"] {display: block;}

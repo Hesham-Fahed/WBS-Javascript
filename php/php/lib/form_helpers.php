@@ -13,7 +13,6 @@ function get_error(
     return '';
 }
 
-
 function get_post_value(string $fieldname) : string
 {
     if (!empty($_POST[$fieldname])) {

@@ -1,9 +1,0 @@
-body      { max-width: 800px; margin: auto; }
-pre       { padding: 0 1rem; }
-.code     { font-family: Courier; }
-div.code  { white-space: pre; }
-.hidden   { display: none; }
-.qna      { margin-bottom: 0.5rem; }
-.solution { padding: 0.1em; background: lightskyblue; }
-.qna:nth-child(2n) {background: #DDD}
-.qbutton  { margin-right: 15px; }

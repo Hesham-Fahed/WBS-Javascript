@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Layouts: Absolute</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<style>
+		
+		html, body{
+			padding: 0;
+			margin: 0;
+		}
+
+		/* Some colors */
+		header { background: red; }
+		footer { background: rgb(128, 128, 255); }
+
+		.wrapper {
+			width: 500px;
+			margin: 0 auto;
+		}
+
+		.tooltip {
+			background: lightcoral;
+			position: relative;
+			margin: auto;
+		}
+
+		.tooltip-popup {
+			position: absolute;
+			left: -10000px;
+			width: 250px;
+			background: darkblue;
+			color: lightblue;
+			padding: 0.5em;
+		}
+
+		.tooltip:hover .tooltip-popup {
+			left: 0;
+		}
+
+	</style>
+  </head>
+  <body>
+
+		<div class="wrapper">
+
+			Lorem ipsum
+			<span class="tooltip">
+				dolor
+				<div class="tooltip-popup">
+					Vorsilbe von Dolores, die schmerzhafte :)
+				</div>
+			</span>
+			sit amet, consectetur adipisicing elit. Aut rem molestias illum, dolore, vel, repellendus ut cumque quidem eligendi accusamus exercitationem. Cum, beatae sunt. Est numquam iste eum vitae tempore?
+		
+		</div>
+
+  </body>
+</html>

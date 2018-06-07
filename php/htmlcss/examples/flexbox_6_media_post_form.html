@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Import Icon Font from Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Flexbox</title>
+
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+        
+        body {
+            font-family: sans-serif;
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .media {
+            width: 100%;
+            display: flex;
+        }
+
+        .media-left {
+            margin-right: 1em;
+        }
+
+        .box {
+            border: 1px dotted gray;
+            padding: 20px;
+        }
+
+
+        .media-content {
+            /* stretch content to take all the space (default: 0) */
+            flex: 1;
+        }
+
+        .media-content textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 0;
+            border-color: #cecece;
+        }
+
+        .media-content-buttons {
+            /* One way to push the buttons to the right */
+            /* text-align: right; */
+        }
+        
+        form {
+            /* Another way to push the buttons to the right */
+            display: flex;
+
+            /* Change Flex direction so align-items is horizontal */
+            flex-direction: column;
+            align-items: flex-end;
+
+            /* Instead of align items, we could */
+            /* margin-left: auto on the .media-content-buttons  */
+              
+            /* another option is to tell the
+               buttons to align align-self: flex-end; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="media box">
+        <div class="media-left">
+            <img src="http://placehold.it/50x50" alt="">
+        </div>
+
+        <div class="media-content">
+            <form action="">
+                <textarea></textarea>
+
+                <div class="media-content-buttons">
+                    <button>Clear</button>
+                    <button>Publish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

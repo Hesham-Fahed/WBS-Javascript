@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>HTML Grundkurs</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Virginia Woolf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts.js"></script>
+    <style>
+
+        /* header {
+            grid-area: head;
+            background: lightcoral;
+        }
+        nav {
+            grid-area: navi;
+            background: lightgreen;
+        }
+        main {
+            grid-area: main;
+            background: lightskyblue;
+        }
+        footer {
+            grid-area: foot;
+            background: lightcyan;
+        }
+
+        .wrapper {
+            width: 450px;
+            height: 250px;
+            margin: 0 auto;
+            background-color: #DDDDDD;
+            display: grid;
+
+            grid-template-columns: auto;
+
+            grid-column-gap: 5px;
+            grid-row-gap: 15px;
+        }
+
+        .nav-left {
+            grid-template-areas:
+                "head head head"
+                "navi main main"
+                "navi foot foot";
+        }
+
+        .nav-right {
+            grid-template-areas:
+                "main"
+                "head"
+                "navi"
+                "foot";
+        }
+
+        @media (min-width: 480px) {
+            .nav-right {
+                grid-template-columns: 100px auto 80px;
+
+                grid-template-areas:
+                    "head head head"
+                    "main main navi"
+                    "foot foot navi";
+            }            
+        } */
+
+        .wrapper {
+            width: 450px;
+            height: 250px;
+            margin: 0 auto;
+            background-color: #DDDDDD;
+            display: grid;
+
+            grid-template-columns: 35px repeat(3, 1fr);
+            grid-template-rows: 60px auto 40px;
+
+            grid-gap: 5px;
+        }
+
+        .item {
+            background-color: lightpink;
+            border: 1px solid green;
+            padding: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="wrapper nav-right">
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </div> -->
+
+    <div class="wrapper">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+    </div>
+
+</body>
+</html>

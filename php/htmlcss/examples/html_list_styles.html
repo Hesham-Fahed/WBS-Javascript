@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+
+    <style>
+        body { margin: 0; padding: 0; }
+    
+        ul, ol {
+            font-size: 1.5rem;
+            padding-left: 3rem;
+        }
+
+       
+        li {
+            padding-left: 0.5rem;
+            line-height: 1.5;
+        }
+
+        ul {
+            /* This is possible but quite limited
+               A background image is far more flexible */
+            /* list-style-image: url(star.svg); */
+
+            list-style-type: none;
+        }
+
+        body > ul > li {
+            padding-left: 2rem;
+
+            background-image: url(images/star.svg);
+            background-position: 0 0.5rem;
+            background-size: 1.3rem 1.3rem;
+            background-repeat: no-repeat;
+        }
+
+        .roman {
+            list-style-type: lower-roman;
+            /* list-style-type: none; */
+        }
+
+        .inside {
+            list-style-position: inside;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Hartkäse
+            <ol class="roman">
+                <li>Gruyère</li>
+                <li value="23">Queso curado de todo lo que hemos</li>
+            </ol>
+        </li>
+        <li>Weichkäse
+            <ol start="42" reversed class="inside">
+                <li>Camembert</li>
+                <li>Stinking Bishop</li>
+            </ol>
+        </li>
+    </ul>
+
+</body>
+</html>

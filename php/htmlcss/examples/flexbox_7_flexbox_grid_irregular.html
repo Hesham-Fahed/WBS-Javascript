@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Import Icon Font from Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Flexbox</title>
+
+    <style>
+        html, body { margin: 0; padding: 0; }
+        
+        body {
+            font-family: sans-serif;
+        }
+
+        .box {
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        .columns {
+            display: flex;
+        }
+
+        .container {
+            background: lightgray;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .columns.is-multiline {
+            flex-wrap: wrap;
+        }
+
+        .is-6 {
+            width: 50%;
+            flex: none;
+        }
+
+        .is-4 {
+            width: 33.33333%;
+            flex: none;
+        }
+
+        .is-3 {
+            width: 25%;
+            flex: none;
+        }
+
+        .is-2 {
+            width: 16.66667%;
+            flex: none;
+        }
+
+        /* Nice option to make columns be as big as their content */
+        .column.is-narrow {
+            flex: none;
+        }
+
+        .columns:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="columns">
+
+        <!-- This magically works because columns are flexible -->
+        <!-- <div class="column is-3"> -->
+        <div class="column is-4">
+            <div class="box">Hello 1</div>
+        </div>
+
+        <div class="column is-6">
+            <div class="box">Hello 2</div>
+        </div>
+
+        <!-- <div class="column is-3"> -->
+        <div class="column is-2">
+            <div class="box">Hello 3</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

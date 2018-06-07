@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Import Icon Font from Google Web Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <title>Flexbox</title>
+
+    <style>
+        html, body { margin: 0; padding: 0; }
+        
+        body {
+            font-family: sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: darkblue;
+            padding: 1em;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 0 0.5em;
+        }
+
+        .nav-item:hover {
+            text-decoration: underline;
+        }
+
+        .nav-item i {
+            color: rgb(180, 180, 230);
+            padding-right: 4px;
+        }
+
+        /* Now for some mobile */
+        @media screen and (max-width: 600px) {
+            nav {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+                margin: 3px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <div class="nav-left">
+            <!-- For accessibility the icons should be set to aria-hidden="true"
+                 Information should be provided in a visually hidden span -->
+            <a class="nav-item" href="#"><i class="fa fa-home"></i>Home</a>
+            <a class="nav-item" href="#"><i class="fa fa-info-circle"></i>About</a>
+        </div>
+
+        <div class="nav-center">
+            <a class="nav-item" href="#"><i class="fa fa-facebook"></i>Facebook</a>
+            <a class="nav-item" href="#"><i class="fa fa-twitter"></i>Twitter</a>
+        </div>
+
+        <div class="nav-right">
+            <a class="nav-item" href="#"><i class="fa fa-user-plus"></i>Register</a>
+            <a class="nav-item" href="#"><i class="fa fa-sign-in"></i>Sign In</a>
+        </div>
+    </nav>
+
+</div>
+
+</body>
+</html>

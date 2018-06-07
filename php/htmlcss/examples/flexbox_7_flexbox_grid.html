@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Import Icon Font from Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Flexbox</title>
+
+    <style>
+        html, body { margin: 0; padding: 0; }
+        
+        body {
+            font-family: sans-serif;
+        }
+
+        /* Make the boxes visible */
+        .box {
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        /* Flex away - push side by side */
+        .columns {
+            display: flex;
+        }
+
+        .container {
+            background: lightgray;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .column {
+            /* Turn on the rubber bands */
+            /* Items will fill avaiable space evenly */
+            flex: 1;
+        }
+
+
+        /* Create a 12 column layout */
+
+        /* Turn on flex-wrap for multiline layouts so
+           columns will fill all the space 
+           Nice to have this in a separate class */
+        .columns.is-multiline {
+            flex-wrap: wrap;
+        }
+
+        .is-6 {
+            /* This has no effect because flex is turned on! */
+            width: 50%;
+
+            /* Turn of flex so the columns will NOT adjust themselves */
+            flex: none;
+        }
+
+        /* Nice trick */
+        .columns:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="columns is-multiline">
+
+        <div class="column is-6">
+            <div class="box">Hello 1</div>
+        </div>
+
+        <div class="column is-6">
+            <div class="box">Hello 2</div>
+        </div>
+
+        <!-- One way to make 2 rows of 2 columns
+             is to move this to its own columns div
+             or use flex-wrap instead  -->
+        <div class="column is-6">
+            <div class="box">Hello 3</div>
+        </div>
+
+        <div class="column is-6">
+            <div class="box">Hello 4</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

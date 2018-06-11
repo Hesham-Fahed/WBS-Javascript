@@ -1,0 +1,156 @@
+0) Allgemeines (10 Punkte)
+==========================
+
+  1) Erstelle einen Ordner namens "wd121_77_" + dein Vor- und Nachname, also zB
+     wd121_77_peter_lustig (keine Sonderzeichen oder Umlaute!)
+
+  2) Alle Dateien, die du in der Klausur erstellst und verwendest,
+      müssen in diesem Ordner liegen.
+
+  3) Verwende in allen Dateien, die PHP enthalten, "strict typing"
+
+  4) Achte darauf, immer valides HTML zu erzeugen.
+     Pro "Fehler" gibt es einen Punkt Abzug. Also schick deine Seiten
+     durch einen Validator.
+
+  5) Achte darauf, vom Benutzer eingegebene Daten zu bereinigen, bevor
+     du sie wieder an den Browser schickst. (Thema XSS / JS Injection)
+     Auch hier 1 Punkt Abzug pro unbereinigter Ausgabe.
+
+
+
+1) Caesar Cipher 25 Punkte)
+=======================================
+
+  Erstelle ein Formular, in das ein Benutzer einen englischen Text
+  eingeben kann. (Also nur ASCII).
+
+  Beim Absenden soll der Text entweder verschlüsselt oder entschlüsselt
+  werden. Der Benutzer soll mit einem Radiobutton auswählen können, ob
+  ver- oder entschlüsselt wird. Konvertiere den Text vor der
+  Verschlüsselung in Kleinbuchstaben (das macht es etwas einfacher).
+
+  Zeige den ver- oder entschlüsselten Text unter dem Formular an.
+
+  Verwende zur Veschlüsselung einen Rotations-Algorithmus. Dieser
+  schiebt jeden einzelnen Buchstaben des Textes um 13 Buchstaben im
+  Alphabet weiter. Aus "a" wird also "n", aus "b" wird "o", usw.
+  
+  Wird ein Buchstabe über das "z" hinausgeschoben, so beginnt man
+  wieder beim "a". Aus einem "v" wird also ein "i".
+
+  Aus "ich hasse meinen dozenten" wird beim Verschlüsseln also
+  "vpu unffr zrvara qbmragra" und daraus wird beim Entschlüsseln wieder
+  "ich hasse meinen dozenten".
+
+  Die Funktionen chr() und ord() sollten bei dieser Aufgabe hilfreich sein.
+
+
+
+2) Dackelclub Reloaded (50 Punkte)
+==================================
+
+  Baue eine Webseite mit mindestens 3 Unterseiten zu einem Thema deiner Wahl.
+  Die Unterseiten sollen dabei dynamisch (include) ins HTML-Gerüst eingebunden
+  werden.
+  Du kannst dazu die Techniken der "Dackelclub"-Seite verwenden.
+
+  Deine Webseite muss mindestens folgende Elemente enthalten:
+
+   1) Eine Bildergalerie, die 3 oder 4 Bilder pro Zeile anzeigt.
+      Die Anzahl der angezeigten Bilder soll der Benutzer über ein
+      Dropdown Menü (select) auswählen können. (Ja, einen Submit Button
+      braucht man auch.)
+
+      Unter jedem Bild soll der Dateiname des Bildes angezeigt werden,
+      jedoch ohne die Endung und nur mit Kleinbuchstaben. Unterstriche sollen
+      durch Leerzeichen ersetzt werden.
+
+      "Bild_1.jpg" soll also als "bild 1" angezeigt werden.
+      
+      Verwende für Bild und Dateinamen ein semantisch passendes HTML Element.
+      Verwende für die Galerie die Bilder aus dem Ordner "pix".
+
+   2) Ein Gewinnspiel:
+
+	Die Frage des Gewinnspiels lautet:
+          "Welche dieser Pflanzen ist eine Nuss?"
+
+	Mögliche Antworten sollen sein:
+          - Cashewnüsse
+          - Erdbeeren    (<- die richige Antwort)
+          - Die Gemeine Pimpernuss
+          - Mandeln
+
+        Neben der Antwort müssen folgende Pflichtangaben gemacht werden:
+        Gib eine Fehlermeldung aus, wenn ein Pflichtfeld leer gelassen wird.
+          - Name
+          - Geburtsdatum
+
+        Folgende Felder sind optional:
+          - Anmerkungen (textarea)
+          - Newsletter abonieren (checkbox)
+
+      Das Kontaktformular soll beim Absenden eine Email an
+        erd@nuss.com
+      versenden.
+
+      Der Betreff der Email (subject) soll den Namen des Benutzers beinhalten.
+      Also zum Beispiel:
+        Betreff: Nachricht von John Wayne.
+      
+      Der "body" der Email soll folgendes Enthalten:
+      1) Name und Geburtsdatum des Benutzers
+      2) Ob der Benutzer die Gewinnspielfrage richtig beantwortet hat
+      3) Eventuelle Anmerkungen des Benutzers
+      4) Ob der Benutzer den Newsletter will
+
+
+    Falls dir kein Thema einfällt, wähle eines der Folgenden:
+    - Meine Stadt/Mein Dorf (wo auch immer du wohnst)
+
+    - Käse: Geschichte, Herstellung, Weltherrschaft
+      https://de.wikipedia.org/wiki/K%C3%A4se
+
+    Die Texte der Webseite darfst du dir aus dem Internet nehmen, zB
+    von Wikipedia.
+
+
+
+3) Token or not token (10 Punkte)
+=================================
+
+  Sichere das Formular aus Aufgabe 2 mit einem Token ab.
+  
+  Füge dazu ein zufällig generiertes Token in das Formular ein
+  
+  Vergleiche dieses nach dem Absenden des Formulars mit dem entsprechenden
+  Token, das auf dem Server gespeichert wurde.
+
+
+
+4) Abgabe (5 Punkte)
+====================
+
+  0) Validiert? Bereinigt? Ausreichend Kaffee getrunken? OK. Dann weiter...
+
+  1) Packe den gesamten Ordner (also zB wd121_77_harry_hirsch) in eine ZIP
+     Datei. Das Format muss zip, 7zip oder tgz sein.
+
+     Die ZIP-Datei heißt also:
+       wd121_77_dein_name.zip oder
+       wd121_77_dein_name.7z  oder
+       wd121_77_dein_name.tgz
+     (dein_name ist natürlich durch deinen Namen zu ersetzen!)
+
+  2) Es müssen:
+     - wirklich alle benötigten Dateien im ZIP sein,
+     - der richtige Ordner gepackt worden sein, und
+     - die Zip-Datei muss den richtigen Namen haben
+
+  3) Lade diese Datei im eCampus hoch. Vor 16:00.
+
+
+Insgesamt können in diesem Test 100 Punkte erzielt werden.
+
+Viel Erfolg!

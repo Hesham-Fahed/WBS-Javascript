@@ -3,7 +3,6 @@
 function links($link, $page) {
         return ($page === $link) ? "active" : "";
     }
-
 ?>
 
 <nav class="navbar navbar-inverse">

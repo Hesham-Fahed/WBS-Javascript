@@ -1,0 +1,101 @@
+.error {
+    color: red;
+}
+
+.hit {
+    color: green;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background: rgb(156, 189, 9);
+    color: white;
+}
+
+.headwrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    margin: .3em auto;
+}
+
+.wrapper, nav ul {
+    width: 70%;
+    margin: 0 auto;
+}
+
+nav {
+    border-top: 1px solid white;
+    background: rgb(209, 147, 14);
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+    padding: .5em 1em;
+    color: white;
+}
+
+nav ul li:hover {
+    background: white;
+    color: rgb(209, 147, 14);
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    background: white;
+    color: rgb(209, 147, 14);
+}
+
+form.selectForm{
+    margin-top: 2em;
+}
+
+#selectNumber {
+    display: block;
+}
+
+
+.imgContainer {
+    display: inline-block;
+    width: 27.3333%;
+    margin: 3%;
+}
+
+img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,11 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+<ul>
+    {% for cow in cows %}
+        <li>
+        {{ cow.name }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

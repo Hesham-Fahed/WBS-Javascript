@@ -1,27 +1,23 @@
 <?php declare(strict_types=1);
 
 require_once __DIR__.'/../../../vendor/autoload.php';
-// strrpos findet das letzte Vorkommen eines Teilstrings
-$app_path = substr(__DIR__, 0, strrpos(__DIR__, DIRECTORY_SEPARATOR)) . '\app\\';
-// echo "<hr>Dir: " . __DIR__ . "<hr>";
-define('PATH', $app_path);
+require_once __DIR__.'/../config/bootstrap.php';
 
-// cookie_httponly macht das Cookie nur über HTTP_Protokoll zugänglich. 
-// kein zugriff via JS möglich.
-ini_set('session.cookie_httponly', '1');
-session_start();
-
-// echo "<hr>PATH: " . PATH . "<hr>";
+// require stuff
 require_once PATH . 'Core/Request.php';
-class Router {
-    public function handle($r) {
-        require PATH . "Controllers/Controller.php";
-        $c = new Controller($r);
-        return $c->index();
-    }
-}
+require_once PATH . 'Core/Router.php';
 
-$router = new Router;
+$routes = require_once __DIR__.'/../config/routes.php';
+// echo "<hr>PATH: " . PATH . "<hr>";
+// echo "<hr>DIR: " . __DIR__ . "<hr>";
+
+$router = new Router($routes);
 $response = $router->handle(new Request);
 
 echo $response;
+//////////////////////////////////////
+// TODO: testing        
+// echo $confParams;
+// var_dump($response);
+//////////////////////////////////////
+// TODO: move DB config this to a config file

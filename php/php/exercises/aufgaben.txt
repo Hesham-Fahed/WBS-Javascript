@@ -1,0 +1,12 @@
+  N: Login System bauen ... LoginController, RegistrationController, UserModel
+  N: Gewinnspiel-Formular aus der Klausur mit Framework umsetzen
+  N: Eine einfache Webseite bauen
+  N: Mit OOP Queue umsetzen, oder Geometry Library
+
+  Neue Unterseite anlegen:
+  1) Route anlegen -> die bestimmt Controller und Methode
+  2) Controller Methode anlegen -> die bestimmt:
+    2a) DB Zugriff übel Model -> ggf Model Methode anlegen, zB getUsers() getUser(2)
+    2b) Daten vom Model an die View schicken    $this->render('template.twig)
+  3) Template schreiben
+

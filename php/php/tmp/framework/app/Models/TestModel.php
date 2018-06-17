@@ -1,13 +1,12 @@
 <?php declare(strict_types=1);
 
-class Model {
-    private $db;
+require_once PATH  . 'Core/Model.php';
 
-    public function __construct($db) {
-        $this->db = $db;
-    } 
+class TestModel extends Model
+{
 
-    public function getCows() {
+    public function getCows()
+    {
         $sql = "SELECT * FROM cows";
         $result = $this->db->query($sql);
 
@@ -18,5 +17,5 @@ class Model {
 
         return $cows;
     }
-}
 
+}

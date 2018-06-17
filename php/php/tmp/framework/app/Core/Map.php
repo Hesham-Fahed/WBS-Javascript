@@ -7,58 +7,74 @@ class Map
 
     public function __construct(array &$baseMap, bool $writable = false)
     {
+        // TODO: Check if $baseMap actually is an array.
         $this->map =& $baseMap;
         $this->writable = $writable;
     }
 
-    public function has(string $key) : bool {
+    public function has(string $key) : bool
+    {
         return isset($this->map[$key]);
     }
 
-    public function get(string $key) {
+    public function get(string $key)
+    {
         return $this->map[$key] ?? null;
     }
 
-    public function getInt(string $key) {
+    public function getInt(string $key)
+    {
         if (!isset($this->map[$key])) {
             return null;
         }
+
         return (int) $this->map[$key];
     }
 
-    public function getFloat(string $key) {
+    public function getFloat(string $key)
+    {
         if (!isset($this->map[$key])) {
             return null;
         }
+
         return (float) $this->map[$key];
     }
 
-    public function getBool(string $key) {
+    public function getBool(string $key)
+    {
         if (!isset($this->map[$key])) {
             return null;
         }
+
         return (bool) $this->map[$key];
     }
 
-    public function getString(string $key, bool $filter = true) {
+    public function getString(string $key, bool $filter = true)
+    {
         if (!isset($this->map[$key])) {
             return null;
         }
+
         $value = (string) $this->map[$key];
+
         return ($filter) ? addslashes($value) : $value;
     }
 
-    public function set(string $key, $value) {
+    public function set(string $key, $value)
+    {
         if (!$this->writable) {
             throw new Exception("This Map is read only.");
         }
+
         $this->map[$key] = $value;
     }
 
-    public function delete(string $key) {
+    public function delete(string $key)
+    {
         if (!$this->writable) {
             throw new Exception("This Map is read only.");
         }
+
         if (isset($this->map[$key])) {
             unset($this->map[$key]);
         }

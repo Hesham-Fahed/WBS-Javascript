@@ -6,7 +6,15 @@ abstract class Db
 
     private static function connect()
     {
-        $db = new mysqli('localhost', 'root', '', 'cheese', 3306);
+        $config = require_once PATH . '../config/db.php';
+
+        $db = new mysqli(
+            $config['server'],
+            $config['username'],
+            $config['password'],
+            $config['database'],
+            $config['port']    
+        );
 
         if (!$db) {
             throw new Exception('DB Connection error: ' . $db->error);
@@ -29,6 +37,5 @@ abstract class Db
     }
 }
 
-$db = Db::getInstance();
+// $db = Db::getInstance();
 // var_dump($db);
-

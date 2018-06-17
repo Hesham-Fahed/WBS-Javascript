@@ -1,15 +1,15 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="de">
 <head>
-    <titel>Framework</titel>
+    <title>{% block title %}The Title{% endblock %}</title>
 </head>
 <body>
+
     <div class="container">
         {% block content %}
             Content Block
         {% endblock %}
-
     </div>
+
 </body>
 </html>
-

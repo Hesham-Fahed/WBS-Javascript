@@ -17,19 +17,19 @@ class Request
     {
         // [www.domain.de]/path/to/app/post/12/edit?id=12
         $this->domain = $_SERVER['HTTP_HOST'];
-        
+
         // www.domain.de/[path/to/app/post/12/edit?id=12]
         $this->fullPath = $_SERVER['REQUEST_URI'];
-        
+
         // www.domain.de/[path/to/app]/Request.php/post/12/edit?id=12
         $this->basePath = substr($_SERVER['SCRIPT_NAME'], 0,
-        strrpos($_SERVER['SCRIPT_NAME'], '/')
-    );
-    
+            strrpos($_SERVER['SCRIPT_NAME'], '/')
+        );
+
         // www.domain.de/path/to/app/[post/12/edit]?id=12
         $pathWithUrlParameters = str_replace($this->basePath, '', $_SERVER['REQUEST_URI']);
         $this->path = explode('?', $pathWithUrlParameters)[0];
-        
+
         $this->method = $_SERVER['REQUEST_METHOD'];
 
         $params = array_merge($_POST, $_GET);
@@ -98,10 +98,14 @@ class Request
 // $r->url();
 // $r->basePath();
 // $r->path();
-// $r->is('POST'); // bool
+// $r->is('POST');
 // $r->is('get');
-// $r->method(); // "post"
+// $r->method();
 // $r->params();  // $_GET und $_POST
-// var_dump($r->session());
+// $r->session();
 // $r->cookies();
 
+// $r->session()->set('food', 'feta');
+// $r->session()->has('food');
+
+?>

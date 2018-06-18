@@ -11,7 +11,7 @@ abstract class Controller
     protected $model = null;
     protected $view = null;
     protected $user = null;
-    protected $data = null;
+    protected $data = [];
 
     public function __construct(Request $request)
     {
@@ -32,6 +32,8 @@ abstract class Controller
     }
 
     public function render(string $template) : string {
+        // basepath für um/weiterleitung aus Request ziehen
+        $this->data['basePath'] = $this->request->basePath();
         return $this->view->render($template, $this->data);
     }
 

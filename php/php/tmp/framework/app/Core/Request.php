@@ -4,14 +4,14 @@ require_once PATH . "Core/Map.php";
 
 class Request
 {
-    private $domain;
-    private $fullPath;
-    private $basePath;
-    private $path;
-    private $method;
-    private $params;
-    private $session;
-    private $cookies;
+    protected $domain;
+    protected $fullPath;
+    protected $basePath;
+    protected $path;
+    protected $method;
+    protected $params;
+    protected $session;
+    protected $cookies;
 
     public function __construct()
     {

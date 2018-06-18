@@ -145,20 +145,16 @@ class Router
         Request $request
     ) : string
     {
-        var_dump($route);
-        var_dump($path);
-        var_dump($config);
-        // var_dump($request);
         $controllerName = $config['controller'] . 'Controller';
         $controllerPath = PATH . "Controllers/{$controllerName}.php";
-        $user = $request->session()->getInt('user');
+        $user = $request->session()->getInt('userId');
 
         // If this is a login route and the user is not logged in
         // redirect to LoginController::index()
         if (isset($config['login']) && $config['login'] && !$user) {
             require_once PATH . "Controllers/LoginController.php";
             $login = new LoginController($request);
-            return $login->index();
+            return $login->create();
         }
 
         if (!file_exists($controllerPath)) {

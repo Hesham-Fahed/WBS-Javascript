@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<form action="{{ basePath }}/login" method="POST">
+    <div class="formfield">
+        {% if errors.username is not empty %}
+            <div>{{ errors.username }}</div>
+        {% endif %}
+        <label for="username">Username</label>
+        <input type="email" name="username" id="username">
+    </div>
+    <div class="formfield">
+        {% if errors.password is not empty %}
+            <div>{{ errors.password }}</div>
+        {% endif %}
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+
+    <button type="submit">Log In!</button>
+</form>
+{% endblock %}
+

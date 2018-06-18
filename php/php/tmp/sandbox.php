@@ -9,5 +9,7 @@ class fahrradteile {
 }
 
 $fahrrad1 = new fahrradteile();
-echo $fahrrad1->var1;
-echo fahrradteile::$var2;
+// echo $fahrrad1->var1;
+// echo fahrradteile::$var2;
+
+echo password_hash("123", PASSWORD_DEFAULT);

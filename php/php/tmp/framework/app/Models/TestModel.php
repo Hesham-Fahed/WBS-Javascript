@@ -7,7 +7,7 @@ class TestModel extends Model
 
     public function getCows()
     {
-        $sql = "SELECT * FROM cows";
+        $sql = "SELECT * FROM users";
         $result = $this->db->query($sql);
 
         $cows = [];

@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Rinder Login</title>
+    {{ include('parts/head.twig') }}
+</head>
+
+<body>
+
+    Log-in to your Rinder!
+    <form method="POST" action="{{ basePath }}/login">
+
+        {{ csrf_field|raw }}
+    
+        <label for="email">Email</label>
+        <i class="user icon"></i>
+        <input type="email" name="email" id="email" autocomplete="off" value="{{ old.email }}">
+
+        <label for="password">Password</label>
+        <i class="lock icon"></i>
+        <input type="password" name="password" id="password" autocomplete="off">
+
+        <input type="submit">
+    </form>
+
+    {% if error %}
+        <div>{{ error }}</div>
+    {% endif %}
+    Don't have an account? <a href="{{ basePath }}/register">Sign Up here.</a>
+
+</body>
+</html>

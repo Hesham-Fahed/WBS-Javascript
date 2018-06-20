@@ -1,0 +1,11 @@
+{% extends "layout.twig" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <div>{{ user.username }}</div>
+    <div>{{ user.screenname }}</div>
+    <div>{{ user.gender }}</div>
+    <div>{{ user.age }}</div>
+    <img src="img/avatars/{{ user.profile }}">
+{% endblock %}

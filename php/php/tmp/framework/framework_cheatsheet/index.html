@@ -16,16 +16,16 @@
                     $this->domain = $_SERVER['HTTP_HOST'];
                 </dd>
                 <dd>
-                    <span>www.domain.de/[path/to/app/post/12/edit?id=12]</span>
+                    <span class="kommentar">www.domain.de/[path/to/app/post/12/edit?id=12]</span>
                     $this->fullPath = $_SERVER['REQUEST_URI'];
                 </dd>
                 <dd>
-                    <span>// www.domain.de/[path/to/app]/Request.php/post/12/edit?id=12</span>
+                    <span class="kommentar">// www.domain.de/[path/to/app]/Request.php/post/12/edit?id=12</span>
                     $this->basePath = substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'], '/'));
                 </dd>
                 <dd>
-                    <span>// www.domain.de/path/to/app/[post/12/edit]?id=12</span>
-                    $pathWithUrlParameters = str_replace($this->basePath, '', $_SERVER['REQUEST_URI']);
+                    <span class="kommentar">// www.domain.de/path/to/app/[post/12/edit]?id=12</span>
+                    $pathWithUrlParameters = str_replace($this->basePath, '', $_SERVER['REQUEST_URI']); <br>
                     $this->path = explode('?', $pathWithUrlParameters)[0];
                 </dd>
                 <dd>

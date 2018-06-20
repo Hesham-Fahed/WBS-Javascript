@@ -1,0 +1,14 @@
+<h3 class="ui dividing header centered">Departments</h3>
+
+<ul class="ui list">
+{% for department in departments %}
+    <li class="item">
+        {{ department.location }} - {{ department.name }}
+        {% if logged_in %}
+            <a href="{{ basePath }}/departments/{{ department.id }}/delete">
+                <i class="ui remove icon"></i>
+            </a>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,19 @@
+<ul>
+
+  {% for item in site.data[include.type][page.collection][include.topic] %}
+
+    <li>
+      {% if item.url %}
+          <a href="{{ item.url }}">
+      {% endif %}
+
+      {{ item.name }}
+
+      {% if item.url %}
+          </a>
+      {% endif%}
+    </li>
+
+  {% endfor %}
+
+</ul>

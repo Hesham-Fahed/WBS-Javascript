@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+{% block title %}FRIENDS{% endblock %}
+
+{% block content %}
+
+    Friends
+
+    {% for friend in friends %}
+        <a href="{{ basePath }}/profile/{{ friend.id }}">
+            <img alt="{{ friend.name }}" src="{{ friend.portrait }}">
+        
+            {{ friend.screenname }}
+
+            Friends: 12
+
+            Gender: {{ friend.gender }}
+            Email: {{ friend.email }}
+            Bio: TODO
+
+            Rind since: {{ friend.registered|date("M Y") }}
+
+            Some Stats
+        </a>
+    {% endfor %}
+    
+{% endblock %}

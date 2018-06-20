@@ -1,0 +1,17 @@
+.text-center {
+    text-align: center;
+}
+
+.col-50-l {
+    width: 45%;
+    margin-right: 5%; 
+}
+
+.col-50-r {
+    width: 45%;
+    margin-left: 5%; 
+}
+
+.order-by {
+    color: #276F86;
+}

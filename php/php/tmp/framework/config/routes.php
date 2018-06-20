@@ -8,6 +8,16 @@ return [
         'login' => true
     ],
 
+
+    'GET::test/:id/edit/:name' => [
+        'controller' => 'Test',
+        'action' => 'edit',
+        'params' => [
+            'id' => 'number',
+            'name' => 'string'
+        ]
+    ],
+
     'GET::login' => [
         'controller' => 'Login',
         'action' => 'create'

@@ -1,0 +1,21 @@
+<form class="ui form" action="{{ basePath }}/departments" method="POST">
+
+    {{ csrf_field|raw }}
+
+    <h3 class="ui dividing header centered">Add department</h3>
+    <div class="field">
+        <label for="department">Department name</label>
+        <input type="text" name="department">
+    </div>
+
+    <div class="field">
+        <label for="location_id">City</label>
+        <select name="location_id" id="location_id">
+            <option value="">-- Choose a Location --</option>
+            {% for location in locations %}
+                <option value="{{ location.id }}">{{ location.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <input type="submit" class="ui fluid large blue submit button">
+</form>

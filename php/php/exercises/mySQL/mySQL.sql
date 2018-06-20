@@ -49,3 +49,9 @@ JOIN
 	cheesewheels ON cheesewheels_cows.cheesewheel_id = cheesewheels.id
 WHERE 
 	cheesewheels.price IS NULL;
+
+
+	_____________________________________________
+
+
+	SELECT * FROM `employees_collection` ORDER BY standort_name DESC, mitarbeiter_name ASC

@@ -28,8 +28,8 @@ body {
 }
 
 dl {
-    float: left;
-    width: 40%;
+    /* float: left;
+    width: 40%; */
     margin: 0 2em 2em;
     background: #fffffa;
 }
@@ -40,8 +40,13 @@ dt {
 
 dd {
     margin-top: .5em;
-
+    padding-bottom: .5em;
+    border-bottom: 1px solid #aaa;
 }
+
+/* dd:before {
+    content: "· ";
+} */
 
 dl span {
     color: #aaa;

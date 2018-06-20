@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block title %}PROFILE{% endblock %}
+
+{% block content %}
+<div class="ui two column grid container segment padded">
+
+  <div class="sixteen wide column"><h2>{{ profile.screenname }}</h2></div>
+  
+  <div class="four wide column">Screen name: </div>
+  <div class="twelve wide column">{{ profile.screenname }}</div>
+
+  <div class="four wide column">Email:</div>
+  <div class="twelve wide column">{{ profile.email }}</div>
+
+  <div class="four wide column">Gender:</div>
+  <div class="twelve wide column">{{ profile.gender }}</div>
+
+  <div class="four wide column">Last online:</div>
+  <div class="twelve wide column">{{ profile.online|date('m/d/Y H:i') }}</div>
+
+  <div class="four wide column">Registered:</div>
+  <div class="twelve wide column">{{ profile.registered|date('m/d/Y') }}</div>
+
+  <div class="four wide column">Portrait:</div>
+  <div class="twelve wide column"><img src="{{ basePath }}/{{ profile.portrait }}" alt="{{ profile.email }}">
+    {% if editable %}
+      <form action="{{ basePath }}/profile" method="POST" enctype="multipart/form-data">      
+
+        {{ csrf_field|raw }}
+        
+        <input type="file" name="portrait" />
+        <input type = "submit"/>
+      </form>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

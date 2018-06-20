@@ -1,0 +1,27 @@
+<form class="ui form" method="POST" action="{{ basePath }}/employees">
+
+    {{ csrf_field|raw }}
+    
+    <h3 class="ui dividing header centered">Add employee</h3>
+    
+    <div class="field">
+        <label for="name">Employee name</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div class="field">
+        <label for="age">Employee age</label>
+        <input type="number" name="age" id="age">
+    </div>
+
+    <div class="field">
+        <label for="dept_id">Department</label>
+        <select name="dept_id" id="dept_id">
+            <option value="">-- Choose a department --</option>
+            {% for department in departments %}
+                <option value="{{ department.id }}">{{ department.location }} - {{ department.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <input type="submit" class="ui fluid large blue submit button">
+</form>

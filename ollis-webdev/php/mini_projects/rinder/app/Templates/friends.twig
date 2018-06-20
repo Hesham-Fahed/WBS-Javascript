@@ -1,0 +1,37 @@
+{% extends "layout.twig" %}
+
+{% block title %}FRIENDS{% endblock %}
+
+{% block content %}
+<h2>Friends</h2>  
+<div class="ui stackable cards">
+    {% for friend in friends %}
+        <a class="card" href="{{ basePath }}/profile/{{ friend.id }}">
+            <div class="image">
+                <img alt="{{ friend.name }}" src="{{ friend.portrait }}">
+            </div>
+            <div class="content">
+                <div class="header">{{ friend.screenname }}</div>
+                    <div class="meta">
+                        <span>Friends</span>
+                    </div>
+                <div class="description">
+                    <div>Gender: {{ friend.gender }}</div>
+                    <div>Email: {{ friend.email }}</div>
+                    <div>Bio: TODO</div>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">
+                    Rind since: {{ friend.registered|date("M Y") }}
+                </span>
+                <span>
+                    <i class="user icon"></i>
+                Some Stat
+                </span>
+            </div>
+        </a>
+    {% endfor %}
+   
+</div>
+{% endblock %}

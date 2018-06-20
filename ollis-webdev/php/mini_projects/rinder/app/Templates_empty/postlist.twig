@@ -1,0 +1,31 @@
+{% extends "layout.twig" %}
+
+{% block title %}POSTLIST{% endblock %}
+
+{% block content %}
+{{ include('parts/addpost.twig') }}
+
+<div>
+  Postlist
+
+  {% for post in posts %}
+
+    <img src="{{ basePath }}/{{ post.portrait }}" alt="{{ post.screenname }}">
+
+    <a class="user" href="{{ basePath }}/profile/{{ post.userid }}">
+      {{ post.screenname }}
+    </a> posted on
+
+    {{ post.created|date("d. M H:i") }}
+
+    {% if delbtn %}
+      <button class="delbtn" id="delbtn-{{ post.id }}">X</button>
+    {% endif %}
+
+    {{ post.title }}</h3>
+
+    {{ post.content | nl2br }}
+
+  {% endfor %}
+</div>
+{% endblock %}

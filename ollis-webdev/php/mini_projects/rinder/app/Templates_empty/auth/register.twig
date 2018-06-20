@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+    <title>Rinder Registration</title>
+    {{ include('parts/head.twig') }}
+</head>
+
+<body>
+
+    Register with Rinder!
+    <form class="ui large form" method="POST" action="{{ basePath }}/register">
+
+        {{ csrf_field|raw }}
+        
+        <label for="email">Email</label>
+        <i class="user icon"></i>
+        <input type="email" name="email" autocomplete="off" value="{{ fields.email }}">
+
+        <label for="password">Password</label>
+        <i class="lock icon"></i>
+        <input type="password" name="password" autocomplete="off">
+
+        <label for="screenname">Screen name</label>
+        <i class="user icon"></i>
+        <input type="text" name="screenname" value="{{ fields.screenname }}">
+
+
+        <label for="gender">Gender: </label>
+
+        <label for="bull">Bull</label>
+        <input type="radio" name="gender" id="bull" value="1"
+        {{ (fields.gender == '1') ? "checked" }}>
+
+        <label for="bullock">Bullock</label>
+        <input type="radio" name="gender" id="bullock" value="2"
+        {{ (fields.gender == 2) ? "checked" }}>
+
+        <label for="cow">Cow</label>
+        <input type="radio" name="gender" id="cow" value="3"
+        {{ (fields.gender == 3) ? "checked" }}>
+
+        <label for="heifer">Heifer</label>
+        <input type="radio" name="gender" id="heifer" value="4"
+        {{ (fields.gender == 4) ? "checked" }}>
+
+        <input type="submit" value="register">
+    </form>
+
+    {% if error %}
+        {{ error }}
+    {% endif %}
+
+    Already have an account? <a href="{{ basePath }}/login">Log in</a>
+
+</body>
+</html>

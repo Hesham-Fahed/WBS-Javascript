@@ -1,0 +1,12 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Kuhliste{% endblock %}
+
+{% block content %}
+{{ day }}
+<ul>
+    {% for cow in cows %}
+        <li>{{ cow.name }} {{ cow.id }} {{ cow.gender }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

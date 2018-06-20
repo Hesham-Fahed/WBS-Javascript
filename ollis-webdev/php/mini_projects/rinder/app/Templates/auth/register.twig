@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+    <title>Rinder Registration</title>
+    {{ include('parts/head.twig') }}
+    <style type="text/css">
+        body         { background-color: #222; }
+        body > .grid { height: 100%; }
+        .column      { max-width: 450px; }
+    </style>
+</head>
+
+<body>
+
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h2 class="ui green image header">
+            Register with Rinder!
+        </h2>
+        <form class="ui large form" method="POST" action="{{ basePath }}/register">
+
+            {{ csrf_field|raw }}
+            
+            <div class="ui padded segment">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="email" name="email" autocomplete="off" value="{{ fields.email }}">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" autocomplete="off">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="screenname">Screen name</label>
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="screenname" value="{{ fields.screenname }}">
+                    </div>
+                </div>
+                <div class="inline fields">
+                    <label for="gender">Gender: </label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <label for="bull">Bull</label>
+                            <input type="radio" name="gender" id="bull" value="1"
+                            {{ (fields.gender == 1) ? "checked" }}>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <label for="bullock">Bullock</label>
+                            <input type="radio" name="gender" id="bullock" value="2"
+                            {{ (fields.gender == 2) ? "checked" }}>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <label for="cow">Cow</label>
+                            <input type="radio" name="gender" id="cow" value="3"
+                            {{ (fields.gender == 3) ? "checked" }}>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <label for="heifer">Heifer</label>
+                            <input type="radio" name="gender" id="heifer" value="4"
+                            {{ (fields.gender == 4) ? "checked" }}>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="ui fluid large green submit button" value="Register">
+            </div>
+        </form>
+        {% if error %}
+            <div class="ui error message">{{ error }}</div>
+        {% endif %}
+        <div class="ui message">
+            Already have an account? <a href="{{ basePath }}/login">Log in</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<div class="ui message">
+  <div class="ui large header center aligned">
+    Your messages
+  </div>
+
+{% if messages.requests %}
+  <div class="ui two column grid">
+
+    {% for user in messages.requests %}
+              
+      <form class="four wide column right aligned" method="POST" action="{{ basePath }}/friends">
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <div class="ui mini buttons">
+          <button class="ui mini positive button" name="accept" value="1">Accept</button>
+          <div class="or"></div>
+          <button class="ui mini negative button" name="accept" value="0">Decline</button>
+        </div>
+      </form>
+
+      <div class="twelve wide column">
+        <img class="ui avatar image" alt="{{ user.name }}" src="{{ user.portrait }}">
+        {{ user.screenname }} sent a friend request.
+      </div>
+
+    {% endfor %}
+  
+  </div>
+{% endif %}
+
+{% if messages.notices %}
+  <div class="ui info message">
+    {% for message in messages.notices %}
+      <div class="info">
+        <i class="announcement icon"></i>
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if messages.errors %}
+  <div class="ui error message">
+    {% for error in messages.errors %}
+      <div class="error">
+        <i class="warning circle icon"></i>
+        {{ error }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if messages.oks %}
+  <div class="ui success message">
+    {% for ok in messages.oks %}
+      <div class="success">
+        <i class="info circle icon"></i>
+        {{ ok }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+</div>

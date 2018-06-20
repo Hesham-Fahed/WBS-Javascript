@@ -1,0 +1,54 @@
+<div>
+  <span>
+    Your messages
+  </span>
+
+{% if messages.requests %}
+  <div>
+
+    {% for user in messages.requests %}
+              
+      <form method="POST" action="{{ basePath }}/friends">
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <div>
+          <button name="accept" value="1">Accept</button>
+          <div class="or"></div>
+          <button name="accept" value="0">Decline</button>
+        </div>
+      </form>
+
+      <div>
+        <img alt="{{ user.name }}" src="{{ user.portrait }}">
+        {{ user.screenname }} sent a friend request.
+      </div>
+
+    {% endfor %}
+  
+  </div>
+{% endif %}
+
+{% if messages.notices %}
+  <div>
+    {% for message in messages.notices %}
+        {{ message }}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if messages.errors %}
+  <div>
+    {% for error in messages.errors %}
+        {{ error }}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if messages.oks %}
+  <div>
+    {% for ok in messages.oks %}
+        {{ ok }}
+    {% endfor %}
+  </div>
+{% endif %}
+
+</div>

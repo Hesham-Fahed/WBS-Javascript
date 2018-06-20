@@ -1,0 +1,13 @@
+{% extends "layout.twig" %}
+
+{% block title %}Cities{% endblock %}
+
+{% block left %}
+    {% include 'parts/employee_index.twig' %}
+{% endblock %}
+
+{% block right %}
+    {% include 'parts/employee_add.twig' %}
+    <div class="ui section divider"></div>
+    {% include 'parts/employee_move.twig' %}
+{% endblock %}

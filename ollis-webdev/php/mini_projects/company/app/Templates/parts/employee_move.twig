@@ -1,0 +1,25 @@
+<form class="ui form" method="POST" action="{{ basePath }}/employees/move">
+
+    {{ csrf_field|raw }}
+
+    <h3 class="ui dividing header centered">Move employee</h3>
+    <div class="field">
+        <label for="employee_id">Employee</label>
+        <select name="employee_id" id="employee_id">
+            <option value="">-- Choose an employee --</option>
+            {% for employee in employees %}
+                <option value="{{ employee.id }}">{{ employee.name }} - {{ employee.location }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="field">
+        <label for="dept_id">Department</label>
+        <select name="dept_id" id="dept_id">
+            <option value="">-- Choose a department --</option>
+            {% for department in departments %}
+                <option value="{{ department.id }}">{{ department.location }} - {{ department.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <input type="submit" class="ui fluid large blue submit button">
+</form>

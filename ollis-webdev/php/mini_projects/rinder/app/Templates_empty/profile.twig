@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block title %}PROFILE{% endblock %}
+
+{% block content %}
+<div>
+
+  {{ profile.screenname }}
+  
+  Screen name: {{ profile.screenname }}
+
+  Email: {{ profile.email }}
+
+  Gender: {{ profile.gender }}
+
+  Last online: {{ profile.online|date('m/d/Y H:i') }}
+
+  Registered: {{ profile.registered|date('m/d/Y') }}
+
+  Portrait: <img src="{{ basePath }}/{{ profile.portrait }}" alt="{{ profile.email }}">
+
+  {% if editable %}
+    <form action="{{ basePath }}/profile" method="POST" enctype="multipart/form-data">
+
+      {{ csrf_field|raw }}
+      
+      <input type="file" name="portrait" />
+      <input type = "submit"/>
+    </form>
+  {% endif %}
+
+</div>
+
+{% endblock %}

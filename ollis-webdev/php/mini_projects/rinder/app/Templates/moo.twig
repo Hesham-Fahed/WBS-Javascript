@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block title %}MOO OR BOO{% endblock %}
+
+{% block content %}
+  {% if not empty %}
+    <h3 class="ui centered header">Your next hottie</h3>
+
+    <div class="ui centered card">
+      <div class="image">
+        <img src="{{ hottie.portrait }}" alt="{{ hottie.name }}">
+      </div>
+      
+      <div class="content">
+        <div class="header">{{ hottie.screenname }}</div>
+        <div class="meta">
+          {{ hottie.id }}
+        </div>
+        <div class="description">
+          Cow description
+        </div>
+      </div>
+
+      <div class="extra content">
+        <form class="ui two buttons" action="{{ basePath }}/moo" method="POST">
+          <input type="hidden" name="hottie-id" value="{{ hottie.id }}">
+          <button type="submit" class="ui green button" name="action" value="moo" id="moo">Moo</button>
+          <button type="submit" class="ui red button" name="action" value="boo" id="boo">Boo</button>
+        </form>
+      </div>
+
+    </div>
+  {% endif %}
+{% endblock %}

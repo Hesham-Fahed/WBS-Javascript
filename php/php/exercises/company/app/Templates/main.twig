@@ -1,0 +1,101 @@
+{% extends "layout.twig" %}
+
+{% block title %}Company - Main{% endblock %}
+
+{% block content %}
+
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# all employee list #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+<div class="ui segment col-50-l">
+    <h2>Employees</h2>
+    <div>Order by: 
+        <a href="{{ basePath }}/main?order=name" class="order-by">Mitarbeiter</a>
+        - 
+        <a href="{{ basePath }}/main?order=abteilung_name" class="order-by">Abteilung</a>
+        - 
+        <a href="{{ basePath }}/main?order=standort_name" class="order-by">Standort</a>
+    </div>
+
+    {% for mitarbeiter_array in mitarbeiter %}
+        <div class="ui">
+            {% for person in mitarbeiter_array %}
+                {{ person  }} - 
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# end: all employee list #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# FORM: ADD EMPLOYEE #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+<div class="ui segment col-50-l">
+
+    <h2>Add employee</h2>
+        <form class="ui large form" method="POST" action="{{ basePath }}/main">
+
+            {{ csrf_field|raw }}
+
+            <div class="ui stacked segment">
+                <div class="field">
+                    <label for="employee_name">Employee name</label>
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="employee_name" id="employee_name" autocomplete="off" value="{{ old.username }}">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="password">Employee age</label>
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" id="password" autocomplete="off">
+                    </div>
+                </div>
+                
+                {# ANFANG STANDORTE #}
+                <div class="field">
+                    <label for="password">Standorte</label>
+                    <div class="ui left icon input">
+                        <i class=""></i>
+                        <select>
+                            <option value="none" selected disabled>-- Bitte wählen --</option>
+                            {% for standort_array in standorte %}
+                                {% for standort in standort_array %}
+                                    <option value="{{ standort }}">
+                                        {{ standort  }}  
+                                    </option>
+                                {% endfor %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div> {# ende standorte #}
+                
+                {# ANFANG ABTEILUNG #}
+                <div class="field">
+                    <label for="password">Abteilungen</label>
+                    <div class="ui left icon input">
+                        <i class=""></i>
+                        <select>
+                            <option value="none" selected disabled>-- Bitte wählen --</option>
+                            {% for abteilung_array in abteilungen %}
+                                {% for abteilung in abteilung_array %}
+                                    <option value="{{ abteilung }}">
+                                        {{ abteilung  }}  
+                                    </option>
+                                {% endfor %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div> {# ende abteilung #}
+                <input type="submit" class="ui fluid large blue submit button">
+            </div>
+        </form>
+</div>
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# end form: add employee #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+
+{% endblock %}

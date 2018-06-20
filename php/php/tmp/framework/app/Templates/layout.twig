@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <title>{% block title %}The Title{% endblock %}</title>
+    {% include 'parts/head.twig' %}
 </head>
+
 <body>
+    {% include 'parts/nav.twig' %}
 
     <div class="container">
         {% block content %}
@@ -11,5 +15,6 @@
         {% endblock %}
     </div>
 
+    {% include 'parts/foot.twig' %}
 </body>
 </html>

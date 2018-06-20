@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+    <title>{% block title %}Company{% endblock %}</title>
+    {{ include('parts/head.twig') }}
+</head>
+
+<body>
+<div class="ui container">
+
+    {{ include('parts/nav.twig') }}
+
+    <div class="ui container">
+    
+        {% if messages %}
+            {{ include('parts/messages.twig') }}
+        {% endif %}
+
+        <div class="ui stackable two column grid">
+            <div class="ui eight wide column">
+                <div class="ui stacked segment">
+                    {% block left %}
+                        Left Content Block
+                    {% endblock %}
+                </div>
+            </div>
+
+            <div class="ui eight wide column">
+                <div class="ui stacked segment">
+                    {% if logged_in %}
+                        {% block right %}
+                            Right Content Block
+                        {% endblock %}
+                    {% else %}
+                        <h3 class="ui dividing header centered">Notice</h3>
+                        <p>You must be logged in to see this panel.</p>
+                        <p><a href="{{ basePath }}/login">Login here</a>.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{ include('parts/foot.twig') }}
+
+</div>
+</body>
+</html>

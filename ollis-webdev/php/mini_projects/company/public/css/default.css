@@ -1,0 +1,11 @@
+.remove.icon {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.list .item:hover {
+    background: #EEE;
+}

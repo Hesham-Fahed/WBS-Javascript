@@ -1,0 +1,13 @@
+{% extends "layout.twig" %}
+
+{% block title %}Departments{% endblock %}
+
+{% block left %}
+    <div class="segment">
+        {% include 'parts/department_index.twig' %}
+    </div>
+{% endblock %}
+
+{% block right %}
+    {% include 'parts/department_add.twig' %}
+{% endblock %}

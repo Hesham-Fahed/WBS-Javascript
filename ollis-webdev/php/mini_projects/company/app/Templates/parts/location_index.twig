@@ -1,0 +1,14 @@
+<h3 class="ui dividing header centered">Locations</h3>
+
+<ul class="ui list">
+{% for location in locations %}
+    <li class="item">
+        {{ location.name }}
+        {% if logged_in %}
+            <a href="{{ basePath }}/locations/{{ location.id }}/delete">
+                <i class="ui remove icon delbtn" id="delbtn-{{ location.id }}"></i>
+            </a>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>

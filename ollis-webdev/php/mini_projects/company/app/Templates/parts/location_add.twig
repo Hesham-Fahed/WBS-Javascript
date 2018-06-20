@@ -1,0 +1,11 @@
+<form class="ui form" method="POST" action="{{ basePath }}/locations">
+
+    {{ csrf_field|raw }}
+
+    <h3 class="ui dividing header centered">Add location</h3>
+    <div class="field">
+        <label for="location">Location name</label>
+        <input type="text" name="location" id="location">
+    </div>
+    <input type="submit" class="ui fluid large blue submit button">
+</form>

@@ -1,0 +1,19 @@
+<h3 class="ui dividing header centered">Employees</h3>
+
+Order By: 
+<a href="{{ basePath }}/employees"> Name</a> - 
+<a href="{{ basePath }}/employees?sort=department,name"> Department</a> - 
+<a href="{{ basePath }}/employees?sort=location,name">Location</a>
+
+<ul class="ui list">
+{% for employee in employees %}
+    <li class="item">
+        {{ employee.name }} - {{ employee.department }} - {{ employee.location }}
+        {% if logged_in %}
+            <a href="{{ basePath }}/employees/{{ employee.id }}/delete">
+                <i class="ui remove icon"></i>
+            </a>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>

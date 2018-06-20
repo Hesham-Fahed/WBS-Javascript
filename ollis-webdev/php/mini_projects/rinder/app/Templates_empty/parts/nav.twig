@@ -1,0 +1,12 @@
+<nav>
+    <a class="{{ page == 'wall' or page == ''  ? 'active' }}" href="{{ basePath }}/wall">Wall</a>
+    <a class="{{ page == 'posts' ? 'active' }}" href="{{ basePath }}/posts">Posts</a^>
+    <a class="{{ page == 'moo' ? 'active' }}" href="{{ basePath }}/moo">Moo</a^>
+    <a class="{{ page == 'friends' ? 'active' }}" href="{{ basePath }}/friends">Friends</a^>
+    <a class="{{ page == 'profile' ? 'active' }}" href="{{ basePath }}/profile">Profile</a^>
+    {% if logged_in %}
+        <a href="{{ basePath }}/logout">Logout</a>
+    {% else %}
+        <a href="{{ basePath }}/login">Login</a>
+    {% endif %}
+</nav>

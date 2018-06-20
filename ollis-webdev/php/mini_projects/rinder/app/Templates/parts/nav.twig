@@ -1,0 +1,12 @@
+<nav class="ui six item menu">
+    <a class="item {{ page == 'wall' or page == ''  ? 'active' }}" href="{{ basePath }}/wall">Wall</a>
+    <a class="item {{ page == 'posts' ? 'active' }}" href="{{ basePath }}/posts">Posts</a>
+    <a class="item {{ page == 'moo' ? 'active' }}" href="{{ basePath }}/moo">Moo</a>
+    <a class="item {{ page == 'friends' ? 'active' }}" href="{{ basePath }}/friends">Friends</a>
+    <a class="item {{ page == 'profile' ? 'active' }}" href="{{ basePath }}/profile">Profile</a>
+    {% if logged_in %}
+        <a class="item" href="{{ basePath }}/logout">Logout</a>
+    {% else %}
+        <a class="item" href="{{ basePath }}/login">Login</a>
+    {% endif %}
+</nav>

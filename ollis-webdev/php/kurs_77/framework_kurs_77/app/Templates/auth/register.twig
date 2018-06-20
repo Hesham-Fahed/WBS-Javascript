@@ -1,0 +1,68 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<form action="{{ basePath }}/register" method="POST">
+
+    <div class="formfield">
+        {% if errors.username is not empty %}
+            <div>{{ errors.username }}</div>
+        {% endif %}
+        <label for="username">E-Mail</label>
+        <input type="email" name="username" id="username">
+    </div>
+
+    <div class="formfield">
+        {% if errors.password is not empty %}
+            <div>{{ errors.password }}</div>
+        {% endif %}
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+
+    <div class="formfield">
+        {% if errors.password_check is not empty %}
+            <div>{{ errors.password_check }}</div>
+        {% endif %}
+        <label for="password_check">Password</label>
+        <input type="password" name="password_check" id="password_check">
+    </div>
+
+    <div class="formfield">
+        {% if errors.screenname is not empty %}
+            <div>{{ errors.screenname }}</div>
+        {% endif %}
+        <label for="screenname">Screen Name</label>
+        <input type="text" name="screenname" id="screenname">
+    </div>
+
+    <div class="formfield">
+        {% if errors.gender is not empty %}
+            <div>{{ errors.gender }}</div>
+        {% endif %}
+
+        <label for="cow">Cow</label>
+        <input type="radio" id="cow" name="gender" value="cow">
+
+        <label for="bull">Bull</label>
+        <input type="radio" id="bull" name="gender" value="bull">
+
+        <label for="bullock">Bullock</label>
+        <input type="radio" id="bullock" name="gender" value="bullock">
+
+        <label for="heifer">Heifer</label>
+        <input type="radio" id="heifer" name="gender" value="heifer">
+    </div>
+
+    <div class="formfield">
+        {% if errors.age is not empty %}
+            <div>{{ errors.age }}</div>
+        {% endif %}
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+    </div>
+
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

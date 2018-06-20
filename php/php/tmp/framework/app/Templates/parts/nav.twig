@@ -1,0 +1,12 @@
+<nav>
+    <a href="{{ basePath}}/wall">Wall</a>
+    <a href="{{ basePath}}/posts">Posts</a>
+    <a href="{{ basePath}}/friends">Friends</a>
+    <a href="{{ basePath}}/profile">Profile</a>
+    {% if logged_in %}
+        <a href="{{ basePath}}/logout">Logout</a>
+    {% else %}
+        <a href="{{ basePath}}/login">Login</a>
+        <a href="{{ basePath}}/register">Register</a>
+    {% endif %}
+</nav>

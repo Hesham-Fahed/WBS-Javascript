@@ -1,0 +1,9 @@
+<nav class="ui three item menu">
+    <a class="item" href="{{ basePath }}/posts">Posts</a>
+    <a class="item" href="{{ basePath }}/profile">Profile</a>
+    {% if logged_in %}
+        <a class="item" href="{{ basePath }}/logout">Logout</a>
+    {% else %}
+        <a class="item" href="{{ basePath }}/login">Login</a>
+    {% endif %}
+</nav>

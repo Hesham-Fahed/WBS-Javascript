@@ -19,6 +19,30 @@ return
         'action' => 'store',
         'login' => true,
     ],
+
+    'POST::destroy' => [
+        'controller' => 'Main',
+        'action' => 'index',
+        'login' => true,
+    ],
+
+    'POST::move' => [
+        'controller' => 'Main',
+        'action' => 'index',
+        'login' => true,
+    ],
+
+    'POST::create' => [
+        'controller' => 'Main',
+        'action' => 'index',
+        'login' => true,
+    ],
+    
+    'POST::addStandort' => [
+        'controller' => 'Main',
+        'action' => 'index',
+        'login' => true,
+    ],
     
     'GET::posts' => [
         'controller' => 'Post',

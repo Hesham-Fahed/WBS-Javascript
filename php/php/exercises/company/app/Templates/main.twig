@@ -22,6 +22,7 @@
             {% for person in mitarbeiter_array %}
                 {{ person  }} - 
             {% endfor %}
+            <a href="{{ basePath }}/destroy?id={{ mitarbeiter_array.id }}/destroy&objekt=mitarbeiter?command=destroy" class="command-delete">X</a>
         </div>
     {% endfor %}
 </div>
@@ -35,37 +36,37 @@
 <div class="ui segment col-50-l">
 
     <h2>Add employee</h2>
-        <form class="ui large form" method="POST" action="{{ basePath }}/main">
+        <form class="ui large form" method="POST" action="{{ basePath }}/create?command=create">
 
             {{ csrf_field|raw }}
 
             <div class="ui stacked segment">
                 <div class="field">
-                    <label for="employee_name">Employee name</label>
+                    <label for="mitarbeiter_name">mitarbeiter name</label>
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="employee_name" id="employee_name" autocomplete="off" value="{{ old.username }}">
+                        <input type="text" name="mitarbeiter_name" id="mitarbeiter_name" autocomplete="off" value="{{ old.username }}">
                     </div>
                 </div>
                 <div class="field">
-                    <label for="password">Employee age</label>
+                    <label for="password">Mitarbeiter age</label>
                     <div class="ui left icon input">
-                        <i class="lock icon"></i>
-                        <input type="password" name="password" id="password" autocomplete="off">
+                        <i class=""></i>
+                        <input type="text" name="age" id="age">
                     </div>
                 </div>
                 
                 {# ANFANG STANDORTE #}
                 <div class="field">
-                    <label for="password">Standorte</label>
+                    <label for="standorte">Standorte</label>
                     <div class="ui left icon input">
                         <i class=""></i>
-                        <select>
+                        <select name="standorte">
                             <option value="none" selected disabled>-- Bitte wählen --</option>
                             {% for standort_array in standorte %}
                                 {% for standort in standort_array %}
                                     <option value="{{ standort }}">
-                                        {{ standort  }}  
+                                        {{ standort  }}
                                     </option>
                                 {% endfor %}
                             {% endfor %}
@@ -75,10 +76,10 @@
                 
                 {# ANFANG ABTEILUNG #}
                 <div class="field">
-                    <label for="password">Abteilungen</label>
+                    <label for="abteilungen">Abteilungen</label>
                     <div class="ui left icon input">
                         <i class=""></i>
-                        <select>
+                        <select name="abteilungen">
                             <option value="none" selected disabled>-- Bitte wählen --</option>
                             {% for abteilung_array in abteilungen %}
                                 {% for abteilung in abteilung_array %}
@@ -98,4 +99,134 @@
 {# end form: add employee #}
 {# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
 
-{% endblock %}
+
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# FORM: ADD STANDORT #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+    <div class="ui segment col-50-l">
+
+        <h2>Add Standort</h2>
+        <form class="ui large form" method="POST" action="{{ basePath }}/addStandort?command=createStandort">
+
+            {{ csrf_field|raw }}
+
+            <div class="ui stacked segment">
+                <div class="field">
+                    <label for="add-standort">Neuer standort</label>
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="add-standort" id="add-standort">
+                    </div>
+                </div>
+            <input type="submit" class="ui fluid large blue submit button">
+            </div>
+        </form>
+    </div>
+
+
+
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# FORM: DESTROY STANDORT #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+    <div class="ui segment col-50-l">
+
+        <h2>Destroy Standort</h2>
+        <form class="ui large form" method="POST" action="{{ basePath }}/destroy?objekt=standorte&command=destroy">
+            
+            {{ csrf_field|raw }}
+
+            <div class="ui stacked segment">
+                <div class="field">
+                    <label for="standorte">Standorte</label>
+                    <div class="ui left icon input">
+                        <i class=""></i>
+                        <select name="standorte">
+                            <option value="none" selected disabled>-- Bitte wählen --</option>
+                            {% for standort_array in standorte %}
+                                {% for standort in standort_array %}
+                                    <option value="{{ standort }}">
+                                        {{ standort  }}
+                                    </option>
+                                {% endfor %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div> {# ende standorte #}
+                <input type="submit" class="ui fluid large blue submit button">
+            </div>
+        </form>
+    </div>
+
+
+
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+{# FORM: MOVE EMPLOYEE #}
+{# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
+    <div class="ui segment col-50-l">
+
+        <h2>Move Mitarbeiter</h2>
+        <form class="ui large form" method="POST" action="{{ basePath }}/move?objekt=mitarbeiter&command=move">
+            
+            {{ csrf_field|raw }}
+
+            <div class="ui stacked segment">
+                <div class="field">
+                    <label for="mitarbeiter">Mitarbeiter</label>
+                    <div class="ui left icon input">
+                        <i class=""></i>
+                        <select name="mitarbeiter">
+                            <option value="none" selected disabled>-- Bitte wählen --</option>
+                            {% for mitarbeiter_array in mitarbeiter %}
+                                {# {% for standort in standort_array %} #}
+                                    <option value="{{ mitarbeiter_array.name  }}">
+                                        {{ mitarbeiter_array.name  }}
+                                    </option>
+                                {# {% endfor %} #}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div> {# ende mitarbeiter #}
+
+                <div class="field">
+                    <label for="standorte">Standorte</label>
+                    <div class="ui left icon input">
+                        <i class=""></i>
+                        <select name="standorte">
+                            <option value="none" selected disabled>-- Bitte wählen --</option>
+                            {% for standort_array in standorte %}
+                                {% for standort in standort_array %}
+                                    <option value="{{ standort }}">
+                                        {{ standort  }}
+                                    </option>
+                                {% endfor %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div> {# ende standorte #}
+                <input type="submit" class="ui fluid large blue submit button">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
